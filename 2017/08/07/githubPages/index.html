@@ -33,8 +33,12 @@
 <meta property="og:image" content="http://yoursite.com/images/github_0_4.png">
 <meta property="og:image" content="http://yoursite.com/images/github_0_5.png">
 <meta property="og:image" content="http://yoursite.com/images/github_0_6.png">
+<meta property="og:image" content="http://yoursite.com/images/github_0_7.png">
+<meta property="og:image" content="http://yoursite.com/images/github_0_8.png">
+<meta property="og:image" content="http://yoursite.com/images/github_0_10.png">
+<meta property="og:image" content="http://yoursite.com/images/github_0_11.png">
 <meta property="og:image" content="http://yoursite.com/images/github_0_12.png">
-<meta property="og:updated_time" content="2017-08-07T08:26:19.681Z">
+<meta property="og:updated_time" content="2017-08-07T08:32:07.311Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github + pages + hexo 搭建个人博客">
 <meta name="twitter:description" content="前言 作为一名程序员没有个人博客感觉都缺点什么（缺点就是帅），所以一直以来都想建个博客，但有点懒所以一直没弄。今天一时兴起，突然想起这件事，就花了一下午时间，总算弄出来了。弄完之后觉得应该写点什么，就把这个过程写下来当第一篇博文把，希望能坚持写下去，笔芯小田。 建博客有两种方法：第一种是在github上fork别人的博客仓库，进行修改。其实这种方法看似见到那，但复制别人的过来后也要删除和更改，所">
@@ -158,7 +162,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#系统环境配置（需要安装的）"><span class="post-toc-number">1.</span> <span class="post-toc-text">系统环境配置（需要安装的）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装node"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装node</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装git"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">安装git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装hexo"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装hexo</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Github-Page-设置"><span class="post-toc-number">2.</span> <span class="post-toc-text">Github Page 设置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建github帐号"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">创建github帐号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建项目仓库"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">创建项目仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置SSH"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">配置SSH</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#系统环境配置（需要安装的）"><span class="post-toc-number">1.</span> <span class="post-toc-text">系统环境配置（需要安装的）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装node"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装node</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装git"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">安装git</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装hexo"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">安装hexo</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Github-Page-设置"><span class="post-toc-number">2.</span> <span class="post-toc-text">Github Page 设置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建github帐号"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">创建github帐号</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#创建项目仓库"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">创建项目仓库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置SSH"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">配置SSH</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#生成ssh密匙"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">生成ssh密匙</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#发布到github"><span class="post-toc-number">3.</span> <span class="post-toc-text">发布到github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置-config-yml"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">配置_config.yml</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -225,11 +229,43 @@
                     <img src="/images/github_0_6.png" alt="github" title="">
                 </div>
                 <div class="image-caption">github</div>
-            </figure><br>输入<br><figure class="highlight ls"><figcaption><span>-al ~/.ssh ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">因为我之前配置过了，所以存在ssh。也正是觉得之前配置过了所以没再重新配置，就跳过这一部，结果上传的时候，坑了。</div><div class="line">![github](/images/github_0_7.png)</div><div class="line">没法上传，最后是直接删除.ssh里面的所有文件，重新生成ssh</div><div class="line">![github](/images/github_0_8.png)</div><div class="line"></div><div class="line"><span class="comment">## 生成ssh密匙</span></div><div class="line"></div><div class="line">输入以下指令（邮箱就是你注册Github时候的邮箱）后，回车：</div><div class="line"></div><div class="line">``` ssh-keygen -t rsa -C "XXXXX@qq.com"</div></pre></td></tr></table></figure></p>
+            </figure><br>输入<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -al ~/.ssh</div></pre></td></tr></table></figure></p>
+<p>因为我之前配置过了，所以存在ssh。也正是觉得之前配置过了所以没再重新配置，就跳过这一部，结果上传的时候，坑了。<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/github_0_7.png" alt="github" title="">
+                </div>
+                <div class="image-caption">github</div>
+            </figure><br>没法上传，最后是直接删除.ssh里面的所有文件，重新生成ssh<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/github_0_8.png" alt="github" title="">
+                </div>
+                <div class="image-caption">github</div>
+            </figure></p>
+<h2 id="生成ssh密匙"><a href="#生成ssh密匙" class="headerlink" title="生成ssh密匙"></a>生成ssh密匙</h2><p>输入以下指令（邮箱就是你注册Github时候的邮箱）后，回车：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"XXXXX@qq.com"</span></div></pre></td></tr></table></figure>
 <p>这一步在~/.ssh/下生成了两个文件id_rsa 和 id_rsa.pub，复制id_rsa.pub里面的代码<br>在<a href="https://github.com/settings/keys" target="_blank" rel="external">这里</a>add new ssh key<br>好了，最后我们测试一下看是否配置成功。</p>
-<figure class="highlight plain"><figcaption><span>git@github.com ```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">成功的话会显示以下的大致内容：</div><div class="line">![github](/images/github_0_10.png)</div><div class="line"></div><div class="line"># 发布到github</div><div class="line">---</div><div class="line"></div><div class="line">## 配置_config.yml</div><div class="line"></div><div class="line">![github](/images/github_0_11.png)</div><div class="line">其中，repo是我们刚刚建立的远程仓库，换成你自己的仓库，同时因为刚才配置了SSH-Key，所以必须是SSH形式的URL。值得注意的是，每一个: 后面都必须有一个空格，否则会引起错误</div><div class="line">•	然后在cmd安装Git包，执行以下命令</div><div class="line"></div><div class="line">``` npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh git@github.com</div></pre></td></tr></table></figure>
+<p>成功的话会显示以下的大致内容：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/github_0_10.png" alt="github" title="">
+                </div>
+                <div class="image-caption">github</div>
+            </figure></p>
+<h1 id="发布到github"><a href="#发布到github" class="headerlink" title="发布到github"></a>发布到github</h1><hr>
+<h2 id="配置-config-yml"><a href="#配置-config-yml" class="headerlink" title="配置_config.yml"></a>配置_config.yml</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/github_0_11.png" alt="github" title="">
+                </div>
+                <div class="image-caption">github</div>
+            </figure>
+<p>其中，repo是我们刚刚建立的远程仓库，换成你自己的仓库，同时因为刚才配置了SSH-Key，所以必须是SSH形式的URL。值得注意的是，每一个: 后面都必须有一个空格，否则会引起错误<br>•    然后在cmd安装Git包，执行以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
 <p>•    部署到GitHub上，执行以下的命令</p>
-<p><code>hexo deploy</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
 <p>最后打开<a href="https://herechc.github.io/" target="_blank" rel="external">https://herechc.github.io/</a><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -244,7 +280,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-08-07T08:26:19.681Z" itemprop="dateUpdated">2017-08-07 16:26:19</time>
+    Last updated: <time datetime="2017-08-07T08:32:07.311Z" itemprop="dateUpdated">2017-08-07 16:32:07</time>
 </span><br>
 
 
