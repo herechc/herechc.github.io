@@ -33,12 +33,12 @@
 <meta property="og:image" content="http://yoursite.com/images/github_0_4.png">
 <meta property="og:image" content="http://yoursite.com/images/github_0_5.png">
 <meta property="og:image" content="http://yoursite.com/images/github_0_6.png">
-<meta property="og:image" content="http://yoursite.com/images/github_0_7.png">
 <meta property="og:image" content="http://yoursite.com/images/github_0_8.png">
+<meta property="og:image" content="http://yoursite.com/images/github_0_9.png">
 <meta property="og:image" content="http://yoursite.com/images/github_0_11.png">
 <meta property="og:image" content="http://yoursite.com/images/github_0_12.png">
 <meta property="og:image" content="http://yoursite.com/images/github_0_13.png">
-<meta property="og:updated_time" content="2017-08-07T08:37:13.979Z">
+<meta property="og:updated_time" content="2017-08-07T08:42:35.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github + pages + hexo 搭建个人博客">
 <meta name="twitter:description" content="前言 作为一名程序员没有个人博客感觉都缺点什么（缺点就是帅），所以一直以来都想建个博客，但有点懒所以一直没弄。今天一时兴起，突然想起这件事，就花了一下午时间，总算弄出来了。弄完之后觉得应该写点什么，就把这个过程写下来当第一篇博文把，希望能坚持写下去，笔芯小田。 建博客有两种方法：第一种是在github上fork别人的博客仓库，进行修改。其实这种方法看似见到那，但复制别人的过来后也要删除和更改，所">
@@ -123,7 +123,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -233,19 +233,19 @@
 <p>因为我之前配置过了，所以存在ssh。也正是觉得之前配置过了所以没再重新配置，就跳过这一部，结果上传的时候，坑了。<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/images/github_0_7.png" alt="github" title="">
-                </div>
-                <div class="image-caption">github</div>
-            </figure><br>没法上传，最后是直接删除.ssh里面的所有文件，重新生成ssh<br><figure class="image-bubble">
-                <div class="img-lightbox">
-                    <div class="overlay"></div>
                     <img src="/images/github_0_8.png" alt="github" title="">
                 </div>
                 <div class="image-caption">github</div>
-            </figure></p>
+            </figure><br>没法上传，最后是直接删除.ssh里面的所有文件，重新生成ssh</p>
 <h2 id="生成ssh密匙"><a href="#生成ssh密匙" class="headerlink" title="生成ssh密匙"></a>生成ssh密匙</h2><p>输入以下指令（邮箱就是你注册Github时候的邮箱）后，回车：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"XXXXX@qq.com"</span></div></pre></td></tr></table></figure>
-<p>这一步在~/.ssh/下生成了两个文件id_rsa 和 id_rsa.pub，复制id_rsa.pub里面的代码<br>在<a href="https://github.com/settings/keys" target="_blank" rel="external">这里</a>add new ssh key<br>好了，最后我们测试一下看是否配置成功。</p>
+<p>这一步在~/.ssh/下生成了两个文件id_rsa 和 id_rsa.pub，复制id_rsa.pub里面的代码<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/github_0_9.png" alt="github" title="">
+                </div>
+                <div class="image-caption">github</div>
+            </figure><br>在<a href="https://github.com/settings/keys" target="_blank" rel="external">这里</a>add new ssh key<br>好了，最后我们测试一下看是否配置成功。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh git@github.com</div></pre></td></tr></table></figure>
 <p>成功的话会显示以下的大致内容：<br><figure class="image-bubble">
                 <div class="img-lightbox">
@@ -280,7 +280,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-08-07T08:37:13.979Z" itemprop="dateUpdated">2017-08-07 16:37:13</time>
+    最后更新时间：<time datetime="2017-08-07T08:42:35.556Z" itemprop="dateUpdated">2017-08-07 16:42:35</time>
 </span><br>
 
 
@@ -437,7 +437,7 @@
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
