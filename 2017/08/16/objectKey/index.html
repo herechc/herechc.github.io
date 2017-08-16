@@ -13,7 +13,7 @@
     
     
     
-    <title>objectKey | herec</title>
+    <title>object.key | herec</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
@@ -23,13 +23,13 @@
     <meta name="description" content="for..in语句作用于对数组或者对象的属性进行的循环操作 object.keys返回该对象的所有可枚举自身属性的属性名。 比较for.in 相当于object.keys(obj).foreach(key=&amp;gt;{console.log((obj[key])})for.in缺点：所以建议不要对数组执行for in循环，事实上，在高性能javascript这本书中,也强调了for in循环的不好,">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="objectKey">
+<meta property="og:title" content="object.key">
 <meta property="og:url" content="http://yoursite.com/2017/08/16/objectKey/index.html">
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="for..in语句作用于对数组或者对象的属性进行的循环操作 object.keys返回该对象的所有可枚举自身属性的属性名。 比较for.in 相当于object.keys(obj).foreach(key=&amp;gt;{console.log((obj[key])})for.in缺点：所以建议不要对数组执行for in循环，事实上，在高性能javascript这本书中,也强调了for in循环的不好,">
-<meta property="og:updated_time" content="2017-08-16T01:07:43.891Z">
+<meta property="og:updated_time" content="2017-08-16T01:10:49.963Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="objectKey">
+<meta name="twitter:title" content="object.key">
 <meta name="twitter:description" content="for..in语句作用于对数组或者对象的属性进行的循环操作 object.keys返回该对象的所有可枚举自身属性的属性名。 比较for.in 相当于object.keys(obj).foreach(key=&amp;gt;{console.log((obj[key])})for.in缺点：所以建议不要对数组执行for in循环，事实上，在高性能javascript这本书中,也强调了for in循环的不好,">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -105,7 +105,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">objectKey</div>
+        <div class="flex-col header-title ellipsis">object.key</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -127,7 +127,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">objectKey</h1>
+        <h1 class="title">object.key</h1>
         <h5 class="subtitle">
             
                 <time datetime="2017-08-16T01:04:57.000Z" itemprop="datePublished" class="page-time">
@@ -150,7 +150,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#for-in"><span class="post-toc-number">1.</span> <span class="post-toc-text">for..in</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#object-keys"><span class="post-toc-number">2.</span> <span class="post-toc-text">object.keys</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#比较"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">比较</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#for-in"><span class="post-toc-number">1.</span> <span class="post-toc-text">for..in</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#object-keys"><span class="post-toc-number">2.</span> <span class="post-toc-text">object.keys</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#比较"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">比较</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考"><span class="post-toc-number">2.0.2.</span> <span class="post-toc-text">参考</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -158,7 +158,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">objectKey</h1>
+        <h1 class="post-card-title">object.key</h1>
         <div class="post-meta">
             <time class="post-time" title="2017-08-16 09:04:57" datetime="2017-08-16T01:04:57.000Z"  itemprop="datePublished">2017-08-16</time>
 
@@ -176,6 +176,7 @@
             <h1 id="for-in"><a href="#for-in" class="headerlink" title="for..in"></a>for..in</h1><p>语句作用于对数组或者对象的属性进行的循环操作</p>
 <h1 id="object-keys"><a href="#object-keys" class="headerlink" title="object.keys"></a>object.keys</h1><p>返回该对象的所有可枚举自身属性的属性名。</p>
 <h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><p><strong>for.in</strong> 相当于object.keys(obj).foreach(key=&gt;{console.log((obj[key])})<br><strong>for.in缺点：</strong>所以建议不要对数组执行for in循环，事实上，在高性能javascript这本书中,也强调了for in循环的不好,因为它总是会访问该对象的原型,看下原型上是否有属性,这在无意中就给遍历增加了额外的压力。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://caibaojian.com/js-loop-for-in.html" target="_blank" rel="external">http://caibaojian.com/js-loop-for-in.html</a><br><a href="http://blog.csdn.net/wgl_china/article/details/51780649" target="_blank" rel="external">http://blog.csdn.net/wgl_china/article/details/51780649</a></p>
 
         </div>
 
@@ -183,7 +184,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-08-16T01:07:43.891Z" itemprop="dateUpdated">2017-08-16 09:07:43</time>
+    Last updated: <time datetime="2017-08-16T01:10:49.963Z" itemprop="dateUpdated">2017-08-16 09:10:49</time>
 </span><br>
 
 
@@ -218,7 +219,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/16/objectKey/&title=《objectKey》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/16/objectKey/&title=《object.key》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -228,7 +229,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/16/objectKey/&title=《objectKey》 — herec&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/16/objectKey/&title=《object.key》 — herec&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -238,7 +239,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《objectKey》 — herec&url=http://yoursite.com/2017/08/16/objectKey/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《object.key》 — herec&url=http://yoursite.com/2017/08/16/objectKey/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -362,7 +363,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/16/objectKey/&title=《objectKey》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/16/objectKey/&title=《object.key》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -372,7 +373,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/16/objectKey/&title=《objectKey》 — herec&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/16/objectKey/&title=《object.key》 — herec&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -382,7 +383,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《objectKey》 — herec&url=http://yoursite.com/2017/08/16/objectKey/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《object.key》 — herec&url=http://yoursite.com/2017/08/16/objectKey/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
