@@ -13,24 +13,23 @@
     
     
     
-    <title>Array.prototype.slice.call | herec</title>
+    <title>map filter some every forEach的区别 | herec</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="javascript">
-    <meta name="description" content="slice 方法可以用来将一个类数组（Array-like）对象/集合转换成一个数组。你只需将该方法绑定到这个对象上。下述代码中 list 函数中的 arguments 就是一个类数组对象。 12345function list() &amp;#123;  return Array.prototype.slice.call(arguments);&amp;#125;var list1 = list(1, 2, 3">
-<meta name="keywords" content="javascript">
+    <meta name="keywords" content="">
+    <meta name="description" content="JS中some(),every(),forEach(),map(),filter()区别JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。 刚开始接触这些倒也记得不是很清楚，在此纪录一下以加深影响。我主要从两个角度来理解和记忆吧，一个是API的使用，一个是内部实现。 函数简述 map():返回一个新的A">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Array.prototype.slice.call">
-<meta property="og:url" content="http://yoursite.com/2017/08/31/Array-prototype-slice-call/index.html">
+<meta property="og:title" content="map filter some every forEach的区别">
+<meta property="og:url" content="http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="slice 方法可以用来将一个类数组（Array-like）对象/集合转换成一个数组。你只需将该方法绑定到这个对象上。下述代码中 list 函数中的 arguments 就是一个类数组对象。 12345function list() &amp;#123;  return Array.prototype.slice.call(arguments);&amp;#125;var list1 = list(1, 2, 3">
-<meta property="og:updated_time" content="2017-08-31T03:07:51.298Z">
+<meta property="og:description" content="JS中some(),every(),forEach(),map(),filter()区别JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。 刚开始接触这些倒也记得不是很清楚，在此纪录一下以加深影响。我主要从两个角度来理解和记忆吧，一个是API的使用，一个是内部实现。 函数简述 map():返回一个新的A">
+<meta property="og:updated_time" content="2017-09-20T03:55:51.931Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Array.prototype.slice.call">
-<meta name="twitter:description" content="slice 方法可以用来将一个类数组（Array-like）对象/集合转换成一个数组。你只需将该方法绑定到这个对象上。下述代码中 list 函数中的 arguments 就是一个类数组对象。 12345function list() &amp;#123;  return Array.prototype.slice.call(arguments);&amp;#125;var list1 = list(1, 2, 3">
+<meta name="twitter:title" content="map filter some every forEach的区别">
+<meta name="twitter:description" content="JS中some(),every(),forEach(),map(),filter()区别JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。 刚开始接触这些倒也记得不是很清楚，在此纪录一下以加深影响。我主要从两个角度来理解和记忆吧，一个是API的使用，一个是内部实现。 函数简述 map():返回一个新的A">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -105,7 +104,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Array.prototype.slice.call</div>
+        <div class="flex-col header-title ellipsis">map filter some every forEach的区别</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -127,11 +126,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Array.prototype.slice.call</h1>
+        <h1 class="title">map filter some every forEach的区别</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-08-31T03:05:05.000Z" itemprop="datePublished" class="page-time">
-  2017-08-31
+                <time datetime="2017-09-20T03:51:10.000Z" itemprop="datePublished" class="page-time">
+  2017-09-20
 </time>
 
 
@@ -150,17 +149,17 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">1.</span> <span class="post-toc-text">参考</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JS中some-every-forEach-map-filter-区别"><span class="post-toc-number">1.</span> <span class="post-toc-text">JS中some(),every(),forEach(),map(),filter()区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#map"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">map</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
-<article id="post-Array-prototype-slice-call"
+<article id="post-map-filter-some-every-forEach的区别"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">Array.prototype.slice.call</h1>
+        <h1 class="post-card-title">map filter some every forEach的区别</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-08-31 11:05:05" datetime="2017-08-31T03:05:05.000Z"  itemprop="datePublished">2017-08-31</time>
+            <time class="post-time" title="2017-09-20 11:51:10" datetime="2017-09-20T03:51:10.000Z"  itemprop="datePublished">2017-09-20</time>
 
             
 
@@ -173,11 +172,16 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>slice 方法可以用来将一个类数组（Array-like）对象/集合转换成一个数组。你只需将该方法绑定到这个对象上。下述代码中 list 函数中的 arguments 就是一个类数组对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">list</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> list1 = list(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
-<p>除了使用 Array.prototype.slice.call(arguments)，你也可以简单的使用 [].slice.call(arguments) 来代替。另外，你可以使用 bind 来简化该过程。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> unboundSlice = <span class="built_in">Array</span>.prototype.slice;</div><div class="line"><span class="keyword">var</span> slice = <span class="built_in">Function</span>.prototype.call.bind(unboundSlice);</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">list</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> slice(<span class="built_in">arguments</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> list1 = list(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/slice" target="_blank" rel="external">MDN</a></p>
+            <h1 id="JS中some-every-forEach-map-filter-区别"><a href="#JS中some-every-forEach-map-filter-区别" class="headerlink" title="JS中some(),every(),forEach(),map(),filter()区别"></a>JS中some(),every(),forEach(),map(),filter()区别</h1><p>JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。</p>
+<p>刚开始接触这些倒也记得不是很清楚，在此纪录一下以加深影响。我主要从两个角度来理解和记忆吧，一个是API的使用，一个是内部实现。</p>
+<p>函数简述</p>
+<p>map():返回一个新的Array，每个元素为调用func的结果</p>
+<p>filter():返回一个符合func条件的元素数组</p>
+<p>some():返回一个boolean，判断是否有元素是否符合func条件</p>
+<p>every():返回一个boolean，判断每个元素是否符合func条件</p>
+<p>forEach():没有返回值，只是针对每个元素调用func</p>
+<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p>返回的是一个匹配数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">let</span> ids = <span class="keyword">this</span>.list.map(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span></div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(ids)</div><div class="line">[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//将所有的数组元素转换为大写：</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> strings = [<span class="string">"hello"</span>, <span class="string">"Array"</span>, <span class="string">"WORLD"</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeUpperCase</span>(<span class="params">v</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">return</span> v.toUpperCase();</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> uppers = strings.map(makeUpperCase);</div><div class="line"><span class="comment">// uppers is now ["HELLO", "ARRAY", "WORLD"]</span></div><div class="line"><span class="comment">// strings is unchanged</span></div><div class="line"><span class="comment">//结果：["hello", "Array", "WORLD"].map(makeUpperCase) ： HELLO, ARRAY, WORLD</span></div></pre></td></tr></table></figure></p>
+<p><a href="http://www.cnblogs.com/xiao-hong/p/3194027.html" target="_blank" rel="external">url</a><br><a href="http://blog.csdn.net/github_31392345/article/details/48631067" target="_blank" rel="external">url</a></p>
 
         </div>
 
@@ -185,12 +189,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-08-31T03:07:51.298Z" itemprop="dateUpdated">2017-08-31 11:07:51</time>
+    最后更新时间：<time datetime="2017-09-20T03:55:51.931Z" itemprop="dateUpdated">2017-09-20 11:55:51</time>
 </span><br>
 
 
         
-        原始链接：<a href="/2017/08/31/Array-prototype-slice-call/" target="_blank" rel="external">http://yoursite.com/2017/08/31/Array-prototype-slice-call/</a>
+        原始链接：<a href="/2017/09/20/map-filter-some-every-forEach的区别/" target="_blank" rel="external">http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/</a>
         
     </div>
     <footer>
@@ -210,8 +214,6 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
-
 
             
 <div class="page-share-wrap">
@@ -220,7 +222,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/31/Array-prototype-slice-call/&title=《Array.prototype.slice.call》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/&title=《map filter some every forEach的区别》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -230,22 +232,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/31/Array-prototype-slice-call/&title=《Array.prototype.slice.call》 — herec&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/&title=《map filter some every forEach的区别》 — herec&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/31/Array-prototype-slice-call/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Array.prototype.slice.call》 — herec&url=http://yoursite.com/2017/08/31/Array-prototype-slice-call/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《map filter some every forEach的区别》 — herec&url=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/31/Array-prototype-slice-call/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -265,21 +267,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2017/09/19/Date格式化/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Date格式化</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/08/31/数组-array-和对象-object/" id="post-next" class="post-nav-link">
+      <a href="/2017/09/19/Date格式化/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">数组(array)和对象(object)</h4>
+        <h4 class="title">Date格式化</h4>
       </a>
     </div>
   
@@ -371,7 +366,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/08/31/Array-prototype-slice-call/&title=《Array.prototype.slice.call》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/&title=《map filter some every forEach的区别》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -381,22 +376,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/08/31/Array-prototype-slice-call/&title=《Array.prototype.slice.call》 — herec&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/&title=《map filter some every forEach的区别》 — herec&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/31/Array-prototype-slice-call/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Array.prototype.slice.call》 — herec&url=http://yoursite.com/2017/08/31/Array-prototype-slice-call/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《map filter some every forEach的区别》 — herec&url=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/31/Array-prototype-slice-call/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -407,7 +402,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/08/31/Array-prototype-slice-call/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/" alt="微信分享二维码">
 </div>
 
 
