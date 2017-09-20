@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/09/20/map-filter-some-every-forEach的区别/index.html">
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="JS中some(),every(),forEach(),map(),filter()区别JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。 刚开始接触这些倒也记得不是很清楚，在此纪录一下以加深影响。我主要从两个角度来理解和记忆吧，一个是API的使用，一个是内部实现。 函数简述 map():返回一个新的A">
-<meta property="og:updated_time" content="2017-09-20T03:55:51.931Z">
+<meta property="og:updated_time" content="2017-09-20T03:56:26.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="map filter some every forEach的区别">
 <meta name="twitter:description" content="JS中some(),every(),forEach(),map(),filter()区别JS在1.6中为Array新增了几个方法map()，filter()，some()，every()，forEach()，也就是一共有这么多方法了。 刚开始接触这些倒也记得不是很清楚，在此纪录一下以加深影响。我主要从两个角度来理解和记忆吧，一个是API的使用，一个是内部实现。 函数简述 map():返回一个新的A">
@@ -110,7 +110,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -149,7 +149,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JS中some-every-forEach-map-filter-区别"><span class="post-toc-number">1.</span> <span class="post-toc-text">JS中some(),every(),forEach(),map(),filter()区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#map"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">map</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#JS中some-every-forEach-map-filter-区别"><span class="post-toc-number">1.</span> <span class="post-toc-text">JS中some(),every(),forEach(),map(),filter()区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#map"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">map</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">参考</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -181,7 +181,7 @@
 <p>every():返回一个boolean，判断每个元素是否符合func条件</p>
 <p>forEach():没有返回值，只是针对每个元素调用func</p>
 <h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p>返回的是一个匹配数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">let</span> ids = <span class="keyword">this</span>.list.map(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> <span class="number">0</span></div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(ids)</div><div class="line">[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//将所有的数组元素转换为大写：</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> strings = [<span class="string">"hello"</span>, <span class="string">"Array"</span>, <span class="string">"WORLD"</span>];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">makeUpperCase</span>(<span class="params">v</span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">return</span> v.toUpperCase();</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> uppers = strings.map(makeUpperCase);</div><div class="line"><span class="comment">// uppers is now ["HELLO", "ARRAY", "WORLD"]</span></div><div class="line"><span class="comment">// strings is unchanged</span></div><div class="line"><span class="comment">//结果：["hello", "Array", "WORLD"].map(makeUpperCase) ： HELLO, ARRAY, WORLD</span></div></pre></td></tr></table></figure></p>
-<p><a href="http://www.cnblogs.com/xiao-hong/p/3194027.html" target="_blank" rel="external">url</a><br><a href="http://blog.csdn.net/github_31392345/article/details/48631067" target="_blank" rel="external">url</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.cnblogs.com/xiao-hong/p/3194027.html" target="_blank" rel="external">url</a><br><a href="http://blog.csdn.net/github_31392345/article/details/48631067" target="_blank" rel="external">url</a></p>
 
         </div>
 
@@ -189,7 +189,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-09-20T03:55:51.931Z" itemprop="dateUpdated">2017-09-20 11:55:51</time>
+    Last updated: <time datetime="2017-09-20T03:56:26.744Z" itemprop="dateUpdated">2017-09-20 11:56:26</time>
 </span><br>
 
 
@@ -344,7 +344,7 @@
 
         <p>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
