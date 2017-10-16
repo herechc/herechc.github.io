@@ -20,23 +20,23 @@
     
     
     <meta name="keywords" content="node">
-    <meta name="description" content="##populate 123456789101112131415var commentSchema = new Schema(&amp;#123;  content: String,  article: &amp;#123;type:ObjectId, ref:&quot;Article&quot;&amp;#125;,  from: &amp;#123;type:ObjectId, ref:&quot;User&quot;&amp;#125;,  meta: &amp;#123;">
+    <meta name="description" content="populate123456789101112131415var commentSchema = new Schema(&amp;#123;  content: String,  article: &amp;#123;type:ObjectId, ref:&quot;Article&quot;&amp;#125;,  from: &amp;#123;type:ObjectId, ref:&quot;User&quot;&amp;#125;,  meta: &amp;#123;">
 <meta name="keywords" content="node">
 <meta property="og:type" content="article">
 <meta property="og:title" content="populate">
 <meta property="og:url" content="http://yoursite.com/2017/10/16/populate/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="##populate 123456789101112131415var commentSchema = new Schema(&amp;#123;  content: String,  article: &amp;#123;type:ObjectId, ref:&quot;Article&quot;&amp;#125;,  from: &amp;#123;type:ObjectId, ref:&quot;User&quot;&amp;#125;,  meta: &amp;#123;">
+<meta property="og:description" content="populate123456789101112131415var commentSchema = new Schema(&amp;#123;  content: String,  article: &amp;#123;type:ObjectId, ref:&quot;Article&quot;&amp;#125;,  from: &amp;#123;type:ObjectId, ref:&quot;User&quot;&amp;#125;,  meta: &amp;#123;">
 <meta property="og:image" content="http://yoursite.com/images/populate1.png">
 <meta property="og:image" content="http://yoursite.com/images/populate2.png">
 <meta property="og:image" content="http://yoursite.com/images/populate3.png">
 <meta property="og:image" content="http://yoursite.com/images/populate4.png">
 <meta property="og:image" content="http://yoursite.com/images/populate5.png">
 <meta property="og:image" content="http://yoursite.com/images/populate6.png">
-<meta property="og:updated_time" content="2017-10-16T09:01:48.346Z">
+<meta property="og:updated_time" content="2017-10-16T09:07:36.913Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="populate">
-<meta name="twitter:description" content="##populate 123456789101112131415var commentSchema = new Schema(&amp;#123;  content: String,  article: &amp;#123;type:ObjectId, ref:&quot;Article&quot;&amp;#125;,  from: &amp;#123;type:ObjectId, ref:&quot;User&quot;&amp;#125;,  meta: &amp;#123;">
+<meta name="twitter:description" content="populate123456789101112131415var commentSchema = new Schema(&amp;#123;  content: String,  article: &amp;#123;type:ObjectId, ref:&quot;Article&quot;&amp;#125;,  from: &amp;#123;type:ObjectId, ref:&quot;User&quot;&amp;#125;,  meta: &amp;#123;">
 <meta name="twitter:image" content="http://yoursite.com/images/populate1.png">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -154,6 +154,13 @@
 
 <div class="container body-wrap">
     
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#populate"><span class="post-toc-number">1.</span> <span class="post-toc-text">populate</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#解析"><span class="post-toc-number">2.</span> <span class="post-toc-text">解析</span></a></li></ol>
+        </nav>
+    </aside>
+    
 <article id="post-populate"
   class="post-article article-type-post fade" itemprop="blogPost">
 
@@ -173,20 +180,19 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>##populate</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> commentSchema = <span class="keyword">new</span> Schema(&#123;</div><div class="line">  content: <span class="built_in">String</span>,</div><div class="line">  article: &#123;<span class="attr">type</span>:ObjectId, <span class="attr">ref</span>:<span class="string">"Article"</span>&#125;,</div><div class="line">  <span class="keyword">from</span>: &#123;<span class="attr">type</span>:ObjectId, <span class="attr">ref</span>:<span class="string">"User"</span>&#125;,</div><div class="line">  meta: &#123;</div><div class="line">    createAt: &#123;</div><div class="line">      type: <span class="built_in">Date</span>,</div><div class="line">      <span class="keyword">default</span>: <span class="built_in">Date</span>.now()</div><div class="line">    &#125;,</div><div class="line">    updateAt:&#123;</div><div class="line">      type: <span class="built_in">Date</span>,</div><div class="line">      <span class="keyword">default</span>: <span class="built_in">Date</span>.now()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+            <h2 id="populate"><a href="#populate" class="headerlink" title="populate"></a>populate</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> commentSchema = <span class="keyword">new</span> Schema(&#123;</div><div class="line">  content: <span class="built_in">String</span>,</div><div class="line">  article: &#123;<span class="attr">type</span>:ObjectId, <span class="attr">ref</span>:<span class="string">"Article"</span>&#125;,</div><div class="line">  <span class="keyword">from</span>: &#123;<span class="attr">type</span>:ObjectId, <span class="attr">ref</span>:<span class="string">"User"</span>&#125;,</div><div class="line">  meta: &#123;</div><div class="line">    createAt: &#123;</div><div class="line">      type: <span class="built_in">Date</span>,</div><div class="line">      <span class="keyword">default</span>: <span class="built_in">Date</span>.now()</div><div class="line">    &#125;,</div><div class="line">    updateAt:&#123;</div><div class="line">      type: <span class="built_in">Date</span>,</div><div class="line">      <span class="keyword">default</span>: <span class="built_in">Date</span>.now()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>一开始不是很明白，觉得为什么要用populate，还有ref关联其他的表(Schema)，觉得直接保存数据像这样</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> UserSchema = <span class="keyword">new</span> mongoose.Schema(&#123;</div><div class="line">  name: &#123;</div><div class="line">    unique: <span class="literal">true</span>,</div><div class="line">    type: <span class="built_in">String</span></div><div class="line">  &#125;,</div><div class="line">  password: <span class="built_in">String</span>,</div><div class="line">  meta: &#123;</div><div class="line">    createAt: &#123;</div><div class="line">      type: <span class="built_in">Date</span>,</div><div class="line">      <span class="keyword">default</span>: <span class="built_in">Date</span>.now()</div><div class="line">    &#125;,</div><div class="line">    updateAt: &#123;</div><div class="line">      type: <span class="built_in">String</span>,</div><div class="line">      <span class="keyword">default</span>: <span class="built_in">Date</span>.now()</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>然后再查找<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Comment</div><div class="line">        .find(&#123;<span class="attr">article</span>:id&#125;)</div></pre></td></tr></table></figure></p>
 <p>之后发现，比如这留言<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">orm.for-horzotal(method=<span class="string">"POST"</span>,action=<span class="string">"/article/#&#123;article._id&#125;"</span>)</div><div class="line">            input(type=<span class="string">"hidden"</span>, name=<span class="string">"comment[article]"</span>, value=<span class="string">"#&#123;article._id&#125;"</span>)</div><div class="line">            input(type=<span class="string">"hidden"</span>, name=<span class="string">"comment[from]"</span>, value=<span class="string">"#&#123;user._id&#125;"</span>) </div><div class="line">            textarea(name=<span class="string">"comment[content]"</span>)</div><div class="line">            .row.text-center</div><div class="line">              button.btn.btn-primary(type=<span class="string">"submit"</span>) 提交</div><div class="line"></div><div class="line"></div><div class="line">app.post(<span class="string">'/article/:id'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> _comment = req.body.comment</div><div class="line">    <span class="keyword">var</span> articleId = req.params.id</div><div class="line">    <span class="keyword">var</span> comment = <span class="keyword">new</span> Comment(_comment)</div><div class="line">    <span class="built_in">console</span>.log(_comment)</div><div class="line">    comment.save(<span class="function"><span class="keyword">function</span>(<span class="params">err,comments</span>)</span>&#123;</div><div class="line">      <span class="keyword">if</span>(err)&#123;</div><div class="line">        <span class="built_in">console</span>.log(err)</div><div class="line">      &#125;</div><div class="line">      res.redirect(<span class="string">'/article/'</span>+ articleId)</div><div class="line">    &#125;)</div><div class="line">  &#125;)</div></pre></td></tr></table></figure></p>
-<figure class="image-bubble">
+<p>它只是保存一个关联到其它表的占位，或者说桥梁<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/images/populate1.png" alt="p1" title="">
                 </div>
                 <div class="image-caption">p1</div>
-            </figure>
-<p>##解析<br>这里是个数组<br><figure class="image-bubble">
+            </figure><br>然后我们就可以根据这个桥梁去查找其他表，获取我们需要的其他表的数据<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Comment</div><div class="line">        .find(&#123;<span class="attr">article</span>:id&#125;)</div><div class="line">        .populate(<span class="string">'from'</span>,<span class="string">'name'</span>)</div><div class="line">        .exec(<span class="function"><span class="keyword">function</span>(<span class="params">err,comments</span>)</span>&#123;</div><div class="line">          <span class="keyword">if</span>(err)&#123;</div><div class="line">            <span class="built_in">console</span>.log(err)</div><div class="line">          &#125;</div><div class="line">          <span class="built_in">console</span>.log(<span class="string">'评论'</span>+ comments +<span class="string">"!"</span>)</div><div class="line">          res.render(<span class="string">'comment'</span>,&#123;</div><div class="line">            article: article,</div><div class="line">            comment: comments</div><div class="line">          &#125;)</div><div class="line">        &#125;)</div></pre></td></tr></table></figure></p>
+<h2 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h2><p>这里是个数组<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/images/populate2.png" alt="p2" title="">
@@ -226,7 +232,7 @@
     <div class="content">
         
 <span class="post-time">
-    最後更新時間：<time datetime="2017-10-16T09:01:48.346Z" itemprop="dateUpdated">2017-10-16 17:01:48</time>
+    最后更新时间：<time datetime="2017-10-16T09:07:36.913Z" itemprop="dateUpdated">2017-10-16 17:07:36</time>
 </span><br>
 
 
@@ -383,7 +389,7 @@
 
         <p>
             
-            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
