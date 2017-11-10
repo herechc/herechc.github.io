@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="httpHTTP由两部分组成：请求和响应。当你在Web浏览器中输入一个URL时，浏览器将根据你的要求创建并发送请求，该请求包含所输入的URL以及一些与浏览器本身相关的信息。当服务器收到这个请求时将返回一个响应，该响应包括与该请求相关的信息以及位于指定URL（如果有的话）的数据。直到浏览器解析该响应并显示出网页（或其他资源）为止。在HTTP请求中，第一行必须是一个请求行（request line），">
 <meta property="og:image" content="http://yoursite.com/images/http.png">
-<meta property="og:updated_time" content="2017-09-30T01:43:51.364Z">
+<meta property="og:updated_time" content="2017-11-10T01:52:25.640Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http与axios">
 <meta name="twitter:description" content="httpHTTP由两部分组成：请求和响应。当你在Web浏览器中输入一个URL时，浏览器将根据你的要求创建并发送请求，该请求包含所输入的URL以及一些与浏览器本身相关的信息。当服务器收到这个请求时将返回一个响应，该响应包括与该请求相关的信息以及位于指定URL（如果有的话）的数据。直到浏览器解析该响应并显示出网页（或其他资源）为止。在HTTP请求中，第一行必须是一个请求行（request line），">
@@ -113,7 +113,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -186,7 +186,7 @@
 <p>###axios</p>
 <p><a href="https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/" target="_blank" rel="external">maybe</a></p>
 <p>##http与axios</p>
-<p>所以结合一起<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//get请求</span></div><div class="line">  getmembers: <span class="function"><span class="params">data</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> axios.get(adminPort + <span class="string">"/members"</span>, &#123;<span class="attr">params</span>: data&#125;)</div><div class="line">  &#125;</div><div class="line"><span class="comment">//post请求</span></div><div class="line">  reviseSale:<span class="function">(<span class="params">id,data</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> axios.post(adminPort + <span class="string">'/members/sale/'</span> + id, qs.stringify(data))</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>所以结合一起<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//get请求</span></div><div class="line">  getmembers: <span class="function"><span class="params">data</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> axios.get(adminPort + <span class="string">"/members"</span>, &#123;<span class="attr">params</span>: data&#125;)</div><div class="line">  &#125;</div><div class="line"><span class="comment">//post请求</span></div><div class="line">  reviseSale:<span class="function">(<span class="params">id,data</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> axios.post(adminPort + <span class="string">'/members/sale/'</span> + id, qs.stringify(data))</div><div class="line">  &#125;</div><div class="line"><span class="comment">// 上传文件 multipart/form-data</span></div><div class="line">  uploadcer:<span class="function"><span class="params">file</span> =&gt;</span>&#123;</div><div class="line">    <span class="keyword">return</span> axios.post(adminPort + <span class="string">"/fence/safesettings/uploadcer"</span>,file)</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
 <p>#####参考<br><a href="http://blog.csdn.net/kfanning/article/details/6062118/" target="_blank" rel="external">http</a></p>
 
         </div>
@@ -195,7 +195,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-09-30T01:43:51.364Z" itemprop="dateUpdated">2017-09-30 09:43:51</time>
+    最后更新时间：<time datetime="2017-11-10T01:52:25.640Z" itemprop="dateUpdated">2017-11-10 09:52:25</time>
 </span><br>
 
 
@@ -359,7 +359,7 @@
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
