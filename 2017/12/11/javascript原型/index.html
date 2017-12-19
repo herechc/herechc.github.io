@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://yoursite.com/images/prototype4.png">
 <meta property="og:image" content="http://yoursite.com/images/prototype5.png">
 <meta property="og:image" content="http://yoursite.com/images/prototype6.png">
-<meta property="og:updated_time" content="2017-12-11T07:20:39.471Z">
+<meta property="og:updated_time" content="2017-12-19T07:10:17.800Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript原型">
 <meta name="twitter:description" content="&quot;pro1&quot;">
@@ -118,7 +118,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -157,7 +157,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">1.</span> <span class="post-toc-text">参考</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-对象是函数创建的，而函数却又是一种对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.对象是函数创建的，而函数却又是一种对象</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">2.</span> <span class="post-toc-text">参考</span></a></li></ol>
         </nav>
     </aside>
     
@@ -215,13 +215,19 @@
                 </div>
                 <div class="image-caption">"pro5"</div>
             </figure>
-<p>写插件的方法，最后一行那样写的话，不管new出多少个出来都能用这个方法<br><figure class="image-bubble">
+<p>写插件的方法，最后一行那样写的话，不管new出多少个出来都能用这个方法<br>每个函数function都有一个prototype，即原型。这里再加一句话——每个对象都有一个<strong>proto</strong>，可成为隐式原型。<br>在说明“Object prototype”之前，先说一下自定义函数的prototype。自定义函数的prototype本质上就是和 var obj = {} 是一样的，都是被Object创建，所以它的<strong>proto</strong>指向的就是Object.prototype。<br>但是Object.prototype确实一个特例——它的<strong>proto</strong>指向的是null</p>
+<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/images/prototype6.png" alt="" pro6""="" title="">
                 </div>
                 <div class="image-caption">"pro6"</div>
-            </figure></p>
+            </figure>
+<h2 id="1-对象是函数创建的，而函数却又是一种对象"><a href="#1-对象是函数创建的，而函数却又是一种对象" class="headerlink" title="1.对象是函数创建的，而函数却又是一种对象"></a>1.对象是函数创建的，而函数却又是一种对象</h2><p>首先看谁创建了函数<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">x,y</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> x+y</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(fn(<span class="number">10</span>,<span class="number">20</span>))</div><div class="line"></div><div class="line"><span class="keyword">var</span> fn1 = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"x"</span>, <span class="string">"y"</span>, <span class="string">"return x+y"</span>)</div><div class="line"><span class="built_in">console</span>.log(fn1(<span class="number">5</span>,<span class="number">6</span>))</div></pre></td></tr></table></figure></p>
+<p>从上面代码可以看出函数是被new Funciton创建的<br>根据：每个函数function都有一个prototype，即原型。这里再加一句话——每个对象都有一个<strong>proto</strong>，可成为隐式原型。<br>所以function是Function函数new出来的对象，就会出现Object.<strong>proto</strong> === Function.prototype</p>
+<p>自定义函数Foo.<strong>proto</strong>指向Function.prototype，Object.<strong>proto</strong>指向Function.prototype，唉，怎么还有一个……Function.<strong>proto</strong>指向Function.prototype？这不成了循环引用了？</p>
+<p>对！是一个环形结构。</p>
+<p>其实稍微想一下就明白了。Function也是一个函数，函数是一种对象，也有<strong>proto</strong>属性。既然是函数，那么它一定是被Function创建。所以——Function是被自身创建的。所以它的<strong>proto</strong>指向了自身的Prototype。</p>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://www.cnblogs.com/wangfupeng1988/p/4001284.html" target="_blank" rel="external">参考</a></p>
 
         </div>
@@ -230,7 +236,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-12-11T07:20:39.471Z" itemprop="dateUpdated">2017-12-11 15:20:39</time>
+    最後更新時間：<time datetime="2017-12-19T07:10:17.800Z" itemprop="dateUpdated">2017-12-19 15:10:17</time>
 </span><br>
 
 
@@ -394,7 +400,7 @@
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
         </p>
     </div>
     <div class="bottom">
