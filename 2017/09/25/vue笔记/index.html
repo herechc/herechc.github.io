@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="vue">
-    <meta name="description" content="1.定义classname12345678:class=&apos;[&quot;from-btn-toggle&quot;,&amp;#123;&quot;cur&quot;:moreInfoVisible&amp;#125;]&apos;el-menu-item v-for=&quot;item in category&quot; :key=&quot;item.key&quot; :index=&quot;item.id&quot;&amp;gt;   &amp;lt;i :class=&quot;[&apos;el-icon&apos;, `icon_$&amp;#123;i">
+    <meta name="description" content="1.定义classname123456789:class=&apos;[&quot;from-btn-toggle&quot;,&amp;#123;&quot;cur&quot;:moreInfoVisible&amp;#125;]&apos;:class=&quot;[!ok &amp;amp;&amp;amp; !cancel ? &apos;mt-dialog-no-footer&apos; : &apos;&apos;]&quot;el-menu-item v-for=&quot;item in category&quot; :key=&quot;item.key&quot;">
 <meta name="keywords" content="vue">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue笔记">
 <meta property="og:url" content="http://yoursite.com/2017/09/25/vue笔记/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="1.定义classname12345678:class=&apos;[&quot;from-btn-toggle&quot;,&amp;#123;&quot;cur&quot;:moreInfoVisible&amp;#125;]&apos;el-menu-item v-for=&quot;item in category&quot; :key=&quot;item.key&quot; :index=&quot;item.id&quot;&amp;gt;   &amp;lt;i :class=&quot;[&apos;el-icon&apos;, `icon_$&amp;#123;i">
+<meta property="og:description" content="1.定义classname123456789:class=&apos;[&quot;from-btn-toggle&quot;,&amp;#123;&quot;cur&quot;:moreInfoVisible&amp;#125;]&apos;:class=&quot;[!ok &amp;amp;&amp;amp; !cancel ? &apos;mt-dialog-no-footer&apos; : &apos;&apos;]&quot;el-menu-item v-for=&quot;item in category&quot; :key=&quot;item.key&quot;">
 <meta property="og:image" content="http://yoursite.com/images/vue1.png">
-<meta property="og:updated_time" content="2017-12-11T07:49:58.944Z">
+<meta property="og:updated_time" content="2017-12-25T03:46:14.161Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue笔记">
-<meta name="twitter:description" content="1.定义classname12345678:class=&apos;[&quot;from-btn-toggle&quot;,&amp;#123;&quot;cur&quot;:moreInfoVisible&amp;#125;]&apos;el-menu-item v-for=&quot;item in category&quot; :key=&quot;item.key&quot; :index=&quot;item.id&quot;&amp;gt;   &amp;lt;i :class=&quot;[&apos;el-icon&apos;, `icon_$&amp;#123;i">
+<meta name="twitter:description" content="1.定义classname123456789:class=&apos;[&quot;from-btn-toggle&quot;,&amp;#123;&quot;cur&quot;:moreInfoVisible&amp;#125;]&apos;:class=&quot;[!ok &amp;amp;&amp;amp; !cancel ? &apos;mt-dialog-no-footer&apos; : &apos;&apos;]&quot;el-menu-item v-for=&quot;item in category&quot; :key=&quot;item.key&quot;">
 <meta name="twitter:image" content="http://yoursite.com/images/vue1.png">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -113,7 +113,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -152,7 +152,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-定义classname"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.定义classname</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-mapStage"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.mapStage</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-emit-与-on"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.$emit 与 $on</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-定义classname"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.定义classname</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-mapStage"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.mapStage</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-emit-与-on"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.$emit 与 $on</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-调用组件的方法"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.调用组件的方法</span></a></li></ol>
         </nav>
     </aside>
     
@@ -175,20 +175,21 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="1-定义classname"><a href="#1-定义classname" class="headerlink" title="1.定义classname"></a>1.定义classname</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">:class='["from-btn-toggle",&#123;"cur":moreInfoVisible&#125;]'</div><div class="line"></div><div class="line"></div><div class="line">el-menu-item v-for="item in category" :key="item.key" :index="item.id"&gt;</div><div class="line">   &lt;i :class="['el-icon', `icon_$&#123;item.id&#125;`]"&gt;&lt;/i&gt;&#123;&#123;item.title&#125;&#125;</div><div class="line">&lt;/el-menu-item&gt;</div></pre></td></tr></table></figure>
+            <h2 id="1-定义classname"><a href="#1-定义classname" class="headerlink" title="1.定义classname"></a>1.定义classname</h2><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">:class='["from-btn-toggle",&#123;"cur":moreInfoVisible&#125;]'</div><div class="line"></div><div class="line">:class="[!ok &amp;&amp; !cancel ? 'mt-dialog-no-footer' : '']"</div><div class="line"></div><div class="line">el-menu-item v-for="item in category" :key="item.key" :index="item.id"&gt;</div><div class="line">   &lt;i :class="['el-icon', `icon_$&#123;item.id&#125;`]"&gt;&lt;/i&gt;&#123;&#123;item.title&#125;&#125;</div><div class="line">&lt;/el-menu-item&gt;</div></pre></td></tr></table></figure>
 <h2 id="2-mapStage"><a href="#2-mapStage" class="headerlink" title="2.mapStage"></a>2.mapStage</h2><p>mapstage相当于一个映射</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">computed: mapState(&#123; </div><div class="line">  count: <span class="string">'numb'</span>,  <span class="comment">//count等于别的组件state的numb</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p><em>参考:</em><br><a href="http://blog.csdn.net/a641832648/article/details/62233213" target="_blank" rel="external">http://blog.csdn.net/a641832648/article/details/62233213</a></p>
 <h2 id="3-emit-与-on"><a href="#3-emit-与-on" class="headerlink" title="3.$emit 与 $on"></a>3.$emit 与 $on</h2><p>  本模板里要用 this.$on this.$emit ,而<br>  <img src="/images/vue1.png" alt="&quot;vue&quot;"></p>
 <p><em>example</em></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//main.js</span></div><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  el: <span class="string">'#app'</span>,</div><div class="line">  router,</div><div class="line">  store,</div><div class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App),</div><div class="line">  data: &#123;</div><div class="line">    eventHub: <span class="keyword">new</span> Vue()</div><div class="line">  &#125;</div><div class="line">&#125;)</div><div class="line"><span class="comment">// tab.vue</span></div><div class="line">mounted()&#123;</div><div class="line">  	<span class="keyword">this</span>.$root.eventHub.$on(<span class="string">'cartCount'</span>,(cartCount)=&gt;&#123;</div><div class="line"></div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//  cart.vue</span></div><div class="line">mounted()&#123;</div><div class="line">  <span class="keyword">this</span>.$root.eventHub.$emit(<span class="string">'cartCount'</span>, <span class="number">-1</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="4-调用组件的方法"><a href="#4-调用组件的方法" class="headerlink" title="4.调用组件的方法"></a>4.调用组件的方法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span></div><div class="line">&lt;coo-dialog :visible.sync=<span class="string">"visible"</span>&gt; &lt;/coo-dialog&gt;</div><div class="line"></div><div class="line">2.</div><div class="line">&lt;cl-alert ref="clalert"&gt;&lt;/cl-alert&gt;</div><div class="line">this.$refs.clalert.show()</div></pre></td></tr></table></figure>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最後更新時間：<time datetime="2017-12-11T07:49:58.944Z" itemprop="dateUpdated">2017-12-11 15:49:58</time>
+    Last updated: <time datetime="2017-12-25T03:46:14.161Z" itemprop="dateUpdated">2017-12-25 11:46:14</time>
 </span><br>
 
 
@@ -352,7 +353,7 @@
 
         <p>
             
-            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
