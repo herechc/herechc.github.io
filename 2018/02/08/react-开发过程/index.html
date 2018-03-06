@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>react 开发过程 | herec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="react">
+    <meta name="description" content="0.淘宝镜像可以使用 n 或者 nvm 来管理node版本 npm npmjs和aws国内访问比较慢，可以换淘宝的镜像源，这里在项目根目录建一个.npmrc文件 1234phantomjs_cdnurl=http://cnpmjs.org/downloadssass_binary_site=https://npm.taobao.org/mirrors/node-sass/registry=http">
+<meta name="keywords" content="react">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react 开发过程">
+<meta property="og:url" content="http://yoursite.com/2018/02/08/react-开发过程/index.html">
+<meta property="og:site_name" content="herec">
+<meta property="og:description" content="0.淘宝镜像可以使用 n 或者 nvm 来管理node版本 npm npmjs和aws国内访问比较慢，可以换淘宝的镜像源，这里在项目根目录建一个.npmrc文件 1234phantomjs_cdnurl=http://cnpmjs.org/downloadssass_binary_site=https://npm.taobao.org/mirrors/node-sass/registry=http">
+<meta property="og:image" content="https://github.com/bailicangdu/react-pxq/blob/master/config/webpack.config.dev.js">
+<meta property="og:image" content="https://github.com/bailicangdu/react-pxq/blob/master/config/webpack.config.dev.js">
+<meta property="og:image" content="https://zhuanlan.zhihu.com/p/29151704)">
+<meta property="og:image" content="https://segmentfault.com/a/1190000008853805">
+<meta property="og:updated_time" content="2018-02-09T07:12:45.369Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react 开发过程">
+<meta name="twitter:description" content="0.淘宝镜像可以使用 n 或者 nvm 来管理node版本 npm npmjs和aws国内访问比较慢，可以换淘宝的镜像源，这里在项目根目录建一个.npmrc文件 1234phantomjs_cdnurl=http://cnpmjs.org/downloadssass_binary_site=https://npm.taobao.org/mirrors/node-sass/registry=http">
+<meta name="twitter:image" content="https://github.com/bailicangdu/react-pxq/blob/master/config/webpack.config.dev.js">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">herec</h5>
+          <a href="mailto:453288875@qq.com" title="453288875@qq.com" class="mail">453288875@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/herec" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/1955831145" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">react 开发过程</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">react 开发过程</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-02-08T01:58:30.000Z" itemprop="datePublished" class="page-time">
+  2018-02-08
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#0-淘宝镜像"><span class="post-toc-number">1.</span> <span class="post-toc-text">0.淘宝镜像</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-crate-react-app"><span class="post-toc-number">2.</span> <span class="post-toc-text">1.crate-react-app</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-移出react-scripts"><span class="post-toc-number">3.</span> <span class="post-toc-text">2.移出react-scripts</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-添加懒加载"><span class="post-toc-number">4.</span> <span class="post-toc-text">3.添加懒加载</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-create-react-app-npm-run-eject后没有-devDependencies"><span class="post-toc-number">5.</span> <span class="post-toc-text">4.create-react-app npm run eject后没有 devDependencies</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-webpack配置"><span class="post-toc-number">6.</span> <span class="post-toc-text">5.webpack配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#0-webpack-config-dev"><span class="post-toc-number">6.0.1.</span> <span class="post-toc-text">0.webpack.config.dev</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-webpack-config-prod"><span class="post-toc-number">6.0.2.</span> <span class="post-toc-text">1.webpack.config.prod</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-添加-babelrc-与-eslintrc-js-eslintignore"><span class="post-toc-number">6.0.3.</span> <span class="post-toc-text">2.添加.babelrc 与 .eslintrc.js, .eslintignore</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-根据需求修改src文件"><span class="post-toc-number">7.</span> <span class="post-toc-text">6.根据需求修改src文件</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-react-开发过程"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">react 开发过程</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-02-08 09:58:30" datetime="2018-02-08T01:58:30.000Z"  itemprop="datePublished">2018-02-08</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="0-淘宝镜像"><a href="#0-淘宝镜像" class="headerlink" title="0.淘宝镜像"></a>0.淘宝镜像</h2><p>可以使用 n 或者 nvm 来管理node版本 npm npmjs和aws国内访问比较慢，可以换淘宝的镜像源，这里在项目根目录建一个.npmrc文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">phantomjs_cdnurl=http:<span class="comment">//cnpmjs.org/downloads</span></div><div class="line">sass_binary_site=https:<span class="comment">//npm.taobao.org/mirrors/node-sass/</span></div><div class="line">registry=https:<span class="comment">//registry.npm.taobao.org</span></div></pre></td></tr></table></figure>
+<p>也可以使用 nrm 切换npm源，很方便。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">$ npm install -g nrm</div><div class="line">$ nrm ls</div><div class="line"></div><div class="line">* npm -----  https:<span class="comment">//registry.npmjs.org/</span></div><div class="line">  cnpm ----  http:<span class="comment">//r.cnpmjs.org/</span></div><div class="line">  taobao --  https:<span class="comment">//registry.npm.taobao.org/</span></div><div class="line">  nj ------  https:<span class="comment">//registry.nodejitsu.com/</span></div><div class="line">  rednpm -- http:<span class="comment">//registry.mirror.cqupt.edu.cn</span></div><div class="line">  skimdb -- https:<span class="comment">//skimdb.npmjs.com/registry</span></div><div class="line">  </div><div class="line">$ nrm use taobao</div></pre></td></tr></table></figure>
+<h2 id="1-crate-react-app"><a href="#1-crate-react-app" class="headerlink" title="1.crate-react-app"></a>1.crate-react-app</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">npm install -g create-react-app</div><div class="line">create-react-app my-app</div><div class="line">cd my-app/</div></pre></td></tr></table></figure>
+<h2 id="2-移出react-scripts"><a href="#2-移出react-scripts" class="headerlink" title="2.移出react-scripts"></a>2.移出react-scripts</h2><p>把node_modules文件里面的react-scripts文件夹的bin,scripts,config文件出放根目录<br>修改package.json文件的script</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="string">"scripts"</span>: &#123;</div><div class="line">    <span class="string">"start"</span>: <span class="string">"node scripts/start.js"</span>,</div><div class="line">    <span class="string">"build"</span>: <span class="string">"node scripts/build.js"</span>,</div><div class="line">    <span class="string">"test"</span>: <span class="string">"node scripts/test.js --env=jsdom"</span>,</div><div class="line">    <span class="string">"eject"</span>: <span class="string">"node scripts/eject.js"</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h2 id="3-添加懒加载"><a href="#3-添加懒加载" class="headerlink" title="3.添加懒加载"></a>3.添加懒加载</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/*--asyncComponent--*/</span></div><div class="line"></div><div class="line"><span class="keyword">import</span> React, &#123; Component &#125; <span class="keyword">from</span> <span class="string">"react"</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">asyncComponent</span>(<span class="params">importComponent</span>) </span>&#123;</div><div class="line">  <span class="class"><span class="keyword">class</span> <span class="title">AsyncComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">      <span class="keyword">super</span>(props);</div><div class="line"></div><div class="line">      <span class="keyword">this</span>.state = &#123;</div><div class="line">        component: <span class="literal">null</span></div><div class="line">      &#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">async</span> componentDidMount() &#123;</div><div class="line">      <span class="keyword">const</span> &#123; <span class="attr">default</span>: component &#125; = <span class="keyword">await</span> importComponent();</div><div class="line"></div><div class="line">      <span class="keyword">this</span>.setState(&#123;component&#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">      <span class="keyword">const</span> C = <span class="keyword">this</span>.state.component;</div><div class="line"></div><div class="line">      <span class="keyword">return</span> C ? <span class="xml"><span class="tag">&lt;<span class="name">C</span> &#123;<span class="attr">...this.props</span>&#125; /&gt;</span> : null;</span></div><div class="line"><span class="xml">    &#125;</span></div><div class="line"><span class="xml">  &#125;</span></div><div class="line"><span class="xml"></span></div><div class="line"><span class="xml">  return AsyncComponent;</span></div><div class="line"><span class="xml">&#125;</span></div></pre></td></tr></table></figure>
+<h2 id="4-create-react-app-npm-run-eject后没有-devDependencies"><a href="#4-create-react-app-npm-run-eject后没有-devDependencies" class="headerlink" title="4.create-react-app npm run eject后没有 devDependencies"></a>4.create-react-app npm run eject后没有 devDependencies</h2><p><a href="https://www.v2ex.com/t/372626" target="_blank" rel="external">https://www.v2ex.com/t/372626</a></p>
+<!----已下为eject后------>
+<h2 id="5-webpack配置"><a href="#5-webpack配置" class="headerlink" title="5.webpack配置"></a>5.webpack配置</h2><h4 id="0-webpack-config-dev"><a href="#0-webpack-config-dev" class="headerlink" title="0.webpack.config.dev"></a>0.webpack.config.dev</h4><p>1.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">resolve</span> (<span class="params">dir</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> path.join(__dirname, <span class="string">'..'</span>, dir)</div><div class="line">&#125;</div><div class="line"></div><div class="line">resolve:&#123;</div><div class="line">  alias:&#123;</div><div class="line">    <span class="string">'@'</span>: resolve(<span class="string">'src'</span>),</div><div class="line">    <span class="string">'src'</span>: path.resolve(__dirname, <span class="string">'../src'</span>),</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2.注册掉首个test: /.(js|jsx|mjs)$/<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">替换oneof里面的 /\.(js|jsx|mjs)$/</div><div class="line"></div><div class="line">npm i babel-plugin-transform-decorators-legacy</div><div class="line"></div><div class="line">use: [</div><div class="line">    &#123;</div><div class="line">      loader: <span class="built_in">require</span>.resolve(<span class="string">'babel-loader'</span>),</div><div class="line">      options: &#123;</div><div class="line">        <span class="comment">// @remove-on-eject-begin</span></div><div class="line">        babelrc: <span class="literal">true</span>,</div><div class="line">        presets: [<span class="built_in">require</span>.resolve(<span class="string">'babel-preset-react-app'</span>)],</div><div class="line">        <span class="comment">// @remove-on-eject-end</span></div><div class="line">        <span class="comment">// This is a feature of `babel-loader` for webpack (not Babel itself).</span></div><div class="line">        <span class="comment">// It enables caching results in ./node_modules/.cache/babel-loader/</span></div><div class="line">        <span class="comment">// directory for faster rebuilds.</span></div><div class="line">        cacheDirectory: <span class="literal">true</span>,</div><div class="line">        plugins: [<span class="string">"transform-decorators-legacy"</span>],</div><div class="line">      &#125;,</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      loader: <span class="built_in">require</span>.resolve(<span class="string">'eslint-loader'</span>),</div><div class="line">      options: &#123;</div><div class="line">        formatter: eslintFormatter,</div><div class="line">        eslintPath: <span class="built_in">require</span>.resolve(<span class="string">'eslint'</span>),</div><div class="line">        <span class="comment">// @remove-on-eject-begin</span></div><div class="line">        <span class="comment">// <span class="doctag">TODO:</span> consider separate config for production,</span></div><div class="line">        <span class="comment">// e.g. to enable no-console and no-debugger only in production.</span></div><div class="line">        baseConfig: &#123;</div><div class="line">          extends: [<span class="built_in">require</span>.resolve(<span class="string">'eslint-config-react-app'</span>)],</div><div class="line">        &#125;,</div><div class="line">        ignore: <span class="literal">false</span>,</div><div class="line">        useEslintrc: <span class="literal">false</span>,</div><div class="line">        <span class="comment">// @remove-on-eject-end</span></div><div class="line">      &#125;,</div><div class="line">    &#125;,</div><div class="line">  </div><div class="line">  ]</div></pre></td></tr></table></figure></p>
+<p>3.使用sass<br>npm i node-sass sass-loader -S<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  test:<span class="regexp">/\.(css|less)$/</span>,</div><div class="line">  use: [</div><div class="line">    <span class="built_in">require</span>.resolve(<span class="string">'style-loader'</span>),</div><div class="line">    &#123;</div><div class="line">      loader: <span class="built_in">require</span>.resolve(<span class="string">'css-loader'</span>),</div><div class="line">      options: &#123;</div><div class="line">        importLoaders: <span class="number">1</span>,</div><div class="line">      &#125;,</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      loader: <span class="built_in">require</span>.resolve(<span class="string">'postcss-loader'</span>),</div><div class="line">      options: &#123;</div><div class="line">        <span class="comment">// Necessary for external CSS imports to work</span></div><div class="line">        <span class="comment">// https://github.com/facebookincubator/create-react-app/issues/2677</span></div><div class="line">        ident: <span class="string">'postcss'</span>,</div><div class="line">        plugins: <span class="function"><span class="params">()</span> =&gt;</span> [</div><div class="line">          <span class="built_in">require</span>(<span class="string">'postcss-flexbugs-fixes'</span>),</div><div class="line">          autoprefixer(&#123;</div><div class="line">            browsers: [</div><div class="line">              <span class="string">'&gt;1%'</span>,</div><div class="line">              <span class="string">'last 4 versions'</span>,</div><div class="line">              <span class="string">'Firefox ESR'</span>,</div><div class="line">              <span class="string">'not ie &lt; 9'</span>, <span class="comment">// React doesn't support IE8 anyway</span></div><div class="line">            ],</div><div class="line">            flexbox: <span class="string">'no-2009'</span>,</div><div class="line">          &#125;),</div><div class="line">          px2rem(&#123;<span class="attr">remUnit</span>: <span class="number">75</span>&#125;)<span class="comment">//设计稿根据750px(iphone6)</span></div><div class="line">        ],</div><div class="line">      &#125;,</div><div class="line">    &#125;,</div><div class="line">    &#123;</div><div class="line">      loader: <span class="built_in">require</span>.resolve(<span class="string">'less-loader'</span>)</div><div class="line">    &#125;,</div><div class="line">  ],</div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p>4.使用px2rem<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://github.com/bailicangdu/react-pxq/blob/master/config/webpack.config.dev.js" alt="参考" title="">
+                </div>
+                <div class="image-caption">参考</div>
+            </figure></p>
+<h4 id="1-webpack-config-prod"><a href="#1-webpack-config-prod" class="headerlink" title="1.webpack.config.prod"></a>1.webpack.config.prod</h4><p>0.首个test: /.(js|jsx|mjs)$/,替换<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">use: [</div><div class="line">    &#123;</div><div class="line">      loader: <span class="built_in">require</span>.resolve(<span class="string">'eslint-loader'</span>),</div><div class="line">      options: &#123;</div><div class="line">        formatter: eslintFormatter,</div><div class="line">        eslintPath: <span class="built_in">require</span>.resolve(<span class="string">'eslint'</span>),</div><div class="line">        <span class="comment">// @remove-on-eject-begin</span></div><div class="line">        <span class="comment">// <span class="doctag">TODO:</span> consider separate config for production,</span></div><div class="line">        <span class="comment">// e.g. to enable no-console and no-debugger only in production.</span></div><div class="line">        baseConfig: &#123;</div><div class="line">          extends: [<span class="built_in">require</span>.resolve(<span class="string">'eslint-config-react-app'</span>)],</div><div class="line">        &#125;,</div><div class="line">        ignore: <span class="literal">false</span>,</div><div class="line">        useEslintrc: <span class="literal">true</span>,</div><div class="line">        <span class="comment">// @remove-on-eject-end</span></div><div class="line">      &#125;,</div><div class="line">    &#125;,</div><div class="line">  ],</div></pre></td></tr></table></figure></p>
+<p>1.oneOf<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  test: <span class="regexp">/\.(js|jsx|mjs)$/</span>,</div><div class="line">  include: paths.appSrc,</div><div class="line">  loader: <span class="built_in">require</span>.resolve(<span class="string">'babel-loader'</span>),</div><div class="line">  options: &#123;</div><div class="line">    <span class="comment">// @remove-on-eject-begin</span></div><div class="line">    babelrc: <span class="literal">true</span>,</div><div class="line">    presets: [<span class="built_in">require</span>.resolve(<span class="string">'babel-preset-react-app'</span>)],</div><div class="line">    <span class="comment">// @remove-on-eject-end</span></div><div class="line">    compact: <span class="literal">true</span>,</div><div class="line">    plugins: [<span class="string">"transform-decorators-legacy"</span>],</div><div class="line">  &#125;,</div><div class="line">&#125;,</div></pre></td></tr></table></figure></p>
+<p>2.sass 同dev</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://github.com/bailicangdu/react-pxq/blob/master/config/webpack.config.dev.js" alt="参考" title="">
+                </div>
+                <div class="image-caption">参考</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://zhuanlan.zhihu.com/p/29151704)" alt="参考,babelrc" title="(babelrc,与跨域">
+                </div>
+                <div class="image-caption">(babelrc,与跨域</div>
+            </figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="https://segmentfault.com/a/1190000008853805" alt="参考,eslint" title="">
+                </div>
+                <div class="image-caption">参考,eslint</div>
+            </figure>
+<h4 id="2-添加-babelrc-与-eslintrc-js-eslintignore"><a href="#2-添加-babelrc-与-eslintrc-js-eslintignore" class="headerlink" title="2.添加.babelrc 与 .eslintrc.js, .eslintignore"></a>2.添加.babelrc 与 .eslintrc.js, .eslintignore</h4><h2 id="6-根据需求修改src文件"><a href="#6-根据需求修改src文件" class="headerlink" title="6.根据需求修改src文件"></a>6.根据需求修改src文件</h2><p>0.使用ant<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">npm i antd</div><div class="line"></div><div class="line">按需加载:使用 babel-plugin-<span class="keyword">import</span>(推荐,npm i babel-plugin-<span class="keyword">import</span>)</div><div class="line"><span class="comment">// .babelrc or babel-loader option</span></div><div class="line">&#123;</div><div class="line">  <span class="string">"plugins"</span>: [</div><div class="line">    [<span class="string">"import"</span>, &#123; <span class="string">"libraryName"</span>: <span class="string">"antd"</span>, <span class="string">"libraryDirectory"</span>: <span class="string">"es"</span>, <span class="string">"style"</span>: <span class="string">"css"</span> &#125;] <span class="comment">// `style: true` 会加载 less 文件</span></div><div class="line">  ]</div><div class="line">&#125;</div><div class="line"></div><div class="line">然后只需从 antd 引入模块即可，无需单独引入样式。等同于下面手动引入的方式。</div><div class="line"><span class="comment">// babel-plugin-import 会帮助你加载 JS 和 CSS</span></div><div class="line"><span class="keyword">import</span> &#123; DatePicker &#125; <span class="keyword">from</span> <span class="string">'antd'</span>;</div></pre></td></tr></table></figure></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-02-09T07:12:45.369Z" itemprop="dateUpdated">2018-02-09 15:12:45</time>
+</span><br>
+
+
+        
+        原始链接：<a href="/2018/02/08/react-开发过程/" target="_blank" rel="external">http://yoursite.com/2018/02/08/react-开发过程/</a>
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="herec">
+            herec
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/08/react-开发过程/&title=《react 开发过程》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/08/react-开发过程/&title=《react 开发过程》 — herec&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/08/react-开发过程/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《react 开发过程》 — herec&url=http://yoursite.com/2018/02/08/react-开发过程/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/08/react-开发过程/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/01/23/js中的计算的推算出公式/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">js中的计算的推算出公式</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢客官~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>herec &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/02/08/react-开发过程/&title=《react 开发过程》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/02/08/react-开发过程/&title=《react 开发过程》 — herec&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/02/08/react-开发过程/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《react 开发过程》 — herec&url=http://yoursite.com/2018/02/08/react-开发过程/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/02/08/react-开发过程/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/02/08/react-开发过程/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
