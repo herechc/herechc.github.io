@@ -20,17 +20,17 @@
     
     
     <meta name="keywords" content="linux">
-    <meta name="description" content="1. ls查看当前目录下的所存在的文件 2. 键盘Tab键补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全 cat 与 vim打开文件 shift + G查看文件的全部内容">
+    <meta name="description" content="1. ls查看当前目录下的所存在的文件 2. 键盘Tab键补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全 cat 与 vim打开文件 shift + G查看文件的全部内容 fdisk -l查看您的数据盘信息fdisk -l与df -h 都为拆看数据盘信息命令，但在没有分区和格式化数据盘之前，使用df -h 命令无法看到数据盘。 wq保存退出 pwd显示当前目">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux 命令">
 <meta property="og:url" content="http://yoursite.com/2018/07/05/linux-命令/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="1. ls查看当前目录下的所存在的文件 2. 键盘Tab键补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全 cat 与 vim打开文件 shift + G查看文件的全部内容">
-<meta property="og:updated_time" content="2018-07-05T06:11:23.648Z">
+<meta property="og:description" content="1. ls查看当前目录下的所存在的文件 2. 键盘Tab键补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全 cat 与 vim打开文件 shift + G查看文件的全部内容 fdisk -l查看您的数据盘信息fdisk -l与df -h 都为拆看数据盘信息命令，但在没有分区和格式化数据盘之前，使用df -h 命令无法看到数据盘。 wq保存退出 pwd显示当前目">
+<meta property="og:updated_time" content="2018-07-05T07:28:50.733Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 命令">
-<meta name="twitter:description" content="1. ls查看当前目录下的所存在的文件 2. 键盘Tab键补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全 cat 与 vim打开文件 shift + G查看文件的全部内容">
+<meta name="twitter:description" content="1. ls查看当前目录下的所存在的文件 2. 键盘Tab键补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全 cat 与 vim打开文件 shift + G查看文件的全部内容 fdisk -l查看您的数据盘信息fdisk -l与df -h 都为拆看数据盘信息命令，但在没有分区和格式化数据盘之前，使用df -h 命令无法看到数据盘。 wq保存退出 pwd显示当前目">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -111,7 +111,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -150,7 +150,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-ls"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. ls</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-键盘Tab键"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 键盘Tab键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cat-与-vim"><span class="post-toc-number">3.</span> <span class="post-toc-text">cat 与 vim</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#shift-G"><span class="post-toc-number">4.</span> <span class="post-toc-text">shift + G</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-ls"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. ls</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-键盘Tab键"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 键盘Tab键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cat-与-vim"><span class="post-toc-number">3.</span> <span class="post-toc-text">cat 与 vim</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#shift-G"><span class="post-toc-number">4.</span> <span class="post-toc-text">shift + G</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#fdisk-l"><span class="post-toc-number">5.</span> <span class="post-toc-text">fdisk -l</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#wq"><span class="post-toc-number">6.</span> <span class="post-toc-text">wq</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pwd"><span class="post-toc-number">7.</span> <span class="post-toc-text">pwd</span></a></li></ol>
         </nav>
     </aside>
     
@@ -177,6 +177,9 @@
 <h2 id="2-键盘Tab键"><a href="#2-键盘Tab键" class="headerlink" title="2. 键盘Tab键"></a>2. 键盘Tab键</h2><p>补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全</p>
 <h2 id="cat-与-vim"><a href="#cat-与-vim" class="headerlink" title="cat 与 vim"></a>cat 与 vim</h2><p>打开文件</p>
 <h2 id="shift-G"><a href="#shift-G" class="headerlink" title="shift + G"></a>shift + G</h2><p>查看文件的全部内容</p>
+<h2 id="fdisk-l"><a href="#fdisk-l" class="headerlink" title="fdisk -l"></a>fdisk -l</h2><p>查看您的数据盘信息<br>fdisk -l与df -h 都为拆看数据盘信息命令，但在没有分区和格式化数据盘之前，使用df -h 命令无法看到数据盘。</p>
+<h2 id="wq"><a href="#wq" class="headerlink" title="wq"></a>wq</h2><p>保存退出</p>
+<h2 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h2><p>显示当前目录名</p>
 
         </div>
 
@@ -184,7 +187,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-07-05T06:11:23.648Z" itemprop="dateUpdated">2018-07-05 14:11:23</time>
+    最後更新時間：<time datetime="2018-07-05T07:28:50.733Z" itemprop="dateUpdated">2018-07-05 15:28:50</time>
 </span><br>
 
 
@@ -341,7 +344,7 @@
 
         <p>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
         </p>
     </div>
     <div class="bottom">

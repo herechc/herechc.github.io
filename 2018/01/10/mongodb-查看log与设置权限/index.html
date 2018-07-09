@@ -20,13 +20,13 @@
     
     
     <meta name="keywords" content="mongodb">
-    <meta name="description" content="查看log                                                                                             mongdb_1">
+    <meta name="description" content="一.查看log                                                                                             mongdb_1">
 <meta name="keywords" content="mongodb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mongodb 查看log与设置权限">
 <meta property="og:url" content="http://yoursite.com/2018/01/10/mongodb-查看log与设置权限/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="查看log                                                                                             mongdb_1">
+<meta property="og:description" content="一.查看log                                                                                             mongdb_1">
 <meta property="og:image" content="http://yoursite.com/images/mongodb4.png">
 <meta property="og:image" content="http://yoursite.com/images/mongodb5.png">
 <meta property="og:image" content="http://yoursite.com/images/mongodb6.png">
@@ -39,10 +39,10 @@
 <meta property="og:image" content="http://yoursite.com/images/mongodb13.png">
 <meta property="og:image" content="http://yoursite.com/images/mongodb15.png">
 <meta property="og:image" content="http://yoursite.com/images/mongodb14.png">
-<meta property="og:updated_time" content="2018-01-10T06:22:57.593Z">
+<meta property="og:updated_time" content="2018-07-09T10:58:42.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongodb 查看log与设置权限">
-<meta name="twitter:description" content="查看log                                                                                             mongdb_1">
+<meta name="twitter:description" content="一.查看log                                                                                             mongdb_1">
 <meta name="twitter:image" content="http://yoursite.com/images/mongodb4.png">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -124,7 +124,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -163,7 +163,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看log"><span class="post-toc-number">1.</span> <span class="post-toc-text">查看log</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置权限"><span class="post-toc-number">2.</span> <span class="post-toc-text">设置权限</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-查看log"><span class="post-toc-number">1.</span> <span class="post-toc-text">一.查看log</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-设置权限"><span class="post-toc-number">2.</span> <span class="post-toc-text">二.设置权限</span></a></li></ol>
         </nav>
     </aside>
     
@@ -186,7 +186,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="查看log"><a href="#查看log" class="headerlink" title="查看log"></a>查看log</h2><p><img src="/images/mongodb4.png" alt="mongdb_1"><br><figure class="image-bubble">
+            <h1 id="一-查看log"><a href="#一-查看log" class="headerlink" title="一.查看log"></a>一.查看log</h1><p><img src="/images/mongodb4.png" alt="mongdb_1"><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/images/mongodb5.png" alt="mongdb_1" title="">
@@ -200,7 +200,7 @@
                 <div class="image-caption">mongdb_1</div>
             </figure></p>
 <p><a href="https://www.cnblogs.com/valor-xh/p/6369432.html" target="_blank" rel="external">参考</a>  (这个是设置方法是版本&lt;3.0)<br><a href="https://yq.aliyun.com/ask/7545?order=ctime" target="_blank" rel="external">参考</a><br><a href="https://docs.mongodb.com/manual/reference/method/db.createUser/#create-administrative-user-with-roles" target="_blank" rel="external">参考</a></p>
-<h2 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h2><p>0.先建帐号权限<br><figure class="image-bubble">
+<h1 id="二-设置权限"><a href="#二-设置权限" class="headerlink" title="二.设置权限"></a>二.设置权限</h1><p>###0.先建帐号权限<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/images/mongodb7.png" alt="mongdb_1" title="">
@@ -213,7 +213,7 @@
                 </div>
                 <div class="image-caption">mongdb_1</div>
             </figure></p>
-<p>1.<br><figure class="image-bubble">
+<p>###1.<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/images/mongodb9.png" alt="mongdb_1" title="">
@@ -239,7 +239,7 @@
                 </div>
                 <div class="image-caption">mongdb_1</div>
             </figure><br>两种都可以<br><a href="https://docs.mongodb.com/manual/reference/configuration-options/#core-options" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/configuration-options/#core-options</a></p>
-<p>2.然后先关闭mongod再开启<br><figure class="image-bubble">
+<p>###2.然后先关闭mongod再开启<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/images/mongodb13.png" alt="mongdb_1" title="">
@@ -258,6 +258,19 @@
                 </div>
                 <div class="image-caption">mongdb_1</div>
             </figure></p>
+<p>#三.详细设置权限流程</p>
+<p>###1.创建root账号权限<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt; db.dropAllUsers()</div><div class="line">NumberLong(<span class="number">0</span>)</div><div class="line">&gt; use admin</div><div class="line">switched to db admin</div><div class="line">&gt; db.createUser(&#123;<span class="attr">user</span>: <span class="string">"root"</span>,<span class="attr">pwd</span>:<span class="string">"xxxxxxxx"</span>,<span class="attr">roles</span>:[<span class="string">"userAdminAnyDatabase"</span>] &#125;)</div><div class="line">Successfully added user: &#123; <span class="string">"user"</span> : <span class="string">"root"</span>, <span class="string">"roles"</span> : [ <span class="string">"userAdminAnyDatabase"</span> ] &#125;</div></pre></td></tr></table></figure></p>
+<p>###2.创建某库(如mall)账号密码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt; use mall</div><div class="line">&gt; db.createUser(&#123;<span class="string">"user"</span>:<span class="string">"xxx"</span>, <span class="string">"pwd"</span>:<span class="string">"xxxxxxxx"</span>, <span class="attr">roles</span>:[<span class="string">"readWrite"</span>]&#125;)</div><div class="line"></div><div class="line">Successfully added user: &#123; <span class="string">"user"</span> : <span class="string">"xxx"</span>, <span class="string">"roles"</span> : [ <span class="string">"readWrite"</span> ] &#125;</div></pre></td></tr></table></figure></p>
+<p>###3.node代码设置密码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> dbUrl = ‘mongodb:<span class="comment">//用户名:登陆密码@127.0.0.1/mall’</span></div></pre></td></tr></table></figure>
+<p>###4.Vi /etc/rc.d/rc.local打开编辑</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">写入</div><div class="line"></div><div class="line">/usr/local/src/mongodb/bin/mongod --dbpath=<span class="regexp">/var/m</span>ongodb/data --logpath 	/<span class="keyword">var</span>/mongodb/logs/log.log -fork --auth</div></pre></td></tr></table></figure>
+<p>###5.关闭mongodb</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt;use admin</div><div class="line">&gt;db.shutdownServer()</div></pre></td></tr></table></figure>
+<p>###6.重启mongodb</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/usr/local/src/mongodb/bin/mongod --dbpath=<span class="regexp">/var/m</span>ongodb/data --logpath 	/<span class="keyword">var</span>/mongodb/logs/log.log -fork --auth</div></pre></td></tr></table></figure>
+<p>###7. 测试是否需要密码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt;use admin</div><div class="line">&gt;use mall</div><div class="line">&gt;show collections</div></pre></td></tr></table></figure>
 <p><a href="http://justcoding.iteye.com/blog/2270466" target="_blank" rel="external">参考</a><br><a href="https://docs.mongodb.com/manual/reference/method/db.dropUser/" target="_blank" rel="external">参考</a><br><a href="http://www.jianshu.com/p/0496ef49b2a5" target="_blank" rel="external">参考</a></p>
 
         </div>
@@ -266,7 +279,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-01-10T06:22:57.593Z" itemprop="dateUpdated">2018-01-10 14:22:57</time>
+    最後更新時間：<time datetime="2018-07-09T10:58:42.756Z" itemprop="dateUpdated">2018-07-09 18:58:42</time>
 </span><br>
 
 
@@ -430,7 +443,7 @@
 
         <p>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
         </p>
     </div>
     <div class="bottom">
