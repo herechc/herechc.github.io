@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/07/05/linux-命令/index.html">
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="1. ls查看当前目录下的所存在的文件 2. 键盘Tab键补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全 cat 与 vim打开文件 shift + G查看文件的全部内容 fdisk -l查看您的数据盘信息fdisk -l与df -h 都为拆看数据盘信息命令，但在没有分区和格式化数据盘之前，使用df -h 命令无法看到数据盘。 wq保存退出 pwd显示当前目">
-<meta property="og:updated_time" content="2018-07-05T07:28:50.733Z">
+<meta property="og:updated_time" content="2018-07-11T08:29:11.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux 命令">
 <meta name="twitter:description" content="1. ls查看当前目录下的所存在的文件 2. 键盘Tab键补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全 cat 与 vim打开文件 shift + G查看文件的全部内容 fdisk -l查看您的数据盘信息fdisk -l与df -h 都为拆看数据盘信息命令，但在没有分区和格式化数据盘之前，使用df -h 命令无法看到数据盘。 wq保存退出 pwd显示当前目">
@@ -111,7 +111,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -150,7 +150,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-ls"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. ls</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-键盘Tab键"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 键盘Tab键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cat-与-vim"><span class="post-toc-number">3.</span> <span class="post-toc-text">cat 与 vim</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#shift-G"><span class="post-toc-number">4.</span> <span class="post-toc-text">shift + G</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#fdisk-l"><span class="post-toc-number">5.</span> <span class="post-toc-text">fdisk -l</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#wq"><span class="post-toc-number">6.</span> <span class="post-toc-text">wq</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pwd"><span class="post-toc-number">7.</span> <span class="post-toc-text">pwd</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-ls"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. ls</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-键盘Tab键"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 键盘Tab键</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#cat-与-vim"><span class="post-toc-number">3.</span> <span class="post-toc-text">cat 与 vim</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#shift-G"><span class="post-toc-number">4.</span> <span class="post-toc-text">shift + G</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#fdisk-l"><span class="post-toc-number">5.</span> <span class="post-toc-text">fdisk -l</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#wq"><span class="post-toc-number">6.</span> <span class="post-toc-text">wq</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pwd"><span class="post-toc-number">7.</span> <span class="post-toc-text">pwd</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#设置环境变量"><span class="post-toc-number">8.</span> <span class="post-toc-text">设置环境变量</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查看路径"><span class="post-toc-number">9.</span> <span class="post-toc-text">查看路径</span></a></li></ol>
         </nav>
     </aside>
     
@@ -180,6 +180,11 @@
 <h2 id="fdisk-l"><a href="#fdisk-l" class="headerlink" title="fdisk -l"></a>fdisk -l</h2><p>查看您的数据盘信息<br>fdisk -l与df -h 都为拆看数据盘信息命令，但在没有分区和格式化数据盘之前，使用df -h 命令无法看到数据盘。</p>
 <h2 id="wq"><a href="#wq" class="headerlink" title="wq"></a>wq</h2><p>保存退出</p>
 <h2 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h2><p>显示当前目录名</p>
+<h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><p>  vim 命令打开文件 /etc/profile</p>
+<p>  PATH=$PATH:/opt/node/lib/node_modules/pm2/bin</p>
+<p>  保存退出之后输入：source /etc/profile 可以让变量生效</p>
+<p>  也可以设置node全部PATH=$PATH:/usr/local/src/node/bin</p>
+<h2 id="查看路径"><a href="#查看路径" class="headerlink" title="查看路径"></a>查看路径</h2><p><a href="https://blog.csdn.net/qq_32497361/article/details/78447576" target="_blank" rel="external">查看</a></p>
 
         </div>
 
@@ -187,7 +192,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-07-05T07:28:50.733Z" itemprop="dateUpdated">2018-07-05 15:28:50</time>
+    最后更新时间：<time datetime="2018-07-11T08:29:11.940Z" itemprop="dateUpdated">2018-07-11 16:29:11</time>
 </span><br>
 
 
@@ -344,7 +349,7 @@
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
