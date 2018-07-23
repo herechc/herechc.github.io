@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>算法图解 | herec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="算法">
+    <meta name="description" content="the note for the of “算法图解”1.二分叉法required:  1.有序列表  2.快速查找 E:12345678910111213141516171819function binary_search(list, item)&amp;#123;  var low = 0;  var high = list.length - 1;  while(low &amp;lt;= high)&amp;#123">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法图解">
+<meta property="og:url" content="http://yoursite.com/2018/07/21/算法图解/index.html">
+<meta property="og:site_name" content="herec">
+<meta property="og:description" content="the note for the of “算法图解”1.二分叉法required:  1.有序列表  2.快速查找 E:12345678910111213141516171819function binary_search(list, item)&amp;#123;  var low = 0;  var high = list.length - 1;  while(low &amp;lt;= high)&amp;#123">
+<meta property="og:updated_time" content="2018-07-22T08:46:14.114Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="算法图解">
+<meta name="twitter:description" content="the note for the of “算法图解”1.二分叉法required:  1.有序列表  2.快速查找 E:12345678910111213141516171819function binary_search(list, item)&amp;#123;  var low = 0;  var high = list.length - 1;  while(low &amp;lt;= high)&amp;#123">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">herec</h5>
+          <a href="mailto:453288875@qq.com" title="453288875@qq.com" class="mail">453288875@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/herec" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/1955831145" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">算法图解</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">算法图解</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-07-21T14:08:32.000Z" itemprop="datePublished" class="page-time">
+  2018-07-21
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#the-note-for-the-of-“算法图解”"><span class="post-toc-number">1.</span> <span class="post-toc-text">the note for the of “算法图解”</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-二分叉法"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">1.二分叉法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#required"><span class="post-toc-number">1.0.1.1.</span> <span class="post-toc-text">required:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#E"><span class="post-toc-number">1.0.1.2.</span> <span class="post-toc-text">E:</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-递归"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">2.递归</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-快速排序"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">3.快速排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#分而治之"><span class="post-toc-number">1.0.3.1.</span> <span class="post-toc-text">分而治之</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#step"><span class="post-toc-number">1.0.3.1.0.1.</span> <span class="post-toc-text">step</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#E："><span class="post-toc-number">1.0.3.1.0.2.</span> <span class="post-toc-text">E：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#快速排序函数"><span class="post-toc-number">1.0.3.2.</span> <span class="post-toc-text">快速排序函数</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-散列表"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">4.散列表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#requied"><span class="post-toc-number">1.0.4.1.</span> <span class="post-toc-text">requied</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-广度优先搜索"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">5. 广度优先搜索</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#E-1"><span class="post-toc-number">1.0.5.0.1.</span> <span class="post-toc-text">E:</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-狄克斯特拉算法"><span class="post-toc-number">1.0.6.</span> <span class="post-toc-text">6.狄克斯特拉算法</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-算法图解"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">算法图解</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-07-21 22:08:32" datetime="2018-07-21T14:08:32.000Z"  itemprop="datePublished">2018-07-21</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="the-note-for-the-of-“算法图解”"><a href="#the-note-for-the-of-“算法图解”" class="headerlink" title="the note for the of “算法图解”"></a>the note for the of “算法图解”</h1><h3 id="1-二分叉法"><a href="#1-二分叉法" class="headerlink" title="1.二分叉法"></a>1.二分叉法</h3><h4 id="required"><a href="#required" class="headerlink" title="required:"></a>required:</h4><p>  1.有序列表<br>  2.快速查找</p>
+<h4 id="E"><a href="#E" class="headerlink" title="E:"></a>E:</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">binary_search</span>(<span class="params">list, item</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> low = <span class="number">0</span>;</div><div class="line">  <span class="keyword">var</span> high = list.length - <span class="number">1</span>;</div><div class="line">  <span class="keyword">while</span>(low &lt;= high)&#123;</div><div class="line">    <span class="keyword">var</span> mid = <span class="built_in">Math</span>.floor((low + high) /<span class="number">2</span>);<span class="comment">//检查中间的元素，向下取整</span></div><div class="line">    <span class="keyword">var</span> guess = list[mid];</div><div class="line">    <span class="keyword">if</span>(guess == item) <span class="keyword">return</span> mid;</div><div class="line">    <span class="keyword">if</span>(guess &gt; item)&#123;</div><div class="line">      <span class="comment">// 猜的数字大</span></div><div class="line">	    high = mid - <span class="number">1</span></div><div class="line">    &#125;<span class="keyword">else</span>&#123; </div><div class="line">      <span class="comment">// 猜的数字小</span></div><div class="line">      low = mid + <span class="number">1</span></div><div class="line">    &#125;    </div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="literal">undefined</span></div><div class="line">&#125;</div><div class="line">binary_search([<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>], <span class="number">3</span>)</div></pre></td></tr></table></figure>
+<h3 id="2-递归"><a href="#2-递归" class="headerlink" title="2.递归"></a>2.递归</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fact</span>(<span class="params">x</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> ( x== <span class="number">1</span>) &#123; </div><div class="line">    <span class="comment">// 基线条件</span></div><div class="line">    <span class="keyword">return</span> <span class="number">1</span></div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="comment">//递归条件</span></div><div class="line">    <span class="keyword">return</span> x * fact(x - <span class="number">1</span>)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="3-快速排序"><a href="#3-快速排序" class="headerlink" title="3.快速排序"></a>3.快速排序</h3><h4 id="分而治之"><a href="#分而治之" class="headerlink" title="分而治之"></a>分而治之</h4><h6 id="step"><a href="#step" class="headerlink" title="step"></a>step</h6><p>(1)找出基线条件，这种条件必须尽可能简单<br>(2)不断将问题分解（或者说缩小规模），直到符合基线条件</p>
+<h6 id="E："><a href="#E：" class="headerlink" title="E："></a>E：</h6><p>  从1680 <em> 640 中分出最大的正方形块<br>  （640 + 640 + 400）</em> 640<br>  （400 + 240）* 400<br>   ……<br>   最后得出80</p>
+<h4 id="快速排序函数"><a href="#快速排序函数" class="headerlink" title="快速排序函数"></a>快速排序函数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (array.length &lt; <span class="number">2</span>)</div><div class="line">    <span class="comment">//基线条件： 为空或者只包含一个元素的数组时"有序"的</span></div><div class="line">     <span class="keyword">return</span> array;</div><div class="line">  <span class="keyword">else</span> </div><div class="line">    <span class="comment">// 递归条件</span></div><div class="line">    <span class="keyword">var</span> pivot = array[<span class="number">0</span>] <span class="comment">// 基准值</span></div><div class="line">    <span class="keyword">var</span> less = [];</div><div class="line">    <span class="keyword">var</span> greater = [];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++ )&#123;</div><div class="line">      <span class="keyword">if</span>( array[i] &lt;= pivot) &#123;</div><div class="line">        less.push(array[i])</div><div class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span>( array[i] &gt; pivot ) &#123;</div><div class="line">        greater.push(array[i])</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> quickSort(less) + pivot + quickSort(greater)</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">quickSort([<span class="number">10.5</span>,<span class="number">2</span>,<span class="number">3</span>])</div></pre></td></tr></table></figure>
+<h3 id="4-散列表"><a href="#4-散列表" class="headerlink" title="4.散列表"></a>4.散列表</h3><h4 id="requied"><a href="#requied" class="headerlink" title="requied"></a>requied</h4><p>由键与值组成</p>
+<h3 id="5-广度优先搜索"><a href="#5-广度优先搜索" class="headerlink" title="5. 广度优先搜索"></a>5. 广度优先搜索</h3><h5 id="E-1"><a href="#E-1" class="headerlink" title="E:"></a>E:</h5><p>找哪个芒果经销商与你的关系最近，朋友是一度关系，朋友的朋友是二度关系</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> graph =&#123;</div><div class="line">  <span class="string">"you"</span>:[<span class="string">'alice'</span>, <span class="string">'bob'</span>, <span class="string">'claire'</span>],</div><div class="line">  <span class="string">"bob"</span>:[<span class="string">'anuj'</span>, <span class="string">'peggy'</span>],</div><div class="line">  <span class="string">"alice"</span>:[<span class="string">"thom"</span>],</div><div class="line">  <span class="string">"anuj"</span>:[],</div><div class="line">  <span class="string">"thom"</span>: []</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">search</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> search_queue = [];</div><div class="line">  search_queue += graph[name];</div><div class="line">  searched = [];</div><div class="line">  <span class="keyword">while</span>(search_queue) &#123;</div><div class="line">    <span class="keyword">var</span> person = search_queue.shift();</div><div class="line">    <span class="keyword">if</span> (! person <span class="keyword">in</span> searched) &#123;</div><div class="line">      <span class="keyword">if</span>(person_is_seller(person)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span></div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        search_queue += graph[person]</div><div class="line">        searched.push(person)</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">search(<span class="string">"you"</span>)</div></pre></td></tr></table></figure>
+<h3 id="6-狄克斯特拉算法"><a href="#6-狄克斯特拉算法" class="headerlink" title="6.狄克斯特拉算法"></a>6.狄克斯特拉算法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> graph = &#123;</div><div class="line">  <span class="string">"start"</span>:&#123;</div><div class="line">    <span class="string">"a"</span>: <span class="number">6</span>,</div><div class="line">    <span class="string">"b"</span>: <span class="number">2</span> </div><div class="line">  &#125;,</div><div class="line">  <span class="string">"a"</span>:&#123;</div><div class="line">    <span class="string">"fin"</span>: <span class="number">1</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"b"</span>: &#123;</div><div class="line">    <span class="string">"a"</span>: <span class="number">3</span>,</div><div class="line">    <span class="string">"fin"</span>: <span class="number">5</span></div><div class="line">  &#125;,</div><div class="line">  <span class="string">"fin"</span>: &#123;&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> <span class="keyword">const</span> = &#123;</div><div class="line">  <span class="string">"a"</span>: <span class="number">6</span>,</div><div class="line">  <span class="string">"2"</span>: <span class="number">2</span>,</div><div class="line">  <span class="string">"fin"</span>: <span class="literal">Infinity</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> parents = &#123;</div><div class="line">  <span class="string">"a"</span>: <span class="string">"start"</span>,</div><div class="line">  <span class="string">"b"</span>: <span class="string">"start"</span>,</div><div class="line">  <span class="string">"fin"</span>: <span class="literal">undefined</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> processed = [];</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">find_lowest_cost_node</span>(<span class="params">costs</span>)</span>&#123;</div><div class="line">  <span class="keyword">var</span> lowest_cost = <span class="literal">Infinity</span>;</div><div class="line">  <span class="keyword">var</span> lowest_const_node = <span class="literal">undefined</span>;</div><div class="line">  <span class="keyword">for</span>( node <span class="keyword">in</span> costs) &#123;<span class="comment">// 遍历所有节点</span></div><div class="line">    cost = costs[node];</div><div class="line">    <span class="keyword">if</span> ( cost &lt; lowest_cost &amp;&amp; !node <span class="keyword">in</span> processed) &#123;<span class="comment">//如果当前节点开销的更低且未被处理过</span></div><div class="line">      lowest_cost = cost <span class="comment">// 就将其视为开销最低的节点</span></div><div class="line">      lowest_cost_node = node</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> lowest_cost_node</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> node = find_lowest_cost_node(costs) <span class="comment">// 在为处理的节点中找出开销最小的节点</span></div><div class="line"><span class="keyword">while</span>(node)&#123;<span class="comment">// 这个while循环在所有节点都被处理后结束</span></div><div class="line">  <span class="keyword">var</span> cost = costs[node];</div><div class="line">  <span class="keyword">var</span> neighbors = graph[node];</div><div class="line">  <span class="keyword">for</span>( n <span class="keyword">in</span> <span class="built_in">Object</span>.keys(neighbors)) &#123; <span class="comment">// 遍历当前节点的所有邻居</span></div><div class="line">    <span class="keyword">var</span> new_cost = cost + neighbors[n];</div><div class="line">    <span class="keyword">if</span>(costs[n] &gt; new_cost)&#123; <span class="comment">// 如果经当前节点前往该邻居更近</span></div><div class="line">      costs[n] = new_cost; <span class="comment">// 就更新该邻居的开销</span></div><div class="line">      parents[n] = node <span class="comment">// 同时将该邻居的父节点设置为当前节点</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  processed.push(node)<span class="comment">//将当前的节点标记为处理过</span></div><div class="line">  node = find_lowest_cost_node(costs) <span class="comment">// 找出接下来要处理的节点，并循环</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-07-22T08:46:14.114Z" itemprop="dateUpdated">2018-07-22 16:46:14</time>
+</span><br>
+
+
+        
+        原始链接：<a href="/2018/07/21/算法图解/" target="_blank" rel="external">http://yoursite.com/2018/07/21/算法图解/</a>
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="herec">
+            herec
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/07/21/算法图解/&title=《算法图解》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/07/21/算法图解/&title=《算法图解》 — herec&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/07/21/算法图解/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《算法图解》 — herec&url=http://yoursite.com/2018/07/21/算法图解/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/07/21/算法图解/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/07/12/umi/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">umi</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢客官~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>herec &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/07/21/算法图解/&title=《算法图解》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/07/21/算法图解/&title=《算法图解》 — herec&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/07/21/算法图解/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《算法图解》 — herec&url=http://yoursite.com/2018/07/21/算法图解/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/07/21/算法图解/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/07/21/算法图解/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
