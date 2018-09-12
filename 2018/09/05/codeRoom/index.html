@@ -20,17 +20,17 @@
     
     
     <meta name="keywords" content="javascript">
-    <meta name="description" content="代码库1.12345678910111213141516/* from mobx */// 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) return;    invoked = true;    return func.apply(this, argu">
+    <meta name="description" content="代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) retu">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="codeRoom">
 <meta property="og:url" content="http://yoursite.com/2018/09/05/codeRoom/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="代码库1.12345678910111213141516/* from mobx */// 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) return;    invoked = true;    return func.apply(this, argu">
-<meta property="og:updated_time" content="2018-09-05T01:52:33.349Z">
+<meta property="og:description" content="代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) retu">
+<meta property="og:updated_time" content="2018-09-08T07:14:29.863Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="codeRoom">
-<meta name="twitter:description" content="代码库1.12345678910111213141516/* from mobx */// 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) return;    invoked = true;    return func.apply(this, argu">
+<meta name="twitter:description" content="代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) retu">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -173,7 +173,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="代码库"><a href="#代码库" class="headerlink" title="代码库"></a>代码库</h1><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* from mobx */</span></div><div class="line"></div><div class="line"><span class="comment">// 只执行一次</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">once</span>(<span class="params">func</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> invoked = <span class="literal">false</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (invoked) <span class="keyword">return</span>;</div><div class="line">    invoked = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">return</span> func.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="comment">//eg</span></div><div class="line">disposer = once(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> idx = interceptors.indexOf(handler);</div><div class="line">  <span class="keyword">if</span> (idx !== <span class="number">-1</span>) interceptors.splice(idx, <span class="number">1</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+            <h1 id="代码库"><a href="#代码库" class="headerlink" title="代码库"></a>代码库</h1><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* from mobx */</span></div><div class="line"></div><div class="line"><span class="comment">//1. 只执行一次</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">once</span>(<span class="params">func</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> invoked = <span class="literal">false</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (invoked) <span class="keyword">return</span>;</div><div class="line">    invoked = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">return</span> func.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="comment">//eg</span></div><div class="line">disposer = once(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> idx = interceptors.indexOf(handler);</div><div class="line">  <span class="keyword">if</span> (idx !== <span class="number">-1</span>) interceptors.splice(idx, <span class="number">1</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//2.</span></div><div class="line">	<span class="keyword">var</span> TraceMode$$<span class="number">1</span>;</div><div class="line">  (<span class="function"><span class="keyword">function</span> (<span class="params">TraceMode$$<span class="number">1</span></span>) </span>&#123;</div><div class="line">      TraceMode$$<span class="number">1</span>[TraceMode$$<span class="number">1</span>[<span class="string">"NONE"</span>] = <span class="number">0</span>] = <span class="string">"NONE"</span>;</div><div class="line">      TraceMode$$<span class="number">1</span>[TraceMode$$<span class="number">1</span>[<span class="string">"LOG"</span>] = <span class="number">1</span>] = <span class="string">"LOG"</span>;</div><div class="line">      TraceMode$$<span class="number">1</span>[TraceMode$$<span class="number">1</span>[<span class="string">"BREAK"</span>] = <span class="number">2</span>] = <span class="string">"BREAK"</span>;</div><div class="line">  &#125;)(TraceMode$$<span class="number">1</span> || (TraceMode$$<span class="number">1</span> = &#123;&#125;));</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//3.</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setReactionScheduler$$1</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> baseScheduler = reactionScheduler;</div><div class="line">    reactionScheduler = <span class="function"><span class="keyword">function</span> (<span class="params">f</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> fn(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> baseScheduler(f);</div><div class="line">        &#125;);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//4.数组去重</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dedupe</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(array));</div><div class="line">&#125;</div><div class="line"></div><div class="line">dedupe([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]) <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
 
         </div>
 
@@ -181,7 +181,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-09-05T01:52:33.349Z" itemprop="dateUpdated">2018-09-05 09:52:33</time>
+    Last updated: <time datetime="2018-09-08T07:14:29.863Z" itemprop="dateUpdated">2018-09-08 15:14:29</time>
 </span><br>
 
 
@@ -261,7 +261,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/09/11/mobx的那些事-autorun/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">mobx的那些事-autorun</h4>
+      </a>
+    </div>
   
 
   
