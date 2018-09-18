@@ -13,24 +13,24 @@
     
     
     
-    <title>codeRoom | herec</title>
+    <title>mobx的那些事-cmoputed | herec</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="javascript">
-    <meta name="description" content="代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) retu">
-<meta name="keywords" content="javascript">
+    <meta name="keywords" content="react,mobx">
+    <meta name="description" content="123456789101112var bankUser = mobx.observable(&amp;#123;  income: 3,  debit: 2&amp;#125;);var divisor = mobx.computed(() =&amp;gt; &amp;#123;  return bankUser.income / bankUser.debit;&amp;#125;);mobx.autorun(() =&amp;gt; &amp;#1">
+<meta name="keywords" content="react,mobx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="codeRoom">
-<meta property="og:url" content="http://yoursite.com/2018/09/05/codeRoom/index.html">
+<meta property="og:title" content="mobx的那些事-cmoputed">
+<meta property="og:url" content="http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) retu">
-<meta property="og:updated_time" content="2018-09-12T07:55:47.493Z">
+<meta property="og:description" content="123456789101112var bankUser = mobx.observable(&amp;#123;  income: 3,  debit: 2&amp;#125;);var divisor = mobx.computed(() =&amp;gt; &amp;#123;  return bankUser.income / bankUser.debit;&amp;#125;);mobx.autorun(() =&amp;gt; &amp;#1">
+<meta property="og:updated_time" content="2018-09-17T02:01:46.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="codeRoom">
-<meta name="twitter:description" content="代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) retu">
+<meta name="twitter:title" content="mobx的那些事-cmoputed">
+<meta name="twitter:description" content="123456789101112var bankUser = mobx.observable(&amp;#123;  income: 3,  debit: 2&amp;#125;);var divisor = mobx.computed(() =&amp;gt; &amp;#123;  return bankUser.income / bankUser.debit;&amp;#125;);mobx.autorun(() =&amp;gt; &amp;#1">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -105,7 +105,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">codeRoom</div>
+        <div class="flex-col header-title ellipsis">mobx的那些事-cmoputed</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -127,11 +127,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">codeRoom</h1>
+        <h1 class="title">mobx的那些事-cmoputed</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-09-05T01:51:02.000Z" itemprop="datePublished" class="page-time">
-  2018-09-05
+                <time datetime="2018-09-13T02:40:18.000Z" itemprop="datePublished" class="page-time">
+  2018-09-13
 </time>
 
 
@@ -150,17 +150,17 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#代码库"><span class="post-toc-number">1.</span> <span class="post-toc-text">代码库</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">1.</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-computed实例"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.computed实例</span></a></li></ol>
         </nav>
     </aside>
     
-<article id="post-codeRoom"
+<article id="post-mobx的那些事-cmoputed"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">codeRoom</h1>
+        <h1 class="post-card-title">mobx的那些事-cmoputed</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-09-05 09:51:02" datetime="2018-09-05T01:51:02.000Z"  itemprop="datePublished">2018-09-05</time>
+            <time class="post-time" title="2018-09-13 10:40:18" datetime="2018-09-13T02:40:18.000Z"  itemprop="datePublished">2018-09-13</time>
 
             
 
@@ -173,7 +173,12 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="代码库"><a href="#代码库" class="headerlink" title="代码库"></a>代码库</h1><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* from mobx */</span></div><div class="line"></div><div class="line"><span class="comment">//1. 只执行一次</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">once</span>(<span class="params">func</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> invoked = <span class="literal">false</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (invoked) <span class="keyword">return</span>;</div><div class="line">    invoked = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">return</span> func.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="comment">//eg</span></div><div class="line">disposer = once(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> idx = interceptors.indexOf(handler);</div><div class="line">  <span class="keyword">if</span> (idx !== <span class="number">-1</span>) interceptors.splice(idx, <span class="number">1</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//2.</span></div><div class="line">	<span class="keyword">var</span> TraceMode$$<span class="number">1</span>;</div><div class="line">  (<span class="function"><span class="keyword">function</span> (<span class="params">TraceMode$$<span class="number">1</span></span>) </span>&#123;</div><div class="line">      TraceMode$$<span class="number">1</span>[TraceMode$$<span class="number">1</span>[<span class="string">"NONE"</span>] = <span class="number">0</span>] = <span class="string">"NONE"</span>;</div><div class="line">      TraceMode$$<span class="number">1</span>[TraceMode$$<span class="number">1</span>[<span class="string">"LOG"</span>] = <span class="number">1</span>] = <span class="string">"LOG"</span>;</div><div class="line">      TraceMode$$<span class="number">1</span>[TraceMode$$<span class="number">1</span>[<span class="string">"BREAK"</span>] = <span class="number">2</span>] = <span class="string">"BREAK"</span>;</div><div class="line">  &#125;)(TraceMode$$<span class="number">1</span> || (TraceMode$$<span class="number">1</span> = &#123;&#125;));</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//3.</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setReactionScheduler$$1</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> baseScheduler = reactionScheduler;</div><div class="line">    reactionScheduler = <span class="function"><span class="keyword">function</span> (<span class="params">f</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> fn(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> baseScheduler(f);</div><div class="line">        &#125;);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//4.数组去重</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dedupe</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(array));</div><div class="line">&#125;</div><div class="line"></div><div class="line">dedupe([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]) <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> bankUser = mobx.observable(&#123;</div><div class="line">  income: <span class="number">3</span>,</div><div class="line">  debit: <span class="number">2</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> divisor = mobx.computed(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="keyword">return</span> bankUser.income / bankUser.debit;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">mobx.autorun(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'张三的贷款：'</span>, bankUser.debit, <span class="string">'；张三的存贷比: '</span> + divisor);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h2 id="1-computed实例"><a href="#1-computed实例" class="headerlink" title="1.computed实例"></a>1.computed实例</h2><p><strong>computed</strong>函数的入口先实例化一个computeValue <em>return new ComputedValue$$1(opts)</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">() =&gt; &#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'张三的贷款：'</span>, bankUser.debit, <span class="string">'；张三的存贷比: '</span> + divisor);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在请求divisor的时候会触发该值的valueOf()方法(<a href="https://www.zhihu.com/question/24262399" target="_blank" rel="external">js中 toString 和 valueOf 的区别？</a>)<br><em>return toPrimitive$$1(this.get())</em> , 如下get：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//如果没有处在上一级的事物处理中</span></div><div class="line"><span class="keyword">if</span> (globalState$$<span class="number">1.</span>inBatch === <span class="number">0</span> &amp;&amp; <span class="keyword">this</span>.observers.size === <span class="number">0</span>) &#123;</div><div class="line">    <span class="keyword">if</span> (shouldCompute$$<span class="number">1</span>(<span class="keyword">this</span>)) &#123;</div><div class="line">        <span class="keyword">this</span>.warnAboutUntrackedRead();</div><div class="line">        startBatch$$<span class="number">1</span>(); <span class="comment">// See perf test 'computed memoization'</span></div><div class="line">        <span class="keyword">this</span>.value = <span class="keyword">this</span>.computeValue(<span class="literal">false</span>);</div><div class="line">        endBatch$$<span class="number">1</span>();</div><div class="line">    &#125;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  <span class="comment">//在上一级事物处理中</span></div><div class="line">    reportObserved$$<span class="number">1</span>(<span class="keyword">this</span>);</div><div class="line">    <span class="comment">//observing在shouldCompute(derivation)里面用到，主要是监听值，当值改变时，触发调用的函数</span></div><div class="line">    <span class="keyword">if</span> (shouldCompute$$<span class="number">1</span>(<span class="keyword">this</span>)) </div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.trackAndCompute()) </div><div class="line">            propagateChangeConfirmed$$<span class="number">1</span>(<span class="keyword">this</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这段代码最后都用到 <em>this.value = this.computeValue(false)</em></p>
 
         </div>
 
@@ -181,12 +186,12 @@
     <div class="content">
         
 <span class="post-time">
-    最後更新時間：<time datetime="2018-09-12T07:55:47.493Z" itemprop="dateUpdated">2018-09-12 15:55:47</time>
+    最後更新時間：<time datetime="2018-09-17T02:01:46.296Z" itemprop="dateUpdated">2018-09-17 10:01:46</time>
 </span><br>
 
 
         
-        原始链接：<a href="/2018/09/05/codeRoom/" target="_blank" rel="external">http://yoursite.com/2018/09/05/codeRoom/</a>
+        原始链接：<a href="/2018/09/13/mobx的那些事-cmoputed/" target="_blank" rel="external">http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/</a>
         
     </div>
     <footer>
@@ -206,7 +211,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobx/">mobx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
 
 
             
@@ -216,7 +221,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/09/05/codeRoom/&title=《codeRoom》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/&title=《mobx的那些事-cmoputed》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -226,22 +231,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/09/05/codeRoom/&title=《codeRoom》 — herec&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/&title=《mobx的那些事-cmoputed》 — herec&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/09/05/codeRoom/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《codeRoom》 — herec&url=http://yoursite.com/2018/09/05/codeRoom/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mobx的那些事-cmoputed》 — herec&url=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/09/05/codeRoom/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -264,18 +269,18 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/09/11/mobx的那些事-autorun/" id="post-prev" class="post-nav-link">
+      <a href="/2018/09/17/mobx的那些事-shouldCompute/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">mobx的那些事-autorun</h4>
+        <h4 class="title">mobx的那些事-shouldCompute</h4>
       </a>
     </div>
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/08/23/package参数详解/" id="post-next" class="post-nav-link">
+      <a href="/2018/09/12/javascript笔记/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">package参数详解</h4>
+        <h4 class="title">javascript笔记</h4>
       </a>
     </div>
   
@@ -367,7 +372,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/09/05/codeRoom/&title=《codeRoom》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/&title=《mobx的那些事-cmoputed》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -377,22 +382,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/09/05/codeRoom/&title=《codeRoom》 — herec&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/&title=《mobx的那些事-cmoputed》 — herec&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/09/05/codeRoom/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《codeRoom》 — herec&url=http://yoursite.com/2018/09/05/codeRoom/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mobx的那些事-cmoputed》 — herec&url=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/09/05/codeRoom/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -403,7 +408,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/09/05/codeRoom/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/09/13/mobx的那些事-cmoputed/" alt="微信分享二维码">
 </div>
 
 

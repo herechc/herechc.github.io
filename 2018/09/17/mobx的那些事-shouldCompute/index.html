@@ -13,24 +13,24 @@
     
     
     
-    <title>html | herec</title>
+    <title>mobx的那些事-shouldCompute | herec</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="html">
-    <meta name="description" content="1.meta1234567&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&amp;gt;&amp;lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&amp;gt;&amp;lt;meta name=&quot;keywords&quot; content=&quot;&quot;&amp;gt;&amp;lt;meta name=&quot;d">
-<meta name="keywords" content="html">
+    <meta name="keywords" content="react,mobx">
+    <meta name="description" content="1.lowestObserverState与dependenciesState下级成员拥有 L 属性；而上级成员拥有 D 属性，比如： 观察员(observable) O1 只拥有 L 属性探长(runAction) R1 只拥有 D 属性会计师(computed) C1 既拥有 L 属性，也拥有 D 属性">
+<meta name="keywords" content="react,mobx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="html">
-<meta property="og:url" content="http://yoursite.com/2018/01/10/html/index.html">
+<meta property="og:title" content="mobx的那些事-shouldCompute">
+<meta property="og:url" content="http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="1.meta1234567&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&amp;gt;&amp;lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&amp;gt;&amp;lt;meta name=&quot;keywords&quot; content=&quot;&quot;&amp;gt;&amp;lt;meta name=&quot;d">
-<meta property="og:updated_time" content="2018-01-10T06:46:36.959Z">
+<meta property="og:description" content="1.lowestObserverState与dependenciesState下级成员拥有 L 属性；而上级成员拥有 D 属性，比如： 观察员(observable) O1 只拥有 L 属性探长(runAction) R1 只拥有 D 属性会计师(computed) C1 既拥有 L 属性，也拥有 D 属性">
+<meta property="og:updated_time" content="2018-09-17T12:59:42.402Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html">
-<meta name="twitter:description" content="1.meta1234567&amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&amp;gt;&amp;lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;&amp;gt;&amp;lt;meta name=&quot;keywords&quot; content=&quot;&quot;&amp;gt;&amp;lt;meta name=&quot;d">
+<meta name="twitter:title" content="mobx的那些事-shouldCompute">
+<meta name="twitter:description" content="1.lowestObserverState与dependenciesState下级成员拥有 L 属性；而上级成员拥有 D 属性，比如： 观察员(observable) O1 只拥有 L 属性探长(runAction) R1 只拥有 D 属性会计师(computed) C1 既拥有 L 属性，也拥有 D 属性">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -105,7 +105,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">html</div>
+        <div class="flex-col header-title ellipsis">mobx的那些事-shouldCompute</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -127,11 +127,11 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">html</h1>
+        <h1 class="title">mobx的那些事-shouldCompute</h1>
         <h5 class="subtitle">
             
-                <time datetime="2018-01-10T06:45:43.000Z" itemprop="datePublished" class="page-time">
-  2018-01-10
+                <time datetime="2018-09-17T08:11:18.000Z" itemprop="datePublished" class="page-time">
+  2018-09-17
 </time>
 
 
@@ -150,17 +150,17 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-meta"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.meta</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-lowestObserverState与dependenciesState"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.lowestObserverState与dependenciesState</span></a></li></ol>
         </nav>
     </aside>
     
-<article id="post-html"
+<article id="post-mobx的那些事-shouldCompute"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">html</h1>
+        <h1 class="post-card-title">mobx的那些事-shouldCompute</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-01-10 14:45:43" datetime="2018-01-10T06:45:43.000Z"  itemprop="datePublished">2018-01-10</time>
+            <time class="post-time" title="2018-09-17 16:11:18" datetime="2018-09-17T08:11:18.000Z"  itemprop="datePublished">2018-09-17</time>
 
             
 
@@ -173,8 +173,8 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="1-meta"><a href="#1-meta" class="headerlink" title="1.meta"></a>1.meta</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"format-detection"</span> <span class="attr">content</span>=<span class="string">"telephone=no"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"keywords"</span> <span class="attr">content</span>=<span class="string">""</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"description"</span> <span class="attr">content</span>=<span class="string">""</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">”apple-mobile-web-app-capable”</span> <span class="attr">content</span>=<span class="string">”yes”</span> /&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><a href="http://www.qdfuns.com/notes/17942/de88ef2b28ae5c423fb972b9a4285946.html" target="_blank" rel="external">参考</a></p>
+            <h2 id="1-lowestObserverState与dependenciesState"><a href="#1-lowestObserverState与dependenciesState" class="headerlink" title="1.lowestObserverState与dependenciesState"></a>1.lowestObserverState与dependenciesState</h2><p>下级成员拥有 L 属性；而上级成员拥有 D 属性，比如：</p>
+<p>观察员(observable) O1 只拥有 L 属性<br>探长(runAction) R1 只拥有 D 属性<br>会计师(computed) C1 既拥有 L 属性，也拥有 D 属性</p>
 
         </div>
 
@@ -182,12 +182,12 @@
     <div class="content">
         
 <span class="post-time">
-    最後更新時間：<time datetime="2018-01-10T06:46:36.959Z" itemprop="dateUpdated">2018-01-10 14:46:36</time>
+    最後更新時間：<time datetime="2018-09-17T12:59:42.402Z" itemprop="dateUpdated">2018-09-17 20:59:42</time>
 </span><br>
 
 
         
-        原始链接：<a href="/2018/01/10/html/" target="_blank" rel="external">http://yoursite.com/2018/01/10/html/</a>
+        原始链接：<a href="/2018/09/17/mobx的那些事-shouldCompute/" target="_blank" rel="external">http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/</a>
         
     </div>
     <footer>
@@ -207,7 +207,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobx/">mobx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
 
 
             
@@ -217,7 +217,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/10/html/&title=《html》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/&title=《mobx的那些事-shouldCompute》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -227,22 +227,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/10/html/&title=《html》 — herec&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/&title=《mobx的那些事-shouldCompute》 — herec&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/10/html/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《html》 — herec&url=http://yoursite.com/2018/01/10/html/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mobx的那些事-shouldCompute》 — herec&url=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/10/html/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -262,21 +262,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2018/01/12/createEvent自定义事件与触发/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">createEvent自定义事件与触发</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2018/01/10/css/" id="post-next" class="post-nav-link">
+      <a href="/2018/09/13/mobx的那些事-cmoputed/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">css</h4>
+        <h4 class="title">mobx的那些事-cmoputed</h4>
       </a>
     </div>
   
@@ -368,7 +361,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/01/10/html/&title=《html》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/&title=《mobx的那些事-shouldCompute》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -378,22 +371,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/01/10/html/&title=《html》 — herec&source=" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/&title=《mobx的那些事-shouldCompute》 — herec&source=" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/01/10/html/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《html》 — herec&url=http://yoursite.com/2018/01/10/html/&via=http://yoursite.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《mobx的那些事-shouldCompute》 — herec&url=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/&via=http://yoursite.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/01/10/html/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -404,7 +397,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/01/10/html/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/09/17/mobx的那些事-shouldCompute/" alt="微信分享二维码">
 </div>
 
 

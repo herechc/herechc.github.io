@@ -106,7 +106,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -140,6 +140,143 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
+            <article id="post-mobx的那些事-shouldCompute"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-09-17 16:11:18" datetime="2018-09-17T08:11:18.000Z"  itemprop="datePublished">2018-09-17</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/09/17/mobx的那些事-shouldCompute/">mobx的那些事-shouldCompute</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        1.lowestObserverState与dependenciesState下级成员拥有 L 属性；而上级成员拥有 D 属性，比如：
+观察员(observable) O1 只拥有 L 属性探长(runAction) R1 只拥有 D 属性会计师(computed) C1 既拥有 L 属性，也拥有 D 属性
+
+    
+
+        <a href="/2018/09/17/mobx的那些事-shouldCompute/" class="post-more waves-effect waves-button">
+            閱讀全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobx/">mobx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-mobx的那些事-cmoputed"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-09-13 10:40:18" datetime="2018-09-13T02:40:18.000Z"  itemprop="datePublished">2018-09-13</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/09/13/mobx的那些事-cmoputed/">mobx的那些事-cmoputed</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        123456789101112var bankUser = mobx.observable(&#123;  income: 3,  debit: 2&#125;);var divisor = mobx.computed(() =&gt; &#123;  return bankUser.income / bankUser.debit;&#125;);mobx.autorun(() =&gt; ...
+    
+
+        <a href="/2018/09/13/mobx的那些事-cmoputed/" class="post-more waves-effect waves-button">
+            閱讀全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobx/">mobx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-javascript笔记"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-09-12 15:55:37" datetime="2018-09-12T07:55:37.000Z"  itemprop="datePublished">2018-09-12</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/09/12/javascript笔记/">javascript笔记</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        1.switch123456789//switchswitch (derivation.dependenciesState) &#123;  case exports.IDerivationState.UP_TO_DATE:      return false;  case exports.IDerivationState.NOT_TRACKING: //这里没有写返回,会跟下面export...
+    
+
+        <a href="/2018/09/12/javascript笔记/" class="post-more waves-effect waves-button">
+            閱讀全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
             <article id="post-mobx的那些事-autorun"
   class="article-card article-type-post" itemprop="blogPost">
 
@@ -171,7 +308,7 @@ autorun接收两个参数,第一个参数是响应式函数,第二个参数是�
     
 
         <a href="/2018/09/11/mobx的那些事-autorun/" class="post-more waves-effect waves-button">
-            Continue reading...
+            閱讀全文…
         </a>
     </div>
     
@@ -212,11 +349,11 @@ autorun接收两个参数,第一个参数是响应式函数,第二个参数是�
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051/* from mobx *///1. 只执行一次function once(func) &#123;  var invoked = false;  return function() &#123;...
+        代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &#123;  var invoked = false;  return function() &#123;    if (invoked) r...
     
 
         <a href="/2018/09/05/codeRoom/" class="post-more waves-effect waves-button">
-            Continue reading...
+            閱讀全文…
         </a>
     </div>
     
@@ -261,7 +398,7 @@ autorun接收两个参数,第一个参数是响应式函数,第二个参数是�
     
 
         <a href="/2018/08/23/package参数详解/" class="post-more waves-effect waves-button">
-            Continue reading...
+            閱讀全文…
         </a>
     </div>
     
@@ -301,7 +438,7 @@ E:12345678910111213141516171819function binary_search(list, item)&#123;  var low
     
 
         <a href="/2018/07/21/算法图解/" class="post-more waves-effect waves-button">
-            Continue reading...
+            閱讀全文…
         </a>
     </div>
     
@@ -356,7 +493,7 @@ Package.json文件：
     
 
         <a href="/2018/07/12/umi/" class="post-more waves-effect waves-button">
-            Continue reading...
+            閱讀全文…
         </a>
     </div>
     
@@ -407,7 +544,7 @@ pwd显示...
     
 
         <a href="/2018/07/05/linux-命令/" class="post-more waves-effect waves-button">
-            Continue reading...
+            閱讀全文…
         </a>
     </div>
     
@@ -452,143 +589,13 @@ pwd显示...
     
 
         <a href="/2018/07/04/access-token与Authorization认证/" class="post-more waves-effect waves-button">
-            Continue reading...
+            閱讀全文…
         </a>
     </div>
     
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-react后台管理-dva-1"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-06-11 14:58:11" datetime="2018-06-11T06:58:11.000Z"  itemprop="datePublished">2018-06-11</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/11/react后台管理-dva-1/">react后台管理(dva)</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        umi
-    
-
-        <a href="/2018/06/11/react后台管理-dva-1/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-react后台管理-dva"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-06-11 14:58:10" datetime="2018-06-11T06:58:10.000Z"  itemprop="datePublished">2018-06-11</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/11/react后台管理-dva/">react后台管理(dva</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        
-    
-
-        <a href="/2018/06/11/react后台管理-dva/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-react-开发过程"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-02-08 09:58:30" datetime="2018-02-08T01:58:30.000Z"  itemprop="datePublished">2018-02-08</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/02/08/react-开发过程/">react 开发过程</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        0.淘宝镜像可以使用 n 或者 nvm 来管理node版本 npm npmjs和aws国内访问比较慢，可以换淘宝的镜像源，这里在项目根目录建一个.npmrc文件
-1234phantomjs_cdnurl=http://cnpmjs.org/downloadssass_binary_site=https://npm.taobao.org/mirrors/node-sass/registry=h...
-    
-
-        <a href="/2018/02/08/react-开发过程/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
 
     </div>
     
@@ -623,7 +630,7 @@ pwd显示...
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
         </p>
     </div>
     <div class="bottom">

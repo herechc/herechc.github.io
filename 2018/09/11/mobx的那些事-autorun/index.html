@@ -27,10 +27,12 @@
 <meta property="og:url" content="http://yoursite.com/2018/09/11/mobx的那些事-autorun/index.html">
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="autoRun(view, opts) autorun接收两个参数,第一个参数是响应式函数,第二个参数是一个对象,可设置name,delay…等等.先看下autorun的入口函数,下面这段代码是入口函数的主要代码,可以看到它调用了Reaction1234reaction$$1 = new Reaction$$1(name, function () &amp;#123;     //this指向Reacti">
-<meta property="og:updated_time" content="2018-09-12T07:33:19.625Z">
+<meta property="og:image" content="http://yoursite.com/images/mobx-autorun.svg">
+<meta property="og:updated_time" content="2018-09-18T03:07:37.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mobx的那些事-autorun">
 <meta name="twitter:description" content="autoRun(view, opts) autorun接收两个参数,第一个参数是响应式函数,第二个参数是一个对象,可设置name,delay…等等.先看下autorun的入口函数,下面这段代码是入口函数的主要代码,可以看到它调用了Reaction1234reaction$$1 = new Reaction$$1(name, function () &amp;#123;     //this指向Reacti">
+<meta name="twitter:image" content="http://yoursite.com/images/mobx-autorun.svg">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -111,7 +113,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -150,7 +152,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#track"><span class="post-toc-number">1.</span> <span class="post-toc-text">track</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#bindDependencies"><span class="post-toc-number">2.</span> <span class="post-toc-text">bindDependencies</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#track"><span class="post-toc-number">1.</span> <span class="post-toc-text">track</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#bindDependencies"><span class="post-toc-number">2.</span> <span class="post-toc-text">bindDependencies</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#流程图"><span class="post-toc-number">3.</span> <span class="post-toc-text">流程图</span></a></li></ol>
         </nav>
     </aside>
     
@@ -184,14 +186,20 @@
 <p> <strong>PS: observing保存的对象都是引用类型的, 所以可能添加两个一样的,修改一个就影响另外一个</strong><br> <b>Q1:为什么get或者set的时候,会打印view函数</b><br> 这是因为get或者set的时候会调用endBatch$$1函数里面的runReactions$$1()<br> <b>Q2:为什么只有调用bankUser.income时才能打印出来,debit没有打印</b><br> 这是因为 <em>runreaction</em> 函数里面 <em>shouldCompute$$1</em> 进行判断,类Reaction有一个 <em>dependenciesState</em> ,在 <em>shouldCompute$$1</em> 函数里面用 <em>switch (derivation.dependenciesState)</em> 做判断, 由于只有在值发生改变才会触发打印,所以每次执行完会调用 <em>changeDependenciesStateTo0$$1(derivation)</em></p>
 <p>更新需要遍历两个数组,朴素算法的时间复杂度将是 O(n^2),bindDependencies用了3 次遍历 + diffValue 属性的辅助将复杂度降到了 O(n).</p>
 <p><strong>第一次遍历:</strong> 先把新的observing的diffValue设为1,由于 <em>var observing = (derivation.observing = derivation.newObserving)</em> 所以derivation.observing的diffValue也为1<br><strong>第二次遍历：</strong>去掉先前的旧的数据<br><strong>第三次遍历：</strong>添加新的数据</p>
-
+<h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/mobx-autorun.svg" alt="流程" title="">
+                </div>
+                <div class="image-caption">流程</div>
+            </figure>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-09-12T07:33:19.625Z" itemprop="dateUpdated">2018-09-12 15:33:19</time>
+    最後更新時間：<time datetime="2018-09-18T03:07:37.826Z" itemprop="dateUpdated">2018-09-18 11:07:37</time>
 </span><br>
 
 
@@ -271,7 +279,14 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/09/12/javascript笔记/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">javascript笔记</h4>
+      </a>
+    </div>
   
 
   
@@ -348,7 +363,7 @@
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
         </p>
     </div>
     <div class="bottom">
