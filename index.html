@@ -106,7 +106,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -138,6 +138,99 @@
 <div class="container body-wrap">
 
     <ul class="post-list">
+    
+        <li class="post-list-item fade">
+            <article id="post-react-笔记"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2019-01-23 14:17:54" datetime="2019-01-23T06:17:54.000Z"  itemprop="datePublished">2019-01-23</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2019/01/23/react-笔记/">react 笔记</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        1.状态管理的高阶函数1234567891011121314151617export default connect((&#123; expandedRowKeys &#125;, &#123; rowKey &#125;) =&gt; (&#123;  expanded: !!~expandedRowKeys.indexOf(rowKey),&#125;))(ExpandableRow);...
+    
+
+        <a href="/2019/01/23/react-笔记/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-算法记录"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-10-30 17:25:43" datetime="2018-10-30T09:25:43.000Z"  itemprop="datePublished">2018-10-30</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/10/30/算法记录/">算法记录</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        1.Manacher算法leetcode
+链接
+链接
+
+    
+
+        <a href="/2018/10/30/算法记录/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
     
         <li class="post-list-item fade">
             <article id="post-mobx的那些事-shouldCompute"
@@ -172,7 +265,7 @@
     
 
         <a href="/2018/09/17/mobx的那些事-shouldCompute/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -217,7 +310,7 @@
     
 
         <a href="/2018/09/13/mobx的那些事-cmoputed/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -262,7 +355,7 @@
     
 
         <a href="/2018/09/12/javascript笔记/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -308,7 +401,7 @@ autorun接收两个参数,第一个参数是响应式函数,第二个参数是�
     
 
         <a href="/2018/09/11/mobx的那些事-autorun/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -349,11 +442,12 @@ autorun接收两个参数,第一个参数是响应式函数,第二个参数是�
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &#123;  var invoked = false;  return function() &#123;    if (invoked) r...
+        代码库1.```javascript/ from mobx /
+//1. 只执行一次function once(func) {  var invoked = false;  return function() {    if (invoked) return;    invoked = true;    return func.apply(this, arguments);  };}//eg...
     
 
         <a href="/2018/09/05/codeRoom/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -398,7 +492,7 @@ autorun接收两个参数,第一个参数是响应式函数,第二个参数是�
     
 
         <a href="/2018/08/23/package参数详解/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -438,7 +532,7 @@ E:12345678910111213141516171819function binary_search(list, item)&#123;  var low
     
 
         <a href="/2018/07/21/算法图解/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
@@ -493,109 +587,13 @@ Package.json文件：
     
 
         <a href="/2018/07/12/umi/" class="post-more waves-effect waves-button">
-            Continue reading...
+            阅读全文…
         </a>
     </div>
     
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-linux-命令"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-07-05 14:06:02" datetime="2018-07-05T06:06:02.000Z"  itemprop="datePublished">2018-07-05</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/05/linux-命令/">linux 命令</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        1. ls查看当前目录下的所存在的文件
-2. 键盘Tab键补全文件名：例如当前目录有changzhi这个文件，我输入chan后按Tab键就会补全
-cat 与 vim打开文件
-shift + G查看文件的全部内容
-fdisk -l查看您的数据盘信息fdisk -l与df -h 都为拆看数据盘信息命令，但在没有分区和格式化数据盘之前，使用df -h 命令无法看到数据盘。
-wq保存退出
-pwd显示...
-    
-
-        <a href="/2018/07/05/linux-命令/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-access-token与Authorization认证"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-07-04 11:38:29" datetime="2018-07-04T03:38:29.000Z"  itemprop="datePublished">2018-07-04</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/04/access-token与Authorization认证/">access_token与Authorization认证</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        1.access_token12345678910111213service.interceptors.request.use(config =&gt; &#123;  if (store.getters.token) &#123;    if (config.params) &#123;      config.params.access_token = store.getters.tok...
-    
-
-        <a href="/2018/07/04/access-token与Authorization认证/" class="post-more waves-effect waves-button">
-            Continue reading...
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li></ul>
 
     </div>
     
@@ -630,11 +628,11 @@ pwd显示...
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
-        <p><span>herec &copy; 2015 - 2018</span>
+        <p><span>herec &copy; 2015 - 2019</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

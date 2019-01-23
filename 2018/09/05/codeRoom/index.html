@@ -20,17 +20,17 @@
     
     
     <meta name="keywords" content="javascript">
-    <meta name="description" content="代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) retu">
+    <meta name="description" content="代码库1.```javascript/ from mobx / //1. 只执行一次function once(func) {  var invoked = false;  return function() {    if (invoked) return;    invoked = true;    return func.apply(this, arguments);  };}//egdis">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="codeRoom">
 <meta property="og:url" content="http://yoursite.com/2018/09/05/codeRoom/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) retu">
-<meta property="og:updated_time" content="2018-09-12T07:55:47.493Z">
+<meta property="og:description" content="代码库1.```javascript/ from mobx / //1. 只执行一次function once(func) {  var invoked = false;  return function() {    if (invoked) return;    invoked = true;    return func.apply(this, arguments);  };}//egdis">
+<meta property="og:updated_time" content="2018-10-15T07:30:05.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="codeRoom">
-<meta name="twitter:description" content="代码库1.123456789101112131415161718192021222324252627282930313233343536373839404142/* from mobx *///1. 只执行一次function once(func) &amp;#123;  var invoked = false;  return function() &amp;#123;    if (invoked) retu">
+<meta name="twitter:description" content="代码库1.```javascript/ from mobx / //1. 只执行一次function once(func) {  var invoked = false;  return function() {    if (invoked) return;    invoked = true;    return func.apply(this, arguments);  };}//egdis">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -111,7 +111,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -173,7 +173,12 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h1 id="代码库"><a href="#代码库" class="headerlink" title="代码库"></a>代码库</h1><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* from mobx */</span></div><div class="line"></div><div class="line"><span class="comment">//1. 只执行一次</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">once</span>(<span class="params">func</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> invoked = <span class="literal">false</span>;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (invoked) <span class="keyword">return</span>;</div><div class="line">    invoked = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">return</span> func.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line"><span class="comment">//eg</span></div><div class="line">disposer = once(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> idx = interceptors.indexOf(handler);</div><div class="line">  <span class="keyword">if</span> (idx !== <span class="number">-1</span>) interceptors.splice(idx, <span class="number">1</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">//2.</span></div><div class="line">	<span class="keyword">var</span> TraceMode$$<span class="number">1</span>;</div><div class="line">  (<span class="function"><span class="keyword">function</span> (<span class="params">TraceMode$$<span class="number">1</span></span>) </span>&#123;</div><div class="line">      TraceMode$$<span class="number">1</span>[TraceMode$$<span class="number">1</span>[<span class="string">"NONE"</span>] = <span class="number">0</span>] = <span class="string">"NONE"</span>;</div><div class="line">      TraceMode$$<span class="number">1</span>[TraceMode$$<span class="number">1</span>[<span class="string">"LOG"</span>] = <span class="number">1</span>] = <span class="string">"LOG"</span>;</div><div class="line">      TraceMode$$<span class="number">1</span>[TraceMode$$<span class="number">1</span>[<span class="string">"BREAK"</span>] = <span class="number">2</span>] = <span class="string">"BREAK"</span>;</div><div class="line">  &#125;)(TraceMode$$<span class="number">1</span> || (TraceMode$$<span class="number">1</span> = &#123;&#125;));</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//3.</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setReactionScheduler$$1</span>(<span class="params">fn</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> baseScheduler = reactionScheduler;</div><div class="line">    reactionScheduler = <span class="function"><span class="keyword">function</span> (<span class="params">f</span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> fn(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="keyword">return</span> baseScheduler(f);</div><div class="line">        &#125;);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//4.数组去重</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">dedupe</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(array));</div><div class="line">&#125;</div><div class="line"></div><div class="line">dedupe([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]) <span class="comment">// [1, 2, 3]</span></div></pre></td></tr></table></figure>
+            <h1 id="代码库"><a href="#代码库" class="headerlink" title="代码库"></a>代码库</h1><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p>```javascript<br>/<em> from mobx </em>/</p>
+<p>//1. 只执行一次<br>function once(func) {<br>  var invoked = false;<br>  return function() {<br>    if (invoked) return;<br>    invoked = true;<br>    return func.apply(this, arguments);<br>  };<br>}<br>//eg<br>disposer = once(function() {<br>  var idx = interceptors.indexOf(handler);<br>  if (idx !== -1) interceptors.splice(idx, 1);<br>});</p>
+<p>//2.<br>    var TraceMode$$1;<br>  (function (TraceMode$$1) {<br>      TraceMode$$1[TraceMode$$1[“NONE”] = 0] = “NONE”;<br>      TraceMode$$1[TraceMode$$1[“LOG”] = 1] = “LOG”;<br>      TraceMode$$1[TraceMode$$1[“BREAK”] = 2] = “BREAK”;<br>  })(TraceMode$$1 || (TraceMode$$1 = {}));</p>
+<p>//3.<br>function setReactionScheduler$$1(fn) {<br>    var baseScheduler = reactionScheduler;<br>    reactionScheduler = function (f) {<br>        return fn(function () {<br>            return baseScheduler(f);<br>        });<br>    };<br>}</p>
+<p>//4.数组去重<br>function dedupe(array) {<br>  return Array.from(new Set(array));<br>}</p>
+<p>dedupe([1, 1, 2, 3]) // [1, 2, 3]</p>
 
         </div>
 
@@ -181,7 +186,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-09-12T07:55:47.493Z" itemprop="dateUpdated">2018-09-12 15:55:47</time>
+    最后更新时间：<time datetime="2018-10-15T07:30:05.370Z" itemprop="dateUpdated">2018-10-15 15:30:05</time>
 </span><br>
 
 
@@ -345,11 +350,11 @@
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
-        <p><span>herec &copy; 2015 - 2018</span>
+        <p><span>herec &copy; 2015 - 2019</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>

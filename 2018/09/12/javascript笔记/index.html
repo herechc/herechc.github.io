@@ -27,7 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/09/12/javascript笔记/index.html">
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="1.switch123456789//switchswitch (derivation.dependenciesState) &amp;#123;  case exports.IDerivationState.UP_TO_DATE:      return false;  case exports.IDerivationState.NOT_TRACKING: //这里没有写返回,会跟下面exports.I">
-<meta property="og:updated_time" content="2018-09-12T08:05:10.963Z">
+<meta property="og:updated_time" content="2018-10-15T07:34:48.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript笔记">
 <meta name="twitter:description" content="1.switch123456789//switchswitch (derivation.dependenciesState) &amp;#123;  case exports.IDerivationState.UP_TO_DATE:      return false;  case exports.IDerivationState.NOT_TRACKING: //这里没有写返回,会跟下面exports.I">
@@ -111,7 +111,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -150,7 +150,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-switch"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.switch</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-toString和valueOf的区别？"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.toString和valueOf的区别？</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-switch"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.switch</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-toString和valueOf的区别？"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.toString和valueOf的区别？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-引用类型"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.引用类型</span></a></li></ol>
         </nav>
     </aside>
     
@@ -175,6 +175,8 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <h2 id="1-switch"><a href="#1-switch" class="headerlink" title="1.switch"></a>1.switch</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//switch</span></div><div class="line"><span class="keyword">switch</span> (derivation.dependenciesState) &#123;</div><div class="line">  <span class="keyword">case</span> exports.IDerivationState.UP_TO_DATE:</div><div class="line">      <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  <span class="keyword">case</span> exports.IDerivationState.NOT_TRACKING: <span class="comment">//这里没有写返回,会跟下面exports.IDerivationState.STALE一样返回return false</span></div><div class="line">  <span class="keyword">case</span> exports.IDerivationState.STALE:</div><div class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="2-toString和valueOf的区别？"><a href="#2-toString和valueOf的区别？" class="headerlink" title="2.toString和valueOf的区别？"></a>2.toString和valueOf的区别？</h2><p><a href="https://www.zhihu.com/question/24262399" target="_blank" rel="external">链接</a><br><a href="https://blog.csdn.net/x_jagger/article/details/73430959" target="_blank" rel="external">链接</a></p>
+<h2 id="3-引用类型"><a href="#3-引用类型" class="headerlink" title="3.引用类型"></a>3.引用类型</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ListNode</span>(<span class="params">val</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.val = val;</div><div class="line">  <span class="keyword">this</span>.next = <span class="literal">null</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> ans,head,node;</div><div class="line">node = <span class="keyword">new</span> ListNode(<span class="number">1</span>)</div><div class="line">ans = head = node</div><div class="line"></div><div class="line">node = <span class="keyword">new</span> ListNode(<span class="number">2</span>)</div><div class="line">head.next = node;</div><div class="line">head = node;</div><div class="line"></div><div class="line">node = <span class="keyword">new</span> ListNode(<span class="number">3</span>)</div><div class="line">head.next = node;</div><div class="line">head = node</div><div class="line"><span class="comment">//这就像一个链式引用，head会一直跟next指向同一个地址</span></div><div class="line"><span class="built_in">console</span>.log(head,ans)</div></pre></td></tr></table></figure>
+<p><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="external">链接</a></p>
 
         </div>
 
@@ -182,7 +184,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-09-12T08:05:10.963Z" itemprop="dateUpdated">2018-09-12 16:05:10</time>
+    最后更新时间：<time datetime="2018-10-15T07:34:48.932Z" itemprop="dateUpdated">2018-10-15 15:34:48</time>
 </span><br>
 
 
@@ -346,11 +348,11 @@
 
         <p>
             
-            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
         </p>
     </div>
     <div class="bottom">
-        <p><span>herec &copy; 2015 - 2018</span>
+        <p><span>herec &copy; 2015 - 2019</span>
             <span>
                 
                 Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
