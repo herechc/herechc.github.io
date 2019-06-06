@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>react笔记 | herec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="react">
+    <meta name="description" content="状态管理的高阶函数1234567891011121314151617export default connect((&amp;#123; expandedRowKeys &amp;#125;, &amp;#123; rowKey &amp;#125;) =&amp;gt; (&amp;#123;  expanded: !!~expandedRowKeys.indexOf(rowKey),&amp;#125;))(ExpandableRow);expor">
+<meta name="keywords" content="react">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react笔记">
+<meta property="og:url" content="http://yoursite.com/2019/01/23/react笔记/index.html">
+<meta property="og:site_name" content="herec">
+<meta property="og:description" content="状态管理的高阶函数1234567891011121314151617export default connect((&amp;#123; expandedRowKeys &amp;#125;, &amp;#123; rowKey &amp;#125;) =&amp;gt; (&amp;#123;  expanded: !!~expandedRowKeys.indexOf(rowKey),&amp;#125;))(ExpandableRow);expor">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-06T02:34:38.514Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react笔记">
+<meta name="twitter:description" content="状态管理的高阶函数1234567891011121314151617export default connect((&amp;#123; expandedRowKeys &amp;#125;, &amp;#123; rowKey &amp;#125;) =&amp;gt; (&amp;#123;  expanded: !!~expandedRowKeys.indexOf(rowKey),&amp;#125;))(ExpandableRow);expor">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide">
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">herec</h5>
+          <a href="mailto:453288875@qq.com" title="453288875@qq.com" class="mail">453288875@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/">
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives">
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags">
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/herec" target="_blank">
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/1955831145" target="_blank">
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">react笔记</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">react笔记</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-01-23T06:17:54.000Z" itemprop="datePublished" class="page-time">
+  2019-01-23
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#状态管理的高阶函数"><span class="post-toc-number">1.</span> <span class="post-toc-text">状态管理的高阶函数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#组件参数用法"><span class="post-toc-number">2.</span> <span class="post-toc-text">组件参数用法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#更新props的值"><span class="post-toc-number">3.</span> <span class="post-toc-text">更新props的值</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#React输入框焦点丢失"><span class="post-toc-number">4.</span> <span class="post-toc-text">React输入框焦点丢失</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#router4如何跳转子路由"><span class="post-toc-number">5.</span> <span class="post-toc-text">router4如何跳转子路由</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-react笔记" class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">react笔记</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-01-23 14:17:54" datetime="2019-01-23T06:17:54.000Z" itemprop="datePublished">2019-01-23</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="状态管理的高阶函数"><a href="#状态管理的高阶函数" class="headerlink" title="状态管理的高阶函数"></a>状态管理的高阶函数</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(<span class="function">(<span class="params">&#123; expandedRowKeys &#125;, &#123; rowKey &#125;</span>) =&gt;</span> (&#123;</span><br><span class="line">  expanded: !!~expandedRowKeys.indexOf(rowKey),</span><br><span class="line">&#125;))(ExpandableRow);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(<span class="function">(<span class="params">state, props</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; currentHoverKey, expandedRowKeys &#125; = state;</span><br><span class="line">  <span class="keyword">const</span> &#123; rowKey, ancestorKeys &#125; = props;</span><br><span class="line">  <span class="comment">// 是否显示（展开-缩起）</span></span><br><span class="line">  <span class="keyword">const</span> visible = ancestorKeys.length === <span class="number">0</span> || ancestorKeys.every(<span class="function"><span class="params">k</span> =&gt;</span> ~expandedRowKeys.indexOf(k));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    visible,</span><br><span class="line">    hovered: currentHoverKey === rowKey,</span><br><span class="line">    height: getRowHeight(state, props),</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;)(TableRow);</span><br></pre></td></tr></table></figure>
+<p>上面代码来自antd-&gt;table-&gt;TableRow,ExpandableRow文件<br>可以看出，connect第一个函数参数的两个参数是state和props，而({ expandedRowKeys }, { rowKey })是它们的解构</p>
+<h2 id="组件参数用法"><a href="#组件参数用法" class="headerlink" title="组件参数用法"></a>组件参数用法</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//antd-&gt;table</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//BaseTable.js</span></span><br><span class="line">&lt;ExpandableRow</span><br><span class="line">  &#123;...expander.props&#125;</span><br><span class="line">  fixed=&#123;fixed&#125;</span><br><span class="line">  index=&#123;i&#125;</span><br><span class="line">  prefixCls=&#123;rowPrefixCls&#125;</span><br><span class="line">  record=&#123;record&#125;</span><br><span class="line">  key=&#123;key&#125;</span><br><span class="line">  rowKey=&#123;key&#125;</span><br><span class="line">  onRowClick=&#123;onRowClick&#125;</span><br><span class="line">  needIndentSpaced=&#123;expander.needIndentSpaced&#125;<span class="comment">//需要占位空白空间</span></span><br><span class="line">  onExpandedChange=&#123;expander.handleExpandChange&#125;</span><br><span class="line">&gt;</span><br><span class="line">  &#123;(</span><br><span class="line">    expandableRow, <span class="comment">// eslint-disable-line</span></span><br><span class="line">  ) =&gt; (</span><br><span class="line">    &lt;TableRow</span><br><span class="line">      fixed=&#123;fixed&#125;</span><br><span class="line">      indent=&#123;indent&#125;</span><br><span class="line">      className=&#123;className&#125;</span><br><span class="line">      record=&#123;record&#125;</span><br><span class="line">      index=&#123;i&#125;</span><br><span class="line">      prefixCls=&#123;rowPrefixCls&#125;</span><br><span class="line">      childrenColumnName=&#123;childrenColumnName&#125;</span><br><span class="line">      columns=&#123;leafColumns&#125;</span><br><span class="line">      onRow=&#123;onRow&#125;</span><br><span class="line">      onRowDoubleClick=&#123;onRowDoubleClick&#125;</span><br><span class="line">      onRowContextMenu=&#123;onRowContextMenu&#125;</span><br><span class="line">      onRowMouseEnter=&#123;onRowMouseEnter&#125;</span><br><span class="line">      onRowMouseLeave=&#123;onRowMouseLeave&#125;</span><br><span class="line">      &#123;...onHoverProps&#125;</span><br><span class="line">      rowKey=&#123;key&#125;</span><br><span class="line">      ancestorKeys=&#123;ancestorKeys&#125;</span><br><span class="line">      ref=&#123;rowRef(record, i, indent)&#125;</span><br><span class="line">      components=&#123;components&#125;</span><br><span class="line">      isAnyColumnsFixed=&#123;isAnyColumnsFixed&#125;</span><br><span class="line">      &#123;...expandableRow&#125;</span><br><span class="line">    /&gt;</span><br><span class="line">  )&#125;</span><br><span class="line">&lt;<span class="regexp">/ExpandableRow&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/ExpandableRow.js</span></span><br><span class="line"><span class="regexp">render() &#123;</span></span><br><span class="line"><span class="regexp">  const &#123;</span></span><br><span class="line"><span class="regexp">    childrenColumnName,</span></span><br><span class="line"><span class="regexp">    expandedRowRender, /</span><span class="regexp">/ 额外的展开行	</span></span><br><span class="line"><span class="regexp">    indentSize,</span></span><br><span class="line"><span class="regexp">    record,</span></span><br><span class="line"><span class="regexp">    fixed,</span></span><br><span class="line"><span class="regexp">    expanded,</span></span><br><span class="line"><span class="regexp">  &#125; = this.props;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  this.expandIconAsCell = fixed !== 'right' ? this.props.expandIconAsCell : false;</span></span><br><span class="line"><span class="regexp">  this.expandIconColumnIndex = fixed !== 'right' ? this.props.expandIconColumnIndex : -1;</span></span><br><span class="line"><span class="regexp">  const childrenData = record[childrenColumnName];</span></span><br><span class="line"><span class="regexp">  this.expandable = !!(childrenData || expandedRowRender);</span></span><br><span class="line"><span class="regexp">  const expandableRowProps = &#123;</span></span><br><span class="line"><span class="regexp">    indentSize,</span></span><br><span class="line"><span class="regexp">    expanded, /</span><span class="regexp">/ not used in TableRow, but it's required to re-render TableRow when `expanded` changes</span></span><br><span class="line"><span class="regexp">    onRowClick: this.handleRowClick,</span></span><br><span class="line"><span class="regexp">    hasExpandIcon: this.hasExpandIcon,</span></span><br><span class="line"><span class="regexp">    renderExpandIcon: this.renderExpandIcon,</span></span><br><span class="line"><span class="regexp">    renderExpandIconCell: this.renderExpandIconCell,</span></span><br><span class="line"><span class="regexp">  &#125;;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  return this.props.children(expandableRowProps);</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="更新props的值"><a href="#更新props的值" class="headerlink" title="更新props的值"></a>更新props的值</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//代码来自antd -&gt; table -&gt; ExpandableRow.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//1</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(<span class="function">(<span class="params">&#123; expandedRowKeys &#125;, &#123; rowKey &#125;</span>) =&gt;</span> (&#123;</span><br><span class="line">  expanded: !!~expandedRowKeys.indexOf(rowKey),</span><br><span class="line">&#125;))(ExpandableRow);</span><br><span class="line"><span class="comment">//2</span></span><br><span class="line">handleExpandChange = <span class="function">(<span class="params">record, event</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; onExpandedChange, expanded, rowKey &#125; = <span class="keyword">this</span>.props;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">this</span>.expandable) &#123;</span><br><span class="line">    onExpandedChange(!expanded, record, event, rowKey);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//3</span></span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123;</span><br><span class="line">    childrenColumnName,</span><br><span class="line">    expandedRowRender, 	</span><br><span class="line">    indentSize,</span><br><span class="line">    record,</span><br><span class="line">    fixed,</span><br><span class="line">    expanded,</span><br><span class="line">  &#125; = <span class="keyword">this</span>.props;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.expandIconAsCell = fixed !== <span class="string">'right'</span> ? <span class="keyword">this</span>.props.expandIconAsCell : <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">this</span>.expandIconColumnIndex = fixed !== <span class="string">'right'</span> ? <span class="keyword">this</span>.props.expandIconColumnIndex : <span class="number">-1</span>;</span><br><span class="line">  <span class="keyword">const</span> childrenData = record[childrenColumnName];</span><br><span class="line">  <span class="keyword">this</span>.expandable = !!(childrenData || expandedRowRender);</span><br><span class="line">  <span class="keyword">const</span> expandableRowProps = &#123;</span><br><span class="line">    indentSize,</span><br><span class="line">    expanded, <span class="comment">//4. not used in TableRow, but it's required to re-render TableRow when `expanded` changes</span></span><br><span class="line">    onRowClick: <span class="keyword">this</span>.handleRowClick,</span><br><span class="line">    hasExpandIcon: <span class="keyword">this</span>.hasExpandIcon,</span><br><span class="line">    renderExpandIcon: <span class="keyword">this</span>.renderExpandIcon,</span><br><span class="line">    renderExpandIconCell: <span class="keyword">this</span>.renderExpandIconCell,</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.props.children(expandableRowProps);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="number">1</span>的expaned更新，handleExpandChange要拿到expanded的值，但这样直接拿expanded并不是更新的值，需要在</span><br><span class="line"> <span class="number">3</span>的<span class="number">4</span>处加上</span><br></pre></td></tr></table></figure>
+<h2 id="React输入框焦点丢失"><a href="#React输入框焦点丢失" class="headerlink" title="React输入框焦点丢失"></a>React输入框焦点丢失</h2><p><a href="http://react-china.org/t/react/3904" target="_blank" rel="noopener">read</a></p>
+<h2 id="router4如何跳转子路由"><a href="#router4如何跳转子路由" class="headerlink" title="router4如何跳转子路由"></a>router4如何跳转子路由</h2><p><a href="https://segmentfault.com/q/1010000009616045" target="_blank" rel="noopener">read</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-06-06T02:34:38.514Z" itemprop="dateUpdated">2019-06-06 10:34:38</time>
+</span><br>
+
+
+        
+        原始链接：<a href="/2019/01/23/react笔记/" target="_blank" rel="external">http://yoursite.com/2019/01/23/react笔记/</a>
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="herec">
+            herec
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/23/react笔记/&title=《react笔记》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/23/react笔记/&title=《react笔记》 — herec&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/23/react笔记/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《react笔记》 — herec&url=http://yoursite.com/2019/01/23/react笔记/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/23/react笔记/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/06/06/http笔记/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">http笔记</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/10/30/算法笔记/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">算法笔记</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢客官~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>herec &copy; 2015 - 2019</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/01/23/react笔记/&title=《react笔记》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/01/23/react笔记/&title=《react笔记》 — herec&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/01/23/react笔记/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《react笔记》 — herec&url=http://yoursite.com/2019/01/23/react笔记/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2019/01/23/react笔记/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2019/01/23/react笔记/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

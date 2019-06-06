@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     
 
     
@@ -19,11 +19,12 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
+    <meta name="keywords" content>
     <meta property="og:type" content="website">
 <meta property="og:title" content="herec">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="herec">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="herec">
     
@@ -35,7 +36,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+    <aside id="menu">
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -55,35 +56,35 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/">
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives"  >
+              <a href="/archives">
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags">
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/herec" target="_blank" >
+              <a href="https://github.com/herec" target="_blank">
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="http://weibo.com/u/1955831145" target="_blank" >
+              <a href="http://weibo.com/u/1955831145" target="_blank">
                 <i class="icon icon-lg icon-weibo"></i>
                 Weibo
               </a>
@@ -140,11 +141,10 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
-            <article id="post-linux-命令"
-  class="article-card article-type-post" itemprop="blogPost">
+            <article id="post-mobx的那些事-shouldCompute" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2018-07-05 14:06:02" datetime="2018-07-05T06:06:02.000Z"  itemprop="datePublished">2018-07-05</time>
+        <time class="post-time" title="2018-09-17 16:11:18" datetime="2018-09-17T08:11:18.000Z" itemprop="datePublished">2018-09-17</time>
 
         
 
@@ -156,7 +156,374 @@
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/05/linux-命令/">linux 命令</a>
+      <a class="post-title-link" href="/2018/09/17/mobx的那些事-shouldCompute/">mobx的那些事-shouldCompute</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        1.lowestObserverState与dependenciesState下级成员拥有 L 属性；而上级成员拥有 D 属性，比如：
+观察员(observable) O1 只拥有 L 属性探长(runAction) R1 只拥有 D 属性会计师(computed) C1 既拥有 L 属性，也拥有 D 属性
+
+    
+
+        <a href="/2018/09/17/mobx的那些事-shouldCompute/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobx/">mobx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-mobx的那些事-cmoputed" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-09-13 10:40:18" datetime="2018-09-13T02:40:18.000Z" itemprop="datePublished">2018-09-13</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/09/13/mobx的那些事-cmoputed/">mobx的那些事-cmoputed</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        123456789101112var bankUser = mobx.observable(&#123;  income: 3,  debit: 2&#125;);var divisor = mobx.computed(() =&gt; &#123;  return bankUser.income / bankUser.debit;&#125;);mobx.autorun(() =&gt; ...
+    
+
+        <a href="/2018/09/13/mobx的那些事-cmoputed/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobx/">mobx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-javascript笔记" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-09-12 15:55:37" datetime="2018-09-12T07:55:37.000Z" itemprop="datePublished">2018-09-12</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/09/12/javascript笔记/">javascript笔记</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        1.switch123456789//switchswitch (derivation.dependenciesState) &#123;  case exports.IDerivationState.UP_TO_DATE:      return false;  case exports.IDerivationState.NOT_TRACKING: //这里没有写返回,会跟下面export...
+    
+
+        <a href="/2018/09/12/javascript笔记/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-mobx的那些事-autorun" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-09-11 15:10:29" datetime="2018-09-11T07:10:29.000Z" itemprop="datePublished">2018-09-11</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/09/11/mobx的那些事-autorun/">mobx的那些事-autorun</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        autoRun(view, opts)
+autorun接收两个参数,第一个参数是响应式函数,第二个参数是一个对象,可设置name,delay…等等.先看下autorun的入口函数,下面这段代码是入口函数的主要代码,可以看到它调用了Reaction1234reaction$$1 = new Reaction$$1(name, function () &#123;     //this指向Rea...
+    
+
+        <a href="/2018/09/11/mobx的那些事-autorun/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobx/">mobx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-codeRoom" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-09-05 09:51:02" datetime="2018-09-05T01:51:02.000Z" itemprop="datePublished">2018-09-05</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/09/05/codeRoom/">codeRoom</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        代码库1.
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384/* from mobx *///1. 只执行一次functio...
+    
+
+        <a href="/2018/09/05/codeRoom/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-package参数详解" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-08-23 11:18:42" datetime="2018-08-23T03:18:42.000Z" itemprop="datePublished">2018-08-23</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/08/23/package参数详解/">package参数详解</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475&#123;    *name:"",            //---包名---            //可...
+    
+
+        <a href="/2018/08/23/package参数详解/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/package/">package</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-算法图解" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-07-21 22:08:32" datetime="2018-07-21T14:08:32.000Z" itemprop="datePublished">2018-07-21</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/07/21/算法图解/">算法图解</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        the note for the of “算法图解”1.二分叉法required:  1.有序列表  2.快速查找
+E:12345678910111213141516171819function binary_search(list, item)&#123;  var low = 0;  var high = list.length - 1;  while(low &lt;= high)&#...
+    
+
+        <a href="/2018/07/21/算法图解/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-umi" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-07-12 10:03:20" datetime="2018-07-12T02:03:20.000Z" itemprop="datePublished">2018-07-12</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/07/12/umi/">umi</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        https://umijs.org/guide/deploy.html#html-在非根路径
+
+                
+                    
+                    
+                
+                umi
+            
+Package.json文件：
+                
+       ...
+    
+
+        <a href="/2018/07/12/umi/" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-linux命令" class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2018-07-05 14:06:02" datetime="2018-07-05T06:06:02.000Z" itemprop="datePublished">2018-07-05</time>
+
+        
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2018/07/05/linux命令/">linux命令</a>
     </h3>
   
 
@@ -175,7 +542,7 @@ wq保存退出
 pwd显示...
     
 
-        <a href="/2018/07/05/linux-命令/" class="post-more waves-effect waves-button">
+        <a href="/2018/07/05/linux命令/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
@@ -191,11 +558,10 @@ pwd显示...
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-access-token与Authorization认证"
-  class="article-card article-type-post" itemprop="blogPost">
+            <article id="post-react开发过程" class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
-        <time class="post-time" title="2018-07-04 11:38:29" datetime="2018-07-04T03:38:29.000Z"  itemprop="datePublished">2018-07-04</time>
+        <time class="post-time" title="2018-02-08 09:58:30" datetime="2018-02-08T01:58:30.000Z" itemprop="datePublished">2018-02-08</time>
 
         
 
@@ -207,136 +573,7 @@ pwd显示...
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/07/04/access-token与Authorization认证/">access_token与Authorization认证</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        1.access_token12345678910111213service.interceptors.request.use(config =&gt; &#123;  if (store.getters.token) &#123;    if (config.params) &#123;      config.params.access_token = store.getters.tok...
-    
-
-        <a href="/2018/07/04/access-token与Authorization认证/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-react后台管理-dva-1"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-06-11 14:58:11" datetime="2018-06-11T06:58:11.000Z"  itemprop="datePublished">2018-06-11</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/11/react后台管理-dva-1/">react后台管理(dva)</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        umi
-    
-
-        <a href="/2018/06/11/react后台管理-dva-1/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-react后台管理-dva"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-06-11 14:58:10" datetime="2018-06-11T06:58:10.000Z"  itemprop="datePublished">2018-06-11</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/06/11/react后台管理-dva/">react后台管理(dva</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        
-    
-
-        <a href="/2018/06/11/react后台管理-dva/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-react-开发过程"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-02-08 09:58:30" datetime="2018-02-08T01:58:30.000Z"  itemprop="datePublished">2018-02-08</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/02/08/react-开发过程/">react 开发过程</a>
+      <a class="post-title-link" href="/2018/02/08/react开发过程/">react开发过程</a>
     </h3>
   
 
@@ -350,7 +587,7 @@ pwd显示...
 1234phantomjs_cdnurl=http://cnpmjs.org/downloadssass_binary_site=https://npm.taobao.org/mirrors/node-sass/registry=h...
     
 
-        <a href="/2018/02/08/react-开发过程/" class="post-more waves-effect waves-button">
+        <a href="/2018/02/08/react开发过程/" class="post-more waves-effect waves-button">
             阅读全文…
         </a>
     </div>
@@ -365,251 +602,12 @@ pwd显示...
 
         </li>
     
-        <li class="post-list-item fade">
-            <article id="post-js中的计算的推算出公式"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-01-23 16:19:16" datetime="2018-01-23T08:19:16.000Z"  itemprop="datePublished">2018-01-23</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/01/23/js中的计算的推算出公式/">js中的计算的推算出公式</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        elementui组件的carousel的item.vue的card模式,要计算舞台中三个子组件的偏移位移123456789101112131415calculateTranslate(index, activeIndex, parentWidth) &#123;  if (this.inStage) &#123;    // 在舞台上的组件    // 1.当前索引的组件位移，要居中，宽度...
-    
-
-        <a href="/2018/01/23/js中的计算的推算出公式/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-createEvent自定义事件与触发"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-01-12 15:01:58" datetime="2018-01-12T07:01:58.000Z"  itemprop="datePublished">2018-01-12</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/01/12/createEvent自定义事件与触发/">createEvent自定义事件与触发</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        
-一个栗子先上demo
-
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960//来自element\src\utils\menu\aria-menuitem.jsMenuItem.prototype.addListener...
-    
-
-        <a href="/2018/01/12/createEvent自定义事件与触发/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-html"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-01-10 14:45:43" datetime="2018-01-10T06:45:43.000Z"  itemprop="datePublished">2018-01-10</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/01/10/html/">html</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        1.meta1234567&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;&lt;meta name="format-detection" content="telephone=no"&gt;&lt;meta name="keywords" content=""&gt;&lt;meta name...
-    
-
-        <a href="/2018/01/10/html/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-css"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-01-10 14:24:47" datetime="2018-01-10T06:24:47.000Z"  itemprop="datePublished">2018-01-10</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/01/10/css/">css</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        1.光标颜色
-12345678910111213141516171819.ui-input&#123;  color: #fc9724;  text-shadow: 0px 0px 0px #000;  -webkit-text-fill-color: transparent;  border:0;  font-size:0.3rem;&amp;:-moz-placeholder &#123...
-    
-
-        <a href="/2018/01/10/css/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-mongodb-查看log与设置权限"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2018-01-10 14:01:05" datetime="2018-01-10T06:01:05.000Z"  itemprop="datePublished">2018-01-10</time>
-
-        
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2018/01/10/mongodb-查看log与设置权限/">mongodb 查看log与设置权限</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        一.查看log
-                
-                    
-                    
-                
-                mongdb_1
-            
-                
-                    
-                    
-                ...
-    
-
-        <a href="/2018/01/10/mongodb-查看log与设置权限/" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mongodb/">mongodb</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
     </ul>
 
     
 <nav id="page-nav">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
     </div>
 </nav>
 
@@ -620,10 +618,10 @@ pwd显示...
     <div class="top">
         
 <p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
+    <span id="busuanzi_container_site_uv" style="display:none">
         站点总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
+    <span id="busuanzi_container_site_pv" style="display:none">
         站点总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>

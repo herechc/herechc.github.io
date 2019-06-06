@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     
 
     
@@ -19,14 +19,16 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="">
+    <meta name="keywords" content="node,package">
     <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475&amp;#123;    *name:&quot;&quot;,            //---包名---            //可包含：">
+<meta name="keywords" content="node,package">
 <meta property="og:type" content="article">
 <meta property="og:title" content="package参数详解">
 <meta property="og:url" content="http://yoursite.com/2018/08/23/package参数详解/index.html">
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475&amp;#123;    *name:&quot;&quot;,            //---包名---            //可包含：">
-<meta property="og:updated_time" content="2018-08-23T03:19:13.986Z">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-06T01:26:35.877Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="package参数详解">
 <meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475&amp;#123;    *name:&quot;&quot;,            //---包名---            //可包含：">
@@ -39,7 +41,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide" >
+    <aside id="menu" class="hide">
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -59,35 +61,35 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/">
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives"  >
+              <a href="/archives">
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags">
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/herec" target="_blank" >
+              <a href="https://github.com/herec" target="_blank">
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="http://weibo.com/u/1955831145" target="_blank" >
+              <a href="http://weibo.com/u/1955831145" target="_blank">
                 <i class="icon icon-lg icon-weibo"></i>
                 Weibo
               </a>
@@ -146,33 +148,32 @@
 
 <div class="container body-wrap">
     
-<article id="post-package参数详解"
-  class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-package参数详解" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">package参数详解</h1>
         <div class="post-meta">
-            <time class="post-time" title="2018-08-23 11:18:42" datetime="2018-08-23T03:18:42.000Z"  itemprop="datePublished">2018-08-23</time>
+            <time class="post-time" title="2018-08-23 11:18:42" datetime="2018-08-23T03:18:42.000Z" itemprop="datePublished">2018-08-23</time>
 
             
 
 
             
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
     <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
 </span>
 
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    *name:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---包名---</span></div><div class="line">            <span class="comment">//可包含：小写的字母、数字、.、_、-，禁止出现空格</span></div><div class="line">            <span class="comment">//包名是唯一的(npm库里的包名)</span></div><div class="line">    *description:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---该包的简介---</span></div><div class="line">    *version:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---版本号---</span></div><div class="line">            <span class="comment">//格式 xx.xx.xx</span></div><div class="line">    *keywords:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---关键词数组---</span></div><div class="line">            <span class="comment">//可被npm库中搜索到</span></div><div class="line">    maintainters:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---包维护者列表---</span></div><div class="line">            <span class="comment">//示例:[&#123;"name":xx,"email":"xx@gmail.com","web":"http://xx.com"&#125;,&#123;...&#125;]</span></div><div class="line">    contributors:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---贡献者列表---</span></div><div class="line">            <span class="comment">//第一个是包作者本人，格式同上面包维护者相同</span></div><div class="line">    bus:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---可反馈bug的url或者email</span></div><div class="line">    lincenses:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---当前包所使用的许可证列表---</span></div><div class="line">            <span class="comment">//表示本包在哪些许可证下可以用</span></div><div class="line">            <span class="comment">//格式:[&#123;"type":xx,"url":"http://xx.com"&#125;]</span></div><div class="line">    *repositories:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---源代码的托管位置---</span></div><div class="line">    *dependencies:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---当前包所需的依赖包---</span></div><div class="line">    homepage:<span class="string">""</span>,</div><div class="line">            <span class="comment">//当前包的网站位置</span></div><div class="line">    os:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---支持的操作系统列表---</span></div><div class="line">            <span class="comment">//一般为空（基本都支持）</span></div><div class="line">    cpu:<span class="string">""</span>, </div><div class="line">            <span class="comment">//---支持的CPU架构列表---</span></div><div class="line">            <span class="comment">//一般为空（基本都支持）</span></div><div class="line">            <span class="comment">//有效的值：arm,mips,ppc,sparc,x86,x86_64.</span></div><div class="line">    *engine:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---支持的javascript引擎列表---</span></div><div class="line">            <span class="comment">//一般为空（基本都支持）</span></div><div class="line">            <span class="comment">//有效的值：ejs,mips,flusspferd,gpsee,jsc,spidermonkey,narwhal,node,v8.</span></div><div class="line">    builtin:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---标志当前包是否内建在底层系统的标准组件--- </span></div><div class="line">            <span class="comment">//不懂 没用到</span></div><div class="line">    directories:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---包目录说明---</span></div><div class="line">    implements:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---实现规范的列表---</span></div><div class="line">            <span class="comment">//标志当前包实现了CommonJs的哪些规范</span></div><div class="line">            <span class="comment">//没用过。。</span></div><div class="line">    *scripts：<span class="string">""</span>,</div><div class="line">            <span class="comment">//---脚本说明对象---</span></div><div class="line">            <span class="comment">//用来安装、编译、测试、卸载包</span></div><div class="line">            <span class="comment">//可是一段命令或者js文件</span></div><div class="line">            <span class="comment">/*</span></div><div class="line"><span class="comment">            "scripts": &#123;</span></div><div class="line"><span class="comment">                "precommit": "eslint --cache --fix ./js/ ./common",</span></div><div class="line"><span class="comment">                "build_clear": "rimraf -rf build&amp;&amp; mkdir build",</span></div><div class="line"><span class="comment">                "start": "cross-env NODE_ENV=development node --max-old-space-size=8192,</span></div><div class="line"><span class="comment">                "test":"test.js"</span></div><div class="line"><span class="comment">            &#125;</span></div><div class="line"><span class="comment">            */</span></div><div class="line">    *author：<span class="string">""</span>,</div><div class="line">            <span class="comment">//---包作者---</span></div><div class="line">    *bin:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---包可作为命令行工具使用---</span></div><div class="line">            <span class="comment">//配置好bin字段后，通过npm install &lt;package_name&gt; -g 将脚本添加到执行路径中，之后可以在命令行中直接执行。</span></div><div class="line">            <span class="comment">//类似全局安装了webpack~</span></div><div class="line">    *main:<span class="string">""</span>,</div><div class="line">            <span class="comment">//---入口文件---</span></div><div class="line">            <span class="comment">//如果不存在这个字段，会自动按下面顺序查找:index.js,index.node,index.json</span></div><div class="line">    *devDenpendencies:<span class="string">""</span></div><div class="line">            <span class="comment">//---只在开发时需要的依赖包---</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    *name:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---包名---</span></span><br><span class="line">            <span class="comment">//可包含：小写的字母、数字、.、_、-，禁止出现空格</span></span><br><span class="line">            <span class="comment">//包名是唯一的(npm库里的包名)</span></span><br><span class="line">    *description:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---该包的简介---</span></span><br><span class="line">    *version:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---版本号---</span></span><br><span class="line">            <span class="comment">//格式 xx.xx.xx</span></span><br><span class="line">    *keywords:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---关键词数组---</span></span><br><span class="line">            <span class="comment">//可被npm库中搜索到</span></span><br><span class="line">    maintainters:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---包维护者列表---</span></span><br><span class="line">            <span class="comment">//示例:[&#123;"name":xx,"email":"xx@gmail.com","web":"http://xx.com"&#125;,&#123;...&#125;]</span></span><br><span class="line">    contributors:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---贡献者列表---</span></span><br><span class="line">            <span class="comment">//第一个是包作者本人，格式同上面包维护者相同</span></span><br><span class="line">    bus:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---可反馈bug的url或者email</span></span><br><span class="line">    lincenses:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---当前包所使用的许可证列表---</span></span><br><span class="line">            <span class="comment">//表示本包在哪些许可证下可以用</span></span><br><span class="line">            <span class="comment">//格式:[&#123;"type":xx,"url":"http://xx.com"&#125;]</span></span><br><span class="line">    *repositories:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---源代码的托管位置---</span></span><br><span class="line">    *dependencies:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---当前包所需的依赖包---</span></span><br><span class="line">    homepage:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//当前包的网站位置</span></span><br><span class="line">    os:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---支持的操作系统列表---</span></span><br><span class="line">            <span class="comment">//一般为空（基本都支持）</span></span><br><span class="line">    cpu:<span class="string">""</span>, </span><br><span class="line">            <span class="comment">//---支持的CPU架构列表---</span></span><br><span class="line">            <span class="comment">//一般为空（基本都支持）</span></span><br><span class="line">            <span class="comment">//有效的值：arm,mips,ppc,sparc,x86,x86_64.</span></span><br><span class="line">    *engine:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---支持的javascript引擎列表---</span></span><br><span class="line">            <span class="comment">//一般为空（基本都支持）</span></span><br><span class="line">            <span class="comment">//有效的值：ejs,mips,flusspferd,gpsee,jsc,spidermonkey,narwhal,node,v8.</span></span><br><span class="line">    builtin:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---标志当前包是否内建在底层系统的标准组件--- </span></span><br><span class="line">            <span class="comment">//不懂 没用到</span></span><br><span class="line">    directories:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---包目录说明---</span></span><br><span class="line">    implements:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---实现规范的列表---</span></span><br><span class="line">            <span class="comment">//标志当前包实现了CommonJs的哪些规范</span></span><br><span class="line">            <span class="comment">//没用过。。</span></span><br><span class="line">    *scripts：<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---脚本说明对象---</span></span><br><span class="line">            <span class="comment">//用来安装、编译、测试、卸载包</span></span><br><span class="line">            <span class="comment">//可是一段命令或者js文件</span></span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            "scripts": &#123;</span></span><br><span class="line"><span class="comment">                "precommit": "eslint --cache --fix ./js/ ./common",</span></span><br><span class="line"><span class="comment">                "build_clear": "rimraf -rf build&amp;&amp; mkdir build",</span></span><br><span class="line"><span class="comment">                "start": "cross-env NODE_ENV=development node --max-old-space-size=8192,</span></span><br><span class="line"><span class="comment">                "test":"test.js"</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">    *author：<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---包作者---</span></span><br><span class="line">    *bin:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---包可作为命令行工具使用---</span></span><br><span class="line">            <span class="comment">//配置好bin字段后，通过npm install &lt;package_name&gt; -g 将脚本添加到执行路径中，之后可以在命令行中直接执行。</span></span><br><span class="line">            <span class="comment">//类似全局安装了webpack~</span></span><br><span class="line">    *main:<span class="string">""</span>,</span><br><span class="line">            <span class="comment">//---入口文件---</span></span><br><span class="line">            <span class="comment">//如果不存在这个字段，会自动按下面顺序查找:index.js,index.node,index.json</span></span><br><span class="line">    *devDenpendencies:<span class="string">""</span></span><br><span class="line">            <span class="comment">//---只在开发时需要的依赖包---</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-08-23T03:19:13.986Z" itemprop="dateUpdated">2018-08-23 11:19:13</time>
+    最后更新时间：<time datetime="2019-06-06T01:26:35.877Z" itemprop="dateUpdated">2019-06-06 09:26:35</time>
 </span><br>
 
 
@@ -197,6 +198,8 @@
 
         <div class="post-footer">
             
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/package/">package</a></li></ul>
+
 
             
 <div class="page-share-wrap">
@@ -303,8 +306,7 @@
         </div>
         
         <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
             <div class="reward-toggle-ctrol">
                 <span class="reward-toggle-item wechat">微信</span>
                 <span class="reward-toggle-label"></span>
@@ -323,10 +325,10 @@
     <div class="top">
         
 <p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
+    <span id="busuanzi_container_site_uv" style="display:none">
         站点总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
+    <span id="busuanzi_container_site_pv" style="display:none">
         站点总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>

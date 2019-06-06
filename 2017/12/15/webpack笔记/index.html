@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     
 
     
@@ -20,17 +20,18 @@
     
     
     <meta name="keywords" content="webpack">
-    <meta name="description" content="1.html-webpack-plugin的chunkschunks 选项的作用主要是针对多入口(entry)文件。当你有多个入口文件的时候，对应就会生成多个编译后的 js 文件。那么 chunks 选项就可以决定是否都使用这些生成的 js 文件。 chunks 默认会在生成的 html 文件中引用所有的 js 文件，当然你也可以指定引入哪些特定的文件。 12345678910111213// w">
+    <meta name="description" content="html-webpack-plugin的chunkschunks 选项的作用主要是针对多入口(entry)文件。当你有多个入口文件的时候，对应就会生成多个编译后的 js 文件。那么 chunks 选项就可以决定是否都使用这些生成的 js 文件。 chunks 默认会在生成的 html 文件中引用所有的 js 文件，当然你也可以指定引入哪些特定的文件。 12345678910111213// web">
 <meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack笔记">
 <meta property="og:url" content="http://yoursite.com/2017/12/15/webpack笔记/index.html">
 <meta property="og:site_name" content="herec">
-<meta property="og:description" content="1.html-webpack-plugin的chunkschunks 选项的作用主要是针对多入口(entry)文件。当你有多个入口文件的时候，对应就会生成多个编译后的 js 文件。那么 chunks 选项就可以决定是否都使用这些生成的 js 文件。 chunks 默认会在生成的 html 文件中引用所有的 js 文件，当然你也可以指定引入哪些特定的文件。 12345678910111213// w">
-<meta property="og:updated_time" content="2018-02-08T11:29:36.002Z">
+<meta property="og:description" content="html-webpack-plugin的chunkschunks 选项的作用主要是针对多入口(entry)文件。当你有多个入口文件的时候，对应就会生成多个编译后的 js 文件。那么 chunks 选项就可以决定是否都使用这些生成的 js 文件。 chunks 默认会在生成的 html 文件中引用所有的 js 文件，当然你也可以指定引入哪些特定的文件。 12345678910111213// web">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-06T02:04:59.682Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack笔记">
-<meta name="twitter:description" content="1.html-webpack-plugin的chunkschunks 选项的作用主要是针对多入口(entry)文件。当你有多个入口文件的时候，对应就会生成多个编译后的 js 文件。那么 chunks 选项就可以决定是否都使用这些生成的 js 文件。 chunks 默认会在生成的 html 文件中引用所有的 js 文件，当然你也可以指定引入哪些特定的文件。 12345678910111213// w">
+<meta name="twitter:description" content="html-webpack-plugin的chunkschunks 选项的作用主要是针对多入口(entry)文件。当你有多个入口文件的时候，对应就会生成多个编译后的 js 文件。那么 chunks 选项就可以决定是否都使用这些生成的 js 文件。 chunks 默认会在生成的 html 文件中引用所有的 js 文件，当然你也可以指定引入哪些特定的文件。 12345678910111213// web">
     
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
@@ -40,7 +41,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide" >
+    <aside id="menu" class="hide">
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -60,35 +61,35 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/">
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives"  >
+              <a href="/archives">
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags">
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/herec" target="_blank" >
+              <a href="https://github.com/herec" target="_blank">
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="http://weibo.com/u/1955831145" target="_blank" >
+              <a href="http://weibo.com/u/1955831145" target="_blank">
                 <i class="icon icon-lg icon-weibo"></i>
                 Weibo
               </a>
@@ -150,46 +151,47 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-html-webpack-plugin的chunks"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.html-webpack-plugin的chunks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-output-filename"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.output.filename</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-CommonsChunkPlugin"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.CommonsChunkPlugin</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-manifest"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.manifest</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-entry引入模块"><span class="post-toc-number">5.</span> <span class="post-toc-text">5.entry引入模块</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-懒加载"><span class="post-toc-number">6.</span> <span class="post-toc-text">6.懒加载</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-懒加载原理"><span class="post-toc-number">7.</span> <span class="post-toc-text">6.懒加载原理</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#html-webpack-plugin的chunks"><span class="post-toc-number">1.</span> <span class="post-toc-text">html-webpack-plugin的chunks</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#output-filename"><span class="post-toc-number">2.</span> <span class="post-toc-text">output.filename</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CommonsChunkPlugin"><span class="post-toc-number">3.</span> <span class="post-toc-text">CommonsChunkPlugin</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#manifest"><span class="post-toc-number">4.</span> <span class="post-toc-text">manifest</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#entry引入模块"><span class="post-toc-number">5.</span> <span class="post-toc-text">entry引入模块</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#懒加载"><span class="post-toc-number">6.</span> <span class="post-toc-text">懒加载</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#懒加载原理"><span class="post-toc-number">7.</span> <span class="post-toc-text">懒加载原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#引入第三方库"><span class="post-toc-number">8.</span> <span class="post-toc-text">引入第三方库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Cannot-read-property-call-of-undefined"><span class="post-toc-number">9.</span> <span class="post-toc-text">Cannot read property call of undefined</span></a></li></ol>
         </nav>
     </aside>
     
-<article id="post-webpack笔记"
-  class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-webpack笔记" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">webpack笔记</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-12-15 15:16:25" datetime="2017-12-15T07:16:25.000Z"  itemprop="datePublished">2017-12-15</time>
+            <time class="post-time" title="2017-12-15 15:16:25" datetime="2017-12-15T07:16:25.000Z" itemprop="datePublished">2017-12-15</time>
 
             
 
 
             
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
     <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
 </span>
 
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="1-html-webpack-plugin的chunks"><a href="#1-html-webpack-plugin的chunks" class="headerlink" title="1.html-webpack-plugin的chunks"></a>1.html-webpack-plugin的chunks</h2><p>chunks 选项的作用主要是针对多入口(entry)文件。当你有多个入口文件的时候，对应就会生成多个编译后的 js 文件。那么 chunks 选项就可以决定是否都使用这些生成的 js 文件。</p>
+            <h2 id="html-webpack-plugin的chunks"><a href="#html-webpack-plugin的chunks" class="headerlink" title="html-webpack-plugin的chunks"></a>html-webpack-plugin的chunks</h2><p>chunks 选项的作用主要是针对多入口(entry)文件。当你有多个入口文件的时候，对应就会生成多个编译后的 js 文件。那么 chunks 选项就可以决定是否都使用这些生成的 js 文件。</p>
 <p>chunks 默认会在生成的 html 文件中引用所有的 js 文件，当然你也可以指定引入哪些特定的文件。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line">entry: &#123;</div><div class="line">    index: path.resolve(__dirname, <span class="string">'./src/index.js'</span>),</div><div class="line">    index1: path.resolve(__dirname, <span class="string">'./src/index1.js'</span>),</div><div class="line">    index2: path.resolve(__dirname, <span class="string">'./src/index2.js'</span>)</div><div class="line">&#125;</div><div class="line">...</div><div class="line">plugins: [</div><div class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</div><div class="line">        ...</div><div class="line">        chunks: [<span class="string">'index'</span>,<span class="string">'index2'</span>]</div><div class="line">    &#125;)</div><div class="line">]</div></pre></td></tr></table></figure>
-<p>执行 webpack 命令之后，你会看到生成的 index.html 文件中，只引用了 index.js 和 index2.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;script type=text/javascript src=index.js&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div><div class="line">&lt;script type=text/javascript src=index2.js&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></div></pre></td></tr></table></figure></p>
-<p><a href="https://segmentfault.com/a/1190000007294861" target="_blank" rel="external">参考</a></p>
-<h2 id="2-output-filename"><a href="#2-output-filename" class="headerlink" title="2.output.filename"></a>2.output.filename</h2><p>如果配置创建了多个单独的 “chunk”（例如，使用多个入口起点或使用像 CommonsChunkPlugin 这样的插件），则应该使用占位符(substitutions)来确保每个文件具有唯一的名称。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  entry: &#123;</div><div class="line">    app: <span class="string">'./src/app.js'</span>,</div><div class="line">    search: <span class="string">'./src/search.js'</span></div><div class="line">  &#125;,</div><div class="line">  output: &#123;</div><div class="line">    filename: <span class="string">'[name].js'</span>,</div><div class="line">    path: __dirname + <span class="string">'/dist'</span></div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="3-CommonsChunkPlugin"><a href="#3-CommonsChunkPlugin" class="headerlink" title="3.CommonsChunkPlugin"></a>3.CommonsChunkPlugin</h2><p>minChunks ：公共模块被使用的最小次数。比如配置为3，也就是同一个模块只有被3个以外的页面同时引用时才会被提取出来作为common chunks。</p>
-<h2 id="4-manifest"><a href="#4-manifest" class="headerlink" title="4.manifest"></a>4.manifest</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</div><div class="line">      name: <span class="string">'manifest'</span>,</div><div class="line">      chunks: [<span class="string">'vendor'</span>]</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
-<p><a href="https://segmentfault.com/q/1010000009276145/a-1020000009279643" target="_blank" rel="external">参考</a></p>
-<h2 id="5-entry引入模块"><a href="#5-entry引入模块" class="headerlink" title="5.entry引入模块"></a>5.entry引入模块</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">entry: &#123;</div><div class="line">      app: [</div><div class="line">          <span class="string">'react-hot-loader/patch'</span>,</div><div class="line">          <span class="string">`webpack-dev-server/client?http://<span class="subst">$&#123;webpackServerConfig.host&#125;</span>:<span class="subst">$&#123;webpackServerConfig.port&#125;</span>`</span>,</div><div class="line">          <span class="string">'webpack/hot/only-dev-server'</span>,</div><div class="line">          <span class="string">'./entry'</span></div><div class="line">      ]</div><div class="line">  &#125;,</div><div class="line">  如果entry里面路径是没有 <span class="string">'./'</span> 这些的，那么是引入模块，会到node_module里面去找</div></pre></td></tr></table></figure>
-<h2 id="6-懒加载"><a href="#6-懒加载" class="headerlink" title="6.懒加载"></a>6.懒加载</h2><p><a href="http://doc.okbase.net/stef/archive/260193.html" target="_blank" rel="external">http://doc.okbase.net/stef/archive/260193.html</a><br><a href="https://router.vuejs.org/zh-cn/advanced/lazy-loading.html里面有句话" target="_blank" rel="external">https://router.vuejs.org/zh-cn/advanced/lazy-loading.html里面有句话</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">第二，在 Webpack 2 中，我们可以使用动态 import语法来定义代码分块点 (split point)：</div><div class="line"></div><div class="line">import('./Foo.vue') // 返回 Promise</div><div class="line">    注意：如果您使用的是 Babel，你将需要添加 syntax-dynamic-import 插件，才能使 Babel 可以正确地解析语法。</div></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line">entry: &#123;</span><br><span class="line">    index: path.resolve(__dirname, <span class="string">'./src/index.js'</span>),</span><br><span class="line">    index1: path.resolve(__dirname, <span class="string">'./src/index1.js'</span>),</span><br><span class="line">    index2: path.resolve(__dirname, <span class="string">'./src/index2.js'</span>)</span><br><span class="line">&#125;</span><br><span class="line">...</span><br><span class="line">plugins: [</span><br><span class="line">    <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">        ...</span><br><span class="line">        chunks: [<span class="string">'index'</span>,<span class="string">'index2'</span>]</span><br><span class="line">    &#125;)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>执行 webpack 命令之后，你会看到生成的 index.html 文件中，只引用了 index.js 和 index2.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=text/javascript src=index.js&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=text/javascript src=index2.js&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p><a href="https://segmentfault.com/a/1190000007294861" target="_blank" rel="noopener">参考</a></p>
+<h2 id="output-filename"><a href="#output-filename" class="headerlink" title="output.filename"></a>output.filename</h2><p>如果配置创建了多个单独的 “chunk”（例如，使用多个入口起点或使用像 CommonsChunkPlugin 这样的插件），则应该使用占位符(substitutions)来确保每个文件具有唯一的名称。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    app: <span class="string">'./src/app.js'</span>,</span><br><span class="line">    search: <span class="string">'./src/search.js'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">'[name].js'</span>,</span><br><span class="line">    path: __dirname + <span class="string">'/dist'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="CommonsChunkPlugin"><a href="#CommonsChunkPlugin" class="headerlink" title="CommonsChunkPlugin"></a>CommonsChunkPlugin</h2><p>minChunks ：公共模块被使用的最小次数。比如配置为3，也就是同一个模块只有被3个以外的页面同时引用时才会被提取出来作为common chunks。</p>
+<h2 id="manifest"><a href="#manifest" class="headerlink" title="manifest"></a>manifest</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">      name: <span class="string">'manifest'</span>,</span><br><span class="line">      chunks: [<span class="string">'vendor'</span>]</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<p><a href="https://segmentfault.com/q/1010000009276145/a-1020000009279643" target="_blank" rel="noopener">参考</a></p>
+<h2 id="entry引入模块"><a href="#entry引入模块" class="headerlink" title="entry引入模块"></a>entry引入模块</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">entry: &#123;</span><br><span class="line">      app: [</span><br><span class="line">          <span class="string">'react-hot-loader/patch'</span>,</span><br><span class="line">          <span class="string">`webpack-dev-server/client?http://<span class="subst">$&#123;webpackServerConfig.host&#125;</span>:<span class="subst">$&#123;webpackServerConfig.port&#125;</span>`</span>,</span><br><span class="line">          <span class="string">'webpack/hot/only-dev-server'</span>,</span><br><span class="line">          <span class="string">'./entry'</span></span><br><span class="line">      ]</span><br><span class="line">  &#125;,</span><br><span class="line">  如果entry里面路径是没有 <span class="string">'./'</span> 这些的，那么是引入模块，会到node_module里面去找</span><br></pre></td></tr></table></figure>
+<h2 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h2><p><a href="http://doc.okbase.net/stef/archive/260193.html" target="_blank" rel="noopener">http://doc.okbase.net/stef/archive/260193.html</a><br><a href="https://router.vuejs.org/zh-cn/advanced/lazy-loading.html里面有句话" target="_blank" rel="noopener">https://router.vuejs.org/zh-cn/advanced/lazy-loading.html里面有句话</a><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">第二，在 Webpack 2 中，我们可以使用动态 import语法来定义代码分块点 (split point)：</span><br><span class="line"></span><br><span class="line">import('./Foo.vue') // 返回 Promise</span><br><span class="line">    注意：如果您使用的是 Babel，你将需要添加 syntax-dynamic-import 插件，才能使 Babel 可以正确地解析语法。</span><br></pre></td></tr></table></figure></p>
 <p>webpack2.0+ 就不需要这个插件了。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">把组件按组分块</div><div class="line"></div><div class="line">有时候我们想把某个路由下的所有组件都打包在同个异步块 (chunk) 中。只需要使用 命名 chunk，一个特殊的注释语法来提供 chunk name (需要 Webpack &gt; 2.4)。</div><div class="line"></div><div class="line">const Foo = () =&gt; import(/* webpackChunkName: "group-foo" */ './Foo.vue')</div><div class="line">const Bar = () =&gt; import(/* webpackChunkName: "group-foo" */ './Bar.vue')</div><div class="line">const Baz = () =&gt; import(/* webpackChunkName: "group-foo" */ './Baz.vue')</div><div class="line">Webpack 会将任何一个异步模块与相同的块名称组合到相同的异步块中。</div></pre></td></tr></table></figure>
-<h2 id="6-懒加载原理"><a href="#6-懒加载原理" class="headerlink" title="6.懒加载原理"></a>6.懒加载原理</h2><p>webpack文档的解释:”懒加载或者按需加载，是一种很好的优化网页或应用的方式。这种方式实际上是先把你的代码在一些逻辑断点处分离开，然后在一些代码块中完成某些操作后，立即引用或即将引用另外一些新的代码块。这样加快了应用的初始加载速度，减轻了它的总体体积，因为某些代码块可能永远不会被加载。”<br>vue路由懒加载: “结合 Vue 的异步组件和 Webpack 的代码分割功能，轻松实现路由组件的懒加载。首先，可以将异步组件定义为返回一个 Promise 的工厂函数 (该函数返回的 Promise 应该 resolve 组件本身)：”</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">把组件按组分块</span><br><span class="line"></span><br><span class="line">有时候我们想把某个路由下的所有组件都打包在同个异步块 (chunk) 中。只需要使用 命名 chunk，一个特殊的注释语法来提供 chunk name (需要 Webpack &gt; 2.4)。</span><br><span class="line"></span><br><span class="line">const Foo = () =&gt; import(/* webpackChunkName: "group-foo" */ './Foo.vue')</span><br><span class="line">const Bar = () =&gt; import(/* webpackChunkName: "group-foo" */ './Bar.vue')</span><br><span class="line">const Baz = () =&gt; import(/* webpackChunkName: "group-foo" */ './Baz.vue')</span><br><span class="line">Webpack 会将任何一个异步模块与相同的块名称组合到相同的异步块中。</span><br></pre></td></tr></table></figure>
+<h2 id="懒加载原理"><a href="#懒加载原理" class="headerlink" title="懒加载原理"></a>懒加载原理</h2><p>webpack文档的解释:”懒加载或者按需加载，是一种很好的优化网页或应用的方式。这种方式实际上是先把你的代码在一些逻辑断点处分离开，然后在一些代码块中完成某些操作后，立即引用或即将引用另外一些新的代码块。这样加快了应用的初始加载速度，减轻了它的总体体积，因为某些代码块可能永远不会被加载。”<br>vue路由懒加载: “结合 Vue 的异步组件和 Webpack 的代码分割功能，轻松实现路由组件的懒加载。首先，可以将异步组件定义为返回一个 Promise 的工厂函数 (该函数返回的 Promise 应该 resolve 组件本身)：”</p>
 <p>这里面的原理就是类似写一个回调函数(promise),当我打开某页面(或做某个操作：如点击..),回调这个函数(加载页面)</p>
-<p>下面是一个类似回调函数:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">asyncComponent</span>(<span class="params">importComponent</span>) </span>&#123;</div><div class="line">  <span class="class"><span class="keyword">class</span> <span class="title">AsyncComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props) &#123;</div><div class="line">      <span class="keyword">super</span>(props);</div><div class="line"></div><div class="line">      <span class="keyword">this</span>.state = &#123;</div><div class="line">        component: <span class="literal">null</span></div><div class="line">      &#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">async</span> componentDidMount() &#123;</div><div class="line">      <span class="keyword">const</span> &#123; <span class="attr">default</span>: component &#125; = <span class="keyword">await</span> importComponent();</div><div class="line"></div><div class="line">      <span class="keyword">this</span>.setState(&#123;component&#125;);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">      <span class="keyword">const</span> C = <span class="keyword">this</span>.state.component;</div><div class="line"></div><div class="line">      <span class="keyword">return</span> C ? <span class="xml"><span class="tag">&lt;<span class="name">C</span> &#123;<span class="attr">...this.props</span>&#125; /&gt;</span> : null;</span></div><div class="line"><span class="xml">    &#125;</span></div><div class="line"><span class="xml">  &#125;</span></div><div class="line"><span class="xml"></span></div><div class="line"><span class="xml">  return AsyncComponent;</span></div><div class="line"><span class="xml">&#125;</span></div></pre></td></tr></table></figure></p>
+<p>下面是一个类似回调函数:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">asyncComponent</span>(<span class="params">importComponent</span>) </span>&#123;</span><br><span class="line">  <span class="class"><span class="keyword">class</span> <span class="title">AsyncComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">      <span class="keyword">super</span>(props);</span><br><span class="line"></span><br><span class="line">      <span class="keyword">this</span>.state = &#123;</span><br><span class="line">        component: <span class="literal">null</span></span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">async</span> componentDidMount() &#123;</span><br><span class="line">      <span class="keyword">const</span> &#123; <span class="attr">default</span>: component &#125; = <span class="keyword">await</span> importComponent();</span><br><span class="line"></span><br><span class="line">      <span class="keyword">this</span>.setState(&#123;component&#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">      <span class="keyword">const</span> C = <span class="keyword">this</span>.state.component;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> C ? <span class="xml"><span class="tag">&lt;<span class="name">C</span> &#123;<span class="attr">...this.props</span>&#125; /&gt;</span> : null;</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml">  &#125;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">  return AsyncComponent;</span></span><br><span class="line"><span class="xml">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="引入第三方库"><a href="#引入第三方库" class="headerlink" title="引入第三方库"></a>引入第三方库</h2><p><a href="https://segmentfault.com/a/1190000015700211" target="_blank" rel="noopener">read</a></p>
+<h2 id="Cannot-read-property-call-of-undefined"><a href="#Cannot-read-property-call-of-undefined" class="headerlink" title="Cannot read property call of undefined"></a>Cannot read property call of undefined</h2><p><a href="https://segmentfault.com/q/1010000007045505/a-1020000007049825" target="_blank" rel="noopener">read</a></p>
 
         </div>
 
@@ -197,7 +199,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-02-08T11:29:36.002Z" itemprop="dateUpdated">2018-02-08 19:29:36</time>
+    最后更新时间：<time datetime="2019-06-06T02:04:59.682Z" itemprop="dateUpdated">2019-06-06 10:04:59</time>
 </span><br>
 
 
@@ -280,9 +282,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/01/10/mongodb-查看log与设置权限/" id="post-prev" class="post-nav-link">
+      <a href="/2018/01/10/mongodb查看log与设置权限/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">mongodb 查看log与设置权限</h4>
+        <h4 class="title">mongodb查看log与设置权限</h4>
       </a>
     </div>
   
@@ -330,8 +332,7 @@
         </div>
         
         <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
             <div class="reward-toggle-ctrol">
                 <span class="reward-toggle-item wechat">微信</span>
                 <span class="reward-toggle-label"></span>
@@ -350,10 +351,10 @@
     <div class="top">
         
 <p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
+    <span id="busuanzi_container_site_uv" style="display:none">
         站点总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
+    <span id="busuanzi_container_site_pv" style="display:none">
         站点总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>

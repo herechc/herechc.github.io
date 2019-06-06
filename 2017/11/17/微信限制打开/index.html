@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     
 
     
@@ -27,6 +27,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/11/17/微信限制打开/index.html">
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="demo123456789101112131415161718192021222324252627282930313233343536373839methods : &amp;#123;  isweixin() &amp;#123;    const ua = window.navigator.userAgent.toLowerCase();    if(ua.match(/MicroMessenger/i) =">
+<meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2017-11-17T07:28:31.206Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="微信限制打开">
@@ -40,7 +41,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide" >
+    <aside id="menu" class="hide">
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -60,35 +61,35 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/">
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives"  >
+              <a href="/archives">
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags">
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/herec" target="_blank" >
+              <a href="https://github.com/herec" target="_blank">
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="http://weibo.com/u/1955831145" target="_blank" >
+              <a href="http://weibo.com/u/1955831145" target="_blank">
                 <i class="icon icon-lg icon-weibo"></i>
                 Weibo
               </a>
@@ -154,26 +155,25 @@
         </nav>
     </aside>
     
-<article id="post-微信限制打开"
-  class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-微信限制打开" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">微信限制打开</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-11-17 15:26:52" datetime="2017-11-17T07:26:52.000Z"  itemprop="datePublished">2017-11-17</time>
+            <time class="post-time" title="2017-11-17 15:26:52" datetime="2017-11-17T07:26:52.000Z" itemprop="datePublished">2017-11-17</time>
 
             
 
 
             
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
     <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
 </span>
 
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">methods : &#123;</div><div class="line">  isweixin() &#123;</div><div class="line">    <span class="keyword">const</span> ua = <span class="built_in">window</span>.navigator.userAgent.toLowerCase();</div><div class="line">    <span class="keyword">if</span>(ua.match(<span class="regexp">/MicroMessenger/i</span>) == <span class="string">'micromessenger'</span>)&#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  GetQueryString(name)</div><div class="line">  &#123;</div><div class="line">       <span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"(^|&amp;)"</span>+ name +<span class="string">"=([^&amp;]*)(&amp;|$)"</span>);</div><div class="line">       <span class="keyword">var</span> r = <span class="built_in">window</span>.location.search.substr(<span class="number">1</span>).match(reg);</div><div class="line">       <span class="keyword">if</span>(r!=<span class="literal">null</span>)<span class="keyword">return</span>  <span class="built_in">unescape</span>(r[<span class="number">2</span>]); <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">  &#125;</div><div class="line">&#125;,</div><div class="line">components:&#123;</div><div class="line">	Tabbar</div><div class="line">&#125;,</div><div class="line">mounted()&#123;</div><div class="line">  <span class="keyword">if</span>(!localStorage.getItem(<span class="string">'userInfo'</span>))&#123;</div><div class="line">    <span class="comment">//if(this.isweixin())&#123;</span></div><div class="line">      <span class="keyword">if</span>(<span class="keyword">this</span>.GetQueryString(<span class="string">'code'</span>) == <span class="literal">null</span>)&#123;</div><div class="line">        <span class="keyword">var</span> $code_url = <span class="string">"https://open.weixin.qq.com/connect/oauth2/authorize?appid="</span>+APPID+<span class="string">"&amp;redirect_uri="</span>+<span class="built_in">encodeURIComponent</span>(location.href)+<span class="string">"&amp;response_type=code&amp;scope=snsapi_base&amp;state=STATE#wechat_redirect"</span>;</div><div class="line">        <span class="built_in">window</span>.location.href = $code_url;</div><div class="line">      &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">var</span> code = <span class="keyword">this</span>.GetQueryString(<span class="string">'code'</span>);</div><div class="line">        <span class="keyword">this</span>.$http.get(<span class="string">'/oauth?code='</span>+code).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</div><div class="line">          <span class="keyword">if</span>(!res.data.subscribe)&#123;</div><div class="line">            MessageBox.alert(<span class="string">'请关注融创食珍园公众号后，再购买！'</span>, <span class="string">'提示'</span>).then(<span class="function"><span class="params">action</span> =&gt;</span> &#123;</div><div class="line">              <span class="keyword">this</span>.$router.replace(<span class="string">'subscribe'</span>)</div><div class="line">            &#125;) </div><div class="line">          &#125;<span class="keyword">else</span>&#123;</div><div class="line">            localStorage.setItem(<span class="string">'userInfo'</span>,<span class="built_in">JSON</span>.stringify(res.data));</div><div class="line">          &#125;</div><div class="line">        &#125;)</div><div class="line">      &#125;</div><div class="line">  <span class="comment">//&#125;</span></div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+            <h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">methods : &#123;</span><br><span class="line">  isweixin() &#123;</span><br><span class="line">    <span class="keyword">const</span> ua = <span class="built_in">window</span>.navigator.userAgent.toLowerCase();</span><br><span class="line">    <span class="keyword">if</span>(ua.match(<span class="regexp">/MicroMessenger/i</span>) == <span class="string">'micromessenger'</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  GetQueryString(name)</span><br><span class="line">  &#123;</span><br><span class="line">       <span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"(^|&amp;)"</span>+ name +<span class="string">"=([^&amp;]*)(&amp;|$)"</span>);</span><br><span class="line">       <span class="keyword">var</span> r = <span class="built_in">window</span>.location.search.substr(<span class="number">1</span>).match(reg);</span><br><span class="line">       <span class="keyword">if</span>(r!=<span class="literal">null</span>)<span class="keyword">return</span>  <span class="built_in">unescape</span>(r[<span class="number">2</span>]); <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line">components:&#123;</span><br><span class="line">	Tabbar</span><br><span class="line">&#125;,</span><br><span class="line">mounted()&#123;</span><br><span class="line">  <span class="keyword">if</span>(!localStorage.getItem(<span class="string">'userInfo'</span>))&#123;</span><br><span class="line">    <span class="comment">//if(this.isweixin())&#123;</span></span><br><span class="line">      <span class="keyword">if</span>(<span class="keyword">this</span>.GetQueryString(<span class="string">'code'</span>) == <span class="literal">null</span>)&#123;</span><br><span class="line">        <span class="keyword">var</span> $code_url = <span class="string">"https://open.weixin.qq.com/connect/oauth2/authorize?appid="</span>+APPID+<span class="string">"&amp;redirect_uri="</span>+<span class="built_in">encodeURIComponent</span>(location.href)+<span class="string">"&amp;response_type=code&amp;scope=snsapi_base&amp;state=STATE#wechat_redirect"</span>;</span><br><span class="line">        <span class="built_in">window</span>.location.href = $code_url;</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> code = <span class="keyword">this</span>.GetQueryString(<span class="string">'code'</span>);</span><br><span class="line">        <span class="keyword">this</span>.$http.get(<span class="string">'/oauth?code='</span>+code).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">          <span class="keyword">if</span>(!res.data.subscribe)&#123;</span><br><span class="line">            MessageBox.alert(<span class="string">'请关注融创食珍园公众号后，再购买！'</span>, <span class="string">'提示'</span>).then(<span class="function"><span class="params">action</span> =&gt;</span> &#123;</span><br><span class="line">              <span class="keyword">this</span>.$router.replace(<span class="string">'subscribe'</span>)</span><br><span class="line">            &#125;) </span><br><span class="line">          &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            localStorage.setItem(<span class="string">'userInfo'</span>,<span class="built_in">JSON</span>.stringify(res.data));</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">  <span class="comment">//&#125;</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
         </div>
 
         <blockquote class="post-copyright">
@@ -274,7 +274,7 @@
     <div class="waves-block waves-effect next">
       <a href="/2017/10/27/关于跨域/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">关于跨域(vue,node)</h4>
+        <h4 class="title">关于跨域</h4>
       </a>
     </div>
   
@@ -313,8 +313,7 @@
         </div>
         
         <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
             <div class="reward-toggle-ctrol">
                 <span class="reward-toggle-item wechat">微信</span>
                 <span class="reward-toggle-label"></span>
@@ -333,10 +332,10 @@
     <div class="top">
         
 <p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
+    <span id="busuanzi_container_site_uv" style="display:none">
         站点总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
+    <span id="busuanzi_container_site_pv" style="display:none">
         站点总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>

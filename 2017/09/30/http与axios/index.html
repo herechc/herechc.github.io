@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     
 
     
@@ -19,16 +19,17 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="javascript">
+    <meta name="keywords" content="http">
     <meta name="description" content="httpHTTP由两部分组成：请求和响应。当你在Web浏览器中输入一个URL时，浏览器将根据你的要求创建并发送请求，该请求包含所输入的URL以及一些与浏览器本身相关的信息。当服务器收到这个请求时将返回一个响应，该响应包括与该请求相关的信息以及位于指定URL（如果有的话）的数据。直到浏览器解析该响应并显示出网页（或其他资源）为止。在HTTP请求中，第一行必须是一个请求行（request line），">
-<meta name="keywords" content="javascript">
+<meta name="keywords" content="http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="http与axios">
 <meta property="og:url" content="http://yoursite.com/2017/09/30/http与axios/index.html">
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="httpHTTP由两部分组成：请求和响应。当你在Web浏览器中输入一个URL时，浏览器将根据你的要求创建并发送请求，该请求包含所输入的URL以及一些与浏览器本身相关的信息。当服务器收到这个请求时将返回一个响应，该响应包括与该请求相关的信息以及位于指定URL（如果有的话）的数据。直到浏览器解析该响应并显示出网页（或其他资源）为止。在HTTP请求中，第一行必须是一个请求行（request line），">
+<meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/http.png">
-<meta property="og:updated_time" content="2017-11-10T01:52:25.640Z">
+<meta property="og:updated_time" content="2019-06-06T01:25:59.976Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http与axios">
 <meta name="twitter:description" content="httpHTTP由两部分组成：请求和响应。当你在Web浏览器中输入一个URL时，浏览器将根据你的要求创建并发送请求，该请求包含所输入的URL以及一些与浏览器本身相关的信息。当服务器收到这个请求时将返回一个响应，该响应包括与该请求相关的信息以及位于指定URL（如果有的话）的数据。直到浏览器解析该响应并显示出网页（或其他资源）为止。在HTTP请求中，第一行必须是一个请求行（request line），">
@@ -42,7 +43,7 @@
 <body>
     <div id="loading" class="active"></div>
 
-    <aside id="menu" class="hide" >
+    <aside id="menu" class="hide">
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -62,35 +63,35 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/"  >
+              <a href="/">
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/archives"  >
+              <a href="/archives">
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/tags"  >
+              <a href="/tags">
                 <i class="icon icon-lg icon-tags"></i>
                 Tags
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://github.com/herec" target="_blank" >
+              <a href="https://github.com/herec" target="_blank">
                 <i class="icon icon-lg icon-github"></i>
                 Github
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="http://weibo.com/u/1955831145" target="_blank" >
+              <a href="http://weibo.com/u/1955831145" target="_blank">
                 <i class="icon icon-lg icon-weibo"></i>
                 Weibo
               </a>
@@ -152,42 +153,39 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http"><span class="post-toc-number">1.</span> <span class="post-toc-text">http</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#http"><span class="post-toc-number">1.</span> <span class="post-toc-text">http</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#axios"><span class="post-toc-number">2.</span> <span class="post-toc-text">axios</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#http与axios"><span class="post-toc-number">3.</span> <span class="post-toc-text">http与axios</span></a></li></ol>
         </nav>
     </aside>
     
-<article id="post-http与axios"
-  class="post-article article-type-post fade" itemprop="blogPost">
+<article id="post-http与axios" class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
         <h1 class="post-card-title">http与axios</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-09-30 09:31:07" datetime="2017-09-30T01:31:07.000Z"  itemprop="datePublished">2017-09-30</time>
+            <time class="post-time" title="2017-09-30 09:31:07" datetime="2017-09-30T01:31:07.000Z" itemprop="datePublished">2017-09-30</time>
 
             
 
 
             
-<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style="display:none">
     <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
 </span>
 
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="http"><a href="#http" class="headerlink" title="http"></a>http</h3><p>HTTP由两部分组成：请求和响应。当你在Web浏览器中输入一个URL时，浏览器将根据你的要求创建并发送请求，该请求包含所输入的URL以及一些与浏览器本身相关的信息。当服务器收到这个请求时将返回一个响应，该响应包括与该请求相关的信息以及位于指定URL（如果有的话）的数据。直到浏览器解析该响应并显示出网页（或其他资源）为止。<br>在HTTP请求中，第一行必须是一个请求行（request line），用来说明请求类型、要访问的资源以及使用的HTTP版本。紧接着是一个首部（header）小节，用来说明服务器要使用的附加信息。在首部之后是一个空行，再此之后可以添加任意的其他数据[称之为主体（body）]。<br>在HTTP中，定义了多种请求类型，通常我们关心的只有GET请求和POST请求。只要在Web浏览器上输入一个URL，浏览器就将基于该URL向服务器发送一个GET请求，以告诉服务器获取并返回什么资源<br>要发送GET请求的参数，则必须将这些额外的信息附在URL本身的后面。其格式类似于：<br>URL ? name1=value1&amp;name2=value2&amp;..&amp;nameN=valueN<br>该信息称之为查询字符串（query string），它将会复制在HTTP请求的请求行中，如下所示：<br>GET /books/?name=Professional%20Ajax HTTP/1.1<br>Host: www.baidu.com<br>User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.6)<br>Gecko/20050225 Firefox/1.0.1<br>Connection: Keep-Alive<br>注意，为了将文本“Professional Ajax”作为URL的参数，需要编码处理其内容，将空格替换成%20，这称为URL编码（URL encoding），常用于HTTP的许多地方（JavaScript提供了内建的函数来处理URL编码和解码）。“名称—值”（name—value）对用 &amp; 隔开。绝大部分的服务器端技术能够自动对请求主体进行解码，并为这些值的访问提供一些逻辑方式。当然，如何使用这些数据还是由服务器决定的。</p>
+            <h2 id="http"><a href="#http" class="headerlink" title="http"></a>http</h2><p>HTTP由两部分组成：请求和响应。当你在Web浏览器中输入一个URL时，浏览器将根据你的要求创建并发送请求，该请求包含所输入的URL以及一些与浏览器本身相关的信息。当服务器收到这个请求时将返回一个响应，该响应包括与该请求相关的信息以及位于指定URL（如果有的话）的数据。直到浏览器解析该响应并显示出网页（或其他资源）为止。<br>在HTTP请求中，第一行必须是一个请求行（request line），用来说明请求类型、要访问的资源以及使用的HTTP版本。紧接着是一个首部（header）小节，用来说明服务器要使用的附加信息。在首部之后是一个空行，再此之后可以添加任意的其他数据[称之为主体（body）]。<br>在HTTP中，定义了多种请求类型，通常我们关心的只有GET请求和POST请求。只要在Web浏览器上输入一个URL，浏览器就将基于该URL向服务器发送一个GET请求，以告诉服务器获取并返回什么资源<br>要发送GET请求的参数，则必须将这些额外的信息附在URL本身的后面。其格式类似于：<br>URL ? name1=value1&amp;name2=value2&amp;..&amp;nameN=valueN<br>该信息称之为查询字符串（query string），它将会复制在HTTP请求的请求行中，如下所示：<br>GET /books/?name=Professional%20Ajax HTTP/1.1<br>Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>User-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.6)<br>Gecko/20050225 Firefox/1.0.1<br>Connection: Keep-Alive<br>注意，为了将文本“Professional Ajax”作为URL的参数，需要编码处理其内容，将空格替换成%20，这称为URL编码（URL encoding），常用于HTTP的许多地方（JavaScript提供了内建的函数来处理URL编码和解码）。“名称—值”（name—value）对用 &amp; 隔开。绝大部分的服务器端技术能够自动对请求主体进行解码，并为这些值的访问提供一些逻辑方式。当然，如何使用这些数据还是由服务器决定的。</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/images/http.png" alt="" http""="" title="">
+                    <img src="/images/http.png" alt http"" title>
                 </div>
                 <div class="image-caption">"http"</div>
             </figure>  
-<p>###axios</p>
-<p><a href="https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/" target="_blank" rel="external">maybe</a></p>
-<p>##http与axios</p>
-<p>所以结合一起<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//get请求</span></div><div class="line">  getmembers: <span class="function"><span class="params">data</span> =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> axios.get(adminPort + <span class="string">"/members"</span>, &#123;<span class="attr">params</span>: data&#125;)</div><div class="line">  &#125;</div><div class="line"><span class="comment">//post请求</span></div><div class="line">  reviseSale:<span class="function">(<span class="params">id,data</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">return</span> axios.post(adminPort + <span class="string">'/members/sale/'</span> + id, qs.stringify(data))</div><div class="line">  &#125;</div><div class="line"><span class="comment">// 上传文件 multipart/form-data</span></div><div class="line">  uploadcer:<span class="function"><span class="params">file</span> =&gt;</span>&#123;</div><div class="line">    <span class="keyword">return</span> axios.post(adminPort + <span class="string">"/fence/safesettings/uploadcer"</span>,file)</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
-<p>#####参考<br><a href="http://blog.csdn.net/kfanning/article/details/6062118/" target="_blank" rel="external">http</a></p>
+<h2 id="axios"><a href="#axios" class="headerlink" title="axios"></a>axios</h2><p><a href="https://ykloveyxk.github.io/2017/02/25/axios%E5%85%A8%E6%94%BB%E7%95%A5/" target="_blank" rel="noopener">read</a></p>
+<h2 id="http与axios"><a href="#http与axios" class="headerlink" title="http与axios"></a>http与axios</h2><p>所以结合一起<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//get请求</span></span><br><span class="line">  getmembers: <span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> axios.get(adminPort + <span class="string">"/members"</span>, &#123;<span class="attr">params</span>: data&#125;)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">//post请求</span></span><br><span class="line">  reviseSale:<span class="function">(<span class="params">id,data</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> axios.post(adminPort + <span class="string">'/members/sale/'</span> + id, qs.stringify(data))</span><br><span class="line">  &#125;</span><br><span class="line"><span class="comment">// 上传文件 multipart/form-data</span></span><br><span class="line">  uploadcer:<span class="function"><span class="params">file</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> axios.post(adminPort + <span class="string">"/fence/safesettings/uploadcer"</span>,file)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://blog.csdn.net/kfanning/article/details/6062118/" target="_blank" rel="noopener">read</a></p>
 
         </div>
 
@@ -195,7 +193,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-11-10T01:52:25.640Z" itemprop="dateUpdated">2017-11-10 09:52:25</time>
+    最后更新时间：<time datetime="2019-06-06T01:25:59.976Z" itemprop="dateUpdated">2019-06-06 09:25:59</time>
 </span><br>
 
 
@@ -220,7 +218,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li></ul>
 
 
             
@@ -278,9 +276,9 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2017/10/16/关于post/" id="post-prev" class="post-nav-link">
+      <a href="/2017/10/27/关于跨域/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">关于post</h4>
+        <h4 class="title">关于跨域</h4>
       </a>
     </div>
   
@@ -328,8 +326,7 @@
         </div>
         
         <label class="reward-toggle">
-            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check" data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
             <div class="reward-toggle-ctrol">
                 <span class="reward-toggle-item wechat">微信</span>
                 <span class="reward-toggle-label"></span>
@@ -348,10 +345,10 @@
     <div class="top">
         
 <p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
+    <span id="busuanzi_container_site_uv" style="display:none">
         站点总访客数：<span id="busuanzi_value_site_uv"></span>
     </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
+    <span id="busuanzi_container_site_pv" style="display:none">
         站点总访问量：<span id="busuanzi_value_site_pv"></span>
     </span>
 </p>
