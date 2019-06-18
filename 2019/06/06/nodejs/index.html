@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="bodyParser.json()与bodyParser.urlencoded()123//bodyParser.json()要与bodyParser.urlencoded(&amp;#123; extended: false &amp;#125;)一起使用，不然req.body获取不到页面post提交的form的值app.use(bodyParser.json())app.use(bodyParser.urle">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-06T01:19:11.179Z">
+<meta property="og:updated_time" content="2019-06-06T15:12:52.064Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nodejs">
 <meta name="twitter:description" content="bodyParser.json()与bodyParser.urlencoded()123//bodyParser.json()要与bodyParser.urlencoded(&amp;#123; extended: false &amp;#125;)一起使用，不然req.body获取不到页面post提交的form的值app.use(bodyParser.json())app.use(bodyParser.urle">
@@ -151,7 +151,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#bodyParser-json-与bodyParser-urlencoded"><span class="post-toc-number">1.</span> <span class="post-toc-text">bodyParser.json()与bodyParser.urlencoded()</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#bodyParser-json-与bodyParser-urlencoded"><span class="post-toc-number">1.</span> <span class="post-toc-text">bodyParser.json()与bodyParser.urlencoded()</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#爬虫"><span class="post-toc-number">2.</span> <span class="post-toc-text">爬虫</span></a></li></ol>
         </nav>
     </aside>
     
@@ -175,6 +175,11 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <h1 id="bodyParser-json-与bodyParser-urlencoded"><a href="#bodyParser-json-与bodyParser-urlencoded" class="headerlink" title="bodyParser.json()与bodyParser.urlencoded()"></a>bodyParser.json()与bodyParser.urlencoded()</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//bodyParser.json()要与bodyParser.urlencoded(&#123; extended: false &#125;)一起使用，不然req.body获取不到页面post提交的form的值</span></span><br><span class="line">app.use(bodyParser.json())</span><br><span class="line">app.use(bodyParser.urlencoded(&#123; <span class="attr">extended</span>: <span class="literal">false</span> &#125;));</span><br></pre></td></tr></table></figure>
 <p><a href="https://www.zhihu.com/question/36962099" target="_blank" rel="noopener">read</a></p>
+<h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><p><strong>思路</strong></p>
+<p>1.思路一，一般情况下分页对应的请求url会带有pageIndex(页码)等参数，确定这一规则后可以递推出每一页的url规则。边界判断可以直接从页面拿到最后一页的页码或者通过总数量和页面最大数量计算，甚至你也可以通过http的错误码或者错误页的内容判断。<br><a href="https://segmentfault.com/a/1190000012983301" target="_blank" rel="noopener">read</a></p>
+<p>2.思路二，直接模拟用户行为(假设是点击时间，超链接跳转)，则每次我们抓取当前页面内容的同时，可以同时抓取下一页的链接，依次抓取。(注意做边界的限制)<br><a href="https://www.cnblogs.com/xiaxuexiaoab/p/7297509.html" target="_blank" rel="noopener">read</a></p>
+<p>3.思路三，抽链(这也是搜索引擎的做法之一)，抓取整个页面(或者局部区域)的所有链接，作正则匹配过滤，保留有效的分页url，进行url排重。然后，抓取内容(当然这两者可并行)</p>
+<p><a href="https://juejin.im/post/5b4f007fe51d4519277b9707" target="_blank" rel="noopener">read</a></p>
 
         </div>
 
@@ -182,7 +187,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-06-06T01:19:11.179Z" itemprop="dateUpdated">2019-06-06 09:19:11</time>
+    Last updated: <time datetime="2019-06-06T15:12:52.064Z" itemprop="dateUpdated">2019-06-06 23:12:52</time>
 </span><br>
 
 

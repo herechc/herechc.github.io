@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://yoursite.com/images/populate4.png">
 <meta property="og:image" content="http://yoursite.com/images/populate5.png">
 <meta property="og:image" content="http://yoursite.com/images/populate6.png">
-<meta property="og:updated_time" content="2019-06-06T01:19:52.648Z">
+<meta property="og:updated_time" content="2019-06-11T06:12:06.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongoose">
 <meta name="twitter:description" content="populate123456789101112131415var commentSchema = new Schema(&amp;#123;  content: String,  article: &amp;#123;type:ObjectId, ref:&quot;Article&quot;&amp;#125;,  from: &amp;#123;type:ObjectId, ref:&quot;User&quot;&amp;#125;,  meta: &amp;#123;">
@@ -158,7 +158,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#populate"><span class="post-toc-number">1.</span> <span class="post-toc-text">populate</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#populate"><span class="post-toc-number">1.</span> <span class="post-toc-text">populate</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#唯一索引有什么作用"><span class="post-toc-number">2.</span> <span class="post-toc-text">唯一索引有什么作用</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#schema"><span class="post-toc-number">3.</span> <span class="post-toc-text">schema</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Query就是一个查询"><span class="post-toc-number">4.</span> <span class="post-toc-text">Query就是一个查询</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#mongoose中的exec和then"><span class="post-toc-number">5.</span> <span class="post-toc-text">mongoose中的exec和then</span></a></li></ol>
         </nav>
     </aside>
     
@@ -225,6 +225,12 @@
                 </div>
                 <div class="image-caption">p6</div>
             </figure><br>这也是为什么这里保存了category后，还要赋值movie.catogory，因为要先有category</p>
+<h2 id="唯一索引有什么作用"><a href="#唯一索引有什么作用" class="headerlink" title="唯一索引有什么作用"></a>唯一索引有什么作用</h2><p>主键保证数据库里面的每一行都是唯一的，比如身份证，学号等，在表中要求唯一，不重复。唯一索引的作用跟主键的作用一样。不同的是，在一张表里面只能有一个主键，主键不能为空，唯一索引可以有多个，唯一索引可以有一条记录为空，即保证跟别人不一样就行。<br>比如学生表，在学校里面一般用学号做主键，身份证则弄成唯一索引；而到了教育局，他们就把身份证号弄成主键，学号换成了唯一索引。<br>选谁做表的主键，要看实际应用，主键不能为空。</p>
+<h2 id="schema"><a href="#schema" class="headerlink" title="schema"></a>schema</h2><p><a href="https://www.jianshu.com/p/08a602b5b0f1" target="_blank" rel="noopener">read</a></p>
+<p>ObjectI为主键<br>主键，一种特殊而且非常重要的类型，每个 Schema 都会默认配置这个属性，属性名为_id，除非自己定义，方可覆盖</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>)</span><br><span class="line"><span class="keyword">var</span> ObjectId = mongoose.Schema.Types.ObjectId</span><br><span class="line"><span class="keyword">var</span> StudentSchema = <span class="keyword">new</span> Schema(&#123;&#125;)   <span class="comment">//默认会有_id:ObjectId</span></span><br><span class="line"><span class="keyword">var</span> TeacherSchema = <span class="keyword">new</span> Schema(&#123;<span class="attr">id</span>:ObjectId&#125;)  <span class="comment">//只有id:ObjectId</span></span><br></pre></td></tr></table></figure>
+<h2 id="Query就是一个查询"><a href="#Query就是一个查询" class="headerlink" title="Query就是一个查询"></a>Query就是一个查询</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1. model会返回一个query</span><br><span class="line">const query = MyModel.find(); // `query` is an instance of `Query`</span><br><span class="line">query.setOptions(&#123; lean : true &#125;);</span><br><span class="line">query.collection(MyModel.collection);</span><br><span class="line">query.where(&apos;age&apos;).gte(21).exec(callback);</span><br><span class="line"></span><br><span class="line">2.也可以自己实例化一个query</span><br><span class="line">// You can instantiate a query directly. There is no need to do</span><br><span class="line">// this unless you&apos;re an advanced user with a very good reason to.</span><br><span class="line">const query = new mongoose.Query();</span><br></pre></td></tr></table></figure>
+<h2 id="mongoose中的exec和then"><a href="#mongoose中的exec和then" class="headerlink" title="mongoose中的exec和then"></a>mongoose中的exec和then</h2><p><a href="https://cnodejs.org/topic/5ab0cb0ae7b166bb7b9ecc5e" target="_blank" rel="noopener">read</a><br><a href="https://segmentfault.com/q/1010000009899317" target="_blank" rel="noopener">read</a></p>
 
         </div>
 
@@ -232,7 +238,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2019-06-06T01:19:52.648Z" itemprop="dateUpdated">2019-06-06 09:19:52</time>
+    Last updated: <time datetime="2019-06-11T06:12:06.883Z" itemprop="dateUpdated">2019-06-11 14:12:06</time>
 </span><br>
 
 
