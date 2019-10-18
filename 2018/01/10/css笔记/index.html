@@ -28,7 +28,7 @@
 <meta property="og:site_name" content="herec">
 <meta property="og:description" content="1.光标颜色12345678910111213141516171819.ui-input&amp;#123;  color: #fc9724;  text-shadow: 0px 0px 0px #000;  -webkit-text-fill-color: transparent;  border:0;  font-size:0.3rem;&amp;amp;:-moz-placeholder &amp;#123; /*">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-06T01:02:10.322Z">
+<meta property="og:updated_time" content="2019-10-14T00:43:52.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css笔记">
 <meta name="twitter:description" content="1.光标颜色12345678910111213141516171819.ui-input&amp;#123;  color: #fc9724;  text-shadow: 0px 0px 0px #000;  -webkit-text-fill-color: transparent;  border:0;  font-size:0.3rem;&amp;amp;:-moz-placeholder &amp;#123; /*">
@@ -112,7 +112,7 @@
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -151,7 +151,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-光标颜色"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.光标颜色</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-点击输入域颜色"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.点击输入域颜色</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-flex与box兼容"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.flex与box兼容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-选择框样式"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.选择框样式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-Not"><span class="post-toc-number">5.</span> <span class="post-toc-text">5.Not</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-jquery-模糊匹配"><span class="post-toc-number">6.</span> <span class="post-toc-text">6.jquery 模糊匹配</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#flex布局"><span class="post-toc-number">7.</span> <span class="post-toc-text">flex布局</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-光标颜色"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.光标颜色</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-点击输入域颜色"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.点击输入域颜色</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-flex与box兼容"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.flex与box兼容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-选择框样式"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.选择框样式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-Not"><span class="post-toc-number">5.</span> <span class="post-toc-text">5.Not</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-jquery-模糊匹配"><span class="post-toc-number">6.</span> <span class="post-toc-text">6.jquery 模糊匹配</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#flex布局"><span class="post-toc-number">7.</span> <span class="post-toc-text">flex布局</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue项目中关于CSS样式【-webkit-box-orient-vertical】打包后丢失问题"><span class="post-toc-number">8.</span> <span class="post-toc-text">vue项目中关于CSS样式【-webkit-box-orient: vertical】打包后丢失问题</span></a></li></ol>
         </nav>
     </aside>
     
@@ -185,13 +185,17 @@
 <p><a href="https://www.cnblogs.com/lixiuran/p/5316727.html" target="_blank" rel="noopener">参考</a></p>
 <h2 id="flex布局"><a href="#flex布局" class="headerlink" title="flex布局"></a>flex布局</h2><p><strong>介绍</strong><br>当我们需要对页面进行布局，比如有一个页面：头部，中部，尾部进行铺满全屏的布局时，要求头尾高度固定，中部自适应</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span>,<span class="selector-id">#app</span>,<span class="selector-id">#home</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.header</span>&#123;</span><br><span class="line">  <span class="comment">/* 我们希望 header 采用固定的高度，只占用必须的空间 */</span></span><br><span class="line">  <span class="comment">/* 0 flex-grow, 0 flex-shrink, auto flex-basis */</span></span><br><span class="line">  <span class="attribute">flex</span>: <span class="number">0</span> <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">999</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line">  <span class="comment">/* 将 flex-grow 设置为1，该元素会占用全部可使用空间</span></span><br><span class="line"><span class="comment">     而其他元素该属性值为0，因此不会得到多余的空间*/</span></span><br><span class="line">  <span class="comment">/* 1 flex-grow, 0 flex-shrink, auto flex-basis */</span></span><br><span class="line">  <span class="attribute">flex</span>: <span class="number">1</span> <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.footer</span>&#123;</span><br><span class="line">  <span class="comment">/* 和 header 一样，footer 也采用固定高度*/</span></span><br><span class="line">  <span class="comment">/* 0 flex-grow, 0 flex-shrink, auto flex-basis */</span></span><br><span class="line">  <span class="attribute">flex</span>: <span class="number">0</span> <span class="number">0</span> auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="vue项目中关于CSS样式【-webkit-box-orient-vertical】打包后丢失问题"><a href="#vue项目中关于CSS样式【-webkit-box-orient-vertical】打包后丢失问题" class="headerlink" title="vue项目中关于CSS样式【-webkit-box-orient: vertical】打包后丢失问题"></a>vue项目中关于CSS样式【-webkit-box-orient: vertical】打包后丢失问题</h2><p>optimize-css-assets-webpack-plugin这个插件的问题，其实解决办法很简单，只需要在这个属性前后加一个特殊注释即可，如下图：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.topic-info &#123;</span><br><span class="line">  margin: <span class="number">5</span>px <span class="number">10</span>px;</span><br><span class="line">  font-size: <span class="number">.8</span>em;</span><br><span class="line">  text-indent: <span class="number">2</span>em;</span><br><span class="line">  display: -webkit-box;</span><br><span class="line">  -webkit-line-clamp: <span class="number">4</span>;</span><br><span class="line">  <span class="comment">/*! autoprefixer: off */</span></span><br><span class="line">  -webkit-box-orient: vertical;</span><br><span class="line">  <span class="comment">/* autoprefixer: on */</span></span><br><span class="line">  overflow: hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/qq_25335529/article/details/80268309" target="_blank" rel="noopener">read</a></p>
+
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-06-06T01:02:10.322Z" itemprop="dateUpdated">2019-06-06 09:02:10</time>
+    Last updated: <time datetime="2019-10-14T00:43:52.418Z" itemprop="dateUpdated">2019-10-14 08:43:52</time>
 </span><br>
 
 
@@ -355,7 +359,7 @@
 
         <p>
             
-            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
         </p>
     </div>
     <div class="bottom">
