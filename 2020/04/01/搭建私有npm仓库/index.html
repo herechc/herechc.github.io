@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>搭建私有npm仓库 | herec</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="npm">
+    <meta name="description" content="安装1npm install -g verdaccio 运行verdaccio或者使用 pm2 永久运行pm2 start verdaccio 1234567verdacciowarn  --- config file - /home/map/.config/verdaccio/config.yamlwarn  --- http address - http://localhost:4873/..">
+<meta name="keywords" content="npm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建私有npm仓库">
+<meta property="og:url" content="http://yoursite.com/2020/04/01/搭建私有npm仓库/index.html">
+<meta property="og:site_name" content="herec">
+<meta property="og:description" content="安装1npm install -g verdaccio 运行verdaccio或者使用 pm2 永久运行pm2 start verdaccio 1234567verdacciowarn  --- config file - /home/map/.config/verdaccio/config.yamlwarn  --- http address - http://localhost:4873/..">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-04-01T09:15:16.476Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建私有npm仓库">
+<meta name="twitter:description" content="安装1npm install -g verdaccio 运行verdaccio或者使用 pm2 永久运行pm2 start verdaccio 1234567verdacciowarn  --- config file - /home/map/.config/verdaccio/config.yamlwarn  --- http address - http://localhost:4873/..">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">herec</h5>
+          <a href="mailto:453288875@qq.com" title="453288875@qq.com" class="mail">453288875@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/herechc" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/u/1955831145" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">搭建私有npm仓库</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">搭建私有npm仓库</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-04-01T07:38:52.000Z" itemprop="datePublished" class="page-time">
+  2020-04-01
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#运行"><span class="post-toc-number">2.</span> <span class="post-toc-text">运行</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#修改config-yaml"><span class="post-toc-number">3.</span> <span class="post-toc-text">修改config.yaml</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#创建htpasswd"><span class="post-toc-number">4.</span> <span class="post-toc-text">创建htpasswd</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#客户端配置"><span class="post-toc-number">5.</span> <span class="post-toc-text">客户端配置</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#登录"><span class="post-toc-number">6.</span> <span class="post-toc-text">登录</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#修改访问权限"><span class="post-toc-number">7.</span> <span class="post-toc-text">修改访问权限</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-搭建私有npm仓库"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">搭建私有npm仓库</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-04-01 15:38:52" datetime="2020-04-01T07:38:52.000Z"  itemprop="datePublished">2020-04-01</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g verdaccio</span><br></pre></td></tr></table></figure>
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><p>verdaccio<br>或者使用 pm2 永久运行<br>pm2 start verdaccio</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">verdaccio</span><br><span class="line">warn  --- config file - /home/map/.config/verdaccio/config.yaml</span><br><span class="line">warn  --- http address - http://localhost:4873/</span><br><span class="line">.....</span><br><span class="line"></span><br><span class="line">cd ./root/.config/verdaccio</span><br><span class="line">vim ./root/.config/verdaccio/config.yaml</span><br></pre></td></tr></table></figure>
+<h1 id="修改config-yaml"><a href="#修改config-yaml" class="headerlink" title="修改config.yaml"></a>修改config.yaml</h1><p>增加监听ip<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">listen:</span><br><span class="line">  - 0.0.0.0:4873 # 设置监听地址，0.0.0.0匹配本机地址</span><br></pre></td></tr></table></figure></p>
+<h1 id="创建htpasswd"><a href="#创建htpasswd" class="headerlink" title="创建htpasswd"></a>创建htpasswd</h1><p>touch htpasswd<br>vim htpasswd </p>
+<p>输入生成的sha1<br><a href="https://hostingcanada.org/htpasswd-generator/" target="_blank" rel="noopener">https://hostingcanada.org/htpasswd-generator/</a></p>
+<h1 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h1><p>建议客户端使用nrm 进行npm registry地址管理和切换</p>
+<p><strong>安装</strong></p>
+<p>npm install -g nrm<br>添加sinopia仓库地址</p>
+<p>nrm add sinopia <a href="http://192.168.xx.xx:4873" target="_blank" rel="noopener">http://192.168.xx.xx:4873</a></p>
+<p><strong>切换私有仓库</strong></p>
+<p>nrm use verdaccio<br>查看所有仓库地址(星标为当前仓库源)</p>
+<p><strong>nrm ls</strong><br>npm —- <a href="https://registry.npmjs.org/" target="_blank" rel="noopener">https://registry.npmjs.org/</a><br>cnpm — <a href="http://r.cnpmjs.org/" target="_blank" rel="noopener">http://r.cnpmjs.org/</a><br>taobao - <a href="https://registry.npm.taobao.org/" target="_blank" rel="noopener">https://registry.npm.taobao.org/</a><br>nj —– <a href="https://registry.nodejitsu.com/" target="_blank" rel="noopener">https://registry.nodejitsu.com/</a><br>rednpm - <a href="http://registry.mirror.cqupt.edu.cn/" target="_blank" rel="noopener">http://registry.mirror.cqupt.edu.cn/</a><br>npmMirror <a href="https://skimdb.npmjs.com/registry/" target="_blank" rel="noopener">https://skimdb.npmjs.com/registry/</a><br>edunpm - <a href="http://registry.enpmjs.org/" target="_blank" rel="noopener">http://registry.enpmjs.org/</a></p>
+<ul>
+<li>verdaccio <a href="http://192.168.xx.xx:4873/" target="_blank" rel="noopener">http://192.168.xx.xx:4873/</a></li>
+</ul>
+<h1 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h1><p>npm login<br>herec dongdong</p>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000015297864" target="_blank" rel="noopener">资料</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/35773211" target="_blank" rel="noopener">资料</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/35773211" target="_blank" rel="noopener">资料</a></li>
+<li><a href="https://juejin.im/entry/5c64db9851882562851b328f" target="_blank" rel="noopener">资料</a></li>
+</ul>
+<h1 id="修改访问权限"><a href="#修改访问权限" class="headerlink" title="修改访问权限"></a>修改访问权限</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">全部改为$authenticated</span><br><span class="line">packages:</span><br><span class="line">  &apos;@*/*&apos;:</span><br><span class="line">    # scoped packages</span><br><span class="line">    access: $authenticated</span><br><span class="line">    publish: $authenticated</span><br><span class="line">    unpublish: $authenticated</span><br><span class="line">    proxy: npmjs</span><br><span class="line"></span><br><span class="line">  &apos;**&apos;:</span><br><span class="line">    # allow all users (including non-authenticated users) to read and</span><br><span class="line">    # publish all packages</span><br><span class="line">    #</span><br><span class="line">    # you can specify usernames/groupnames (depending on your auth plugin)</span><br><span class="line">    # and three keywords: &quot;$all&quot;, &quot;$anonymous&quot;, &quot;$authenticated&quot;</span><br><span class="line">    access: $authenticated</span><br><span class="line"></span><br><span class="line">    # allow all known users to publish/publish packages</span><br><span class="line">    # (anyone can register by default, remember?)</span><br><span class="line">    publish: $authenticated</span><br><span class="line">    unpublish: $authenticated</span><br><span class="line"></span><br><span class="line">    # if package is not available locally, proxy requests to &apos;npmjs&apos; registry</span><br><span class="line">    proxy: npmjs</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2020-04-01T09:15:16.476Z" itemprop="dateUpdated">2020-04-01 17:15:16</time>
+</span><br>
+
+
+        
+        原始链接：<a href="/2020/04/01/搭建私有npm仓库/" target="_blank" rel="external">http://yoursite.com/2020/04/01/搭建私有npm仓库/</a>
+        
+    </div>
+    <footer>
+        <a href="http://yoursite.com">
+            <img src="/img/avatar.jpg" alt="herec">
+            herec
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/04/01/搭建私有npm仓库/&title=《搭建私有npm仓库》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/04/01/搭建私有npm仓库/&title=《搭建私有npm仓库》 — herec&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/01/搭建私有npm仓库/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《搭建私有npm仓库》 — herec&url=http://yoursite.com/2020/04/01/搭建私有npm仓库/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/04/01/搭建私有npm仓库/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/10/18/开发技术笔记/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">开发技术笔记</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢客官~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>This blog is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>herec &copy; 2015 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2020/04/01/搭建私有npm仓库/&title=《搭建私有npm仓库》 — herec&pic=http://yoursite.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2020/04/01/搭建私有npm仓库/&title=《搭建私有npm仓库》 — herec&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/01/搭建私有npm仓库/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《搭建私有npm仓库》 — herec&url=http://yoursite.com/2020/04/01/搭建私有npm仓库/&via=http://yoursite.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2020/04/01/搭建私有npm仓库/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2020/04/01/搭建私有npm仓库/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
